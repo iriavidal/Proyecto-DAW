@@ -33,13 +33,15 @@
 > - ¿O desenvolvemento da aplicación abre unha oportunidade de negocio? ¿É posible comercializala? Como?
 > - ¿Que tecnoloxías son as máis axeitadas para a realización do proxecto?
 
-Mi proyecto consiste en una **plantilla de una web para clínicas veterinarias**, cuyo propósito es acercar la clínica a sus pacientes y facilitarle la vida tanto a los clientes como a los propios veterinarios y veterinarias.
+Mi proyecto consiste en una **web para una clínica veterinaria**, cuyo propósito es acercar la clínica a sus pacientes y facilitarle la vida tanto a los clientes como a los propios veterinarios y veterinarias.
+
+El principal atractivo de mi producto y lo que lo diferencia de la competencia es su manera de facilitarle la vida al profesional veterinario, ya que esta web auna la gestión interna de la clínica y su imagen al exterior con la que se comunicará y captará posibles clientes. Esto quiere decir que nuestro cliente recibirá dos productos solo teniendo que contratar uno.
+
+La web será totalmente personalizable para cada clínica que la compre, consiguiendo que con la base de la misma web cada clínica tenga su propia página totalmente diferenciada de los demás.
 
 El objetivo de la web en la parte del cliente es tener un primer vistazo atractivo, que te haga elegirlos frente a otras clínicas, y que después decidas quedarte por la facilidad para pedir, modificar y anular tus citas, y gestionar la información clínica de tus amadas mascotas.
 
 Por otro lado, el objetivo en la parte del veterinario o veterinaria es poder organizar tu día con facilidad teniendo todas tus citas en un mismo lugar, y pudiendo consultar y ampliar rápidamente el historial clínico de tu paciente para dar el mejor servicio a tu cliente.
-
-Como se ha dicho anteriormente, este proyecto sería una plantilla, que se comercializaría a todas las clínicas interesadas con la ventaja de que será totalmente personalizable.
 
 Las tecnologías para la web serían:
 
