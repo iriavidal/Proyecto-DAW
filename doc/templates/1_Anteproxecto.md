@@ -349,33 +349,28 @@ Para el front-end usaría **Angular, HTML y CSS**. Para el back-end crearía una
 >
 > Debe facerse un calendario ou un diagrama de Gantt indicando, para cada fase, a data de inicio, a súa duración e breve descrición das tarefas a realizar.
 
-![Calendario de Gantt](/doc/img/calendario_gantt.png)
+- **Estudio preliminar**
 
-- **Semana 1**:
-
-  - Fase: estudio preliminar
-  - Duración: 16 - 22 de septiembre
+  - Duración: 16 de septiembre al 6 de octubre
   - Breve descripción: en esta fase se realizará el anteproyecto en el que se dará una explicación tanto empresarial como ténica del proyecto a realizar
 
-- **Semana 2**:
+- **Análisis**
 
-  - Fase: análisis
-  - Duración: 23 al 29 de septiembre
+  - Duración: 7 al 13 de octubre
   - Breve descripción: en esta fase se describirán los requerimientos del proyecto, que funcionalidades ofrecerá y cómo
 
-- **Semana 3-4**:
+- **Diseño**
 
-  - Fase: diseño
-  - Duración: 30 de septiembre al 13 de octubre
+  - Duración: 14 al 24 de octubre
   - Breve descripción: en esta fase se crearán diferente diagramas, esquemas y diseños del proyecto
 
-- **Semana 5-9**:
+- **Codificación y pruebas**
 
-  - Fase: codificación y pruebas
-  - Duración: 14 de octubre al 17 de noviembre
+  - Duración: 25 de octubre al 24 de noviembre
   - Breve descripción: en esta fase se desarrollará todo lo expuesto en las fases anteriores y se realizarán pruebas para detectar posibles errores a medida que se vaya codificando
 
-- **Semana 10**:
-  - Fase: implantación
-  - Duración: 18 al 24 de nombiembre
+- **Implantación**
+  - Duración: 24 de nombiembre al 1 de diciembre
   - Breve descripción: en esta fase se creará tanto un manual técnico como un manual de usuario para el proyecto
+
+![Calendario de Gantt](/doc/img/calendario_gantt.png)
