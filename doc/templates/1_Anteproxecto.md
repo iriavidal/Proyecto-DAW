@@ -198,9 +198,13 @@ Existen productos sustitutos en el mercado, como software de gestión general ad
 
 > _EXPLICACIÓN_: Neste apartado deberedes indicar a forma xurídica: autónomo, soc. Cooperativa, SL,.. Explicando (nun par de frases) por que escolledes esta forma
 
-He escogido crear una Sociedad Limitada (SL) ya que la empresa será una entidad legal independiente, y solo arriesgaré el dinero que he invertido. Esta opción también facilita añadir nuevos socios o inversores si el negocio crece.
+He optado por constituir una **Sociedad Limitada (SL)** como forma jurídica para el proyecto de software para clínicas veterinarias por las siguientes razones:
 
-[infoautónomos: "Autónomo o SL, ¿cómo decidir?"](https://www.infoautonomos.com/ser-autonomo-o-no/autonomo-o-sl/)
+- **Protección de activos personales**: ya que una SL proporciona una separación clara entre los bienes personales de los socios y los activos de la empresa. Esto significa que, en caso de que la empresa enfrente deudas o responsabilidades legales, los activos personales de los propietarios están protegidos, lo que reduce significativamente el riesgo financiero para los involucrados.
+
+- **Facilidad de crecimiento y ampliación de capital**: la SL permite la incorporación de nuevos socios o inversores sin complicaciones excesivas. Esto es fundamental si el proyecto crece y se requiere más capital para invertir en desarrollo, marketing o expansión del negocio.
+
+- **Credibilidad ante clientes y proveedores**: contar con una forma jurídica reconocida como la SL puede aumentar la confianza de clientes y proveedores en el negocio.
 
 ### 2.7- Investimentos
 
