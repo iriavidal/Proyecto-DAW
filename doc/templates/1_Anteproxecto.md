@@ -198,13 +198,19 @@ Existen productos sustitutos en el mercado, como software de gestión general ad
 
 > _EXPLICACIÓN_: Neste apartado deberedes indicar a forma xurídica: autónomo, soc. Cooperativa, SL,.. Explicando (nun par de frases) por que escolledes esta forma
 
-He optado por constituir una **Sociedad Limitada (SL)** como forma jurídica para el proyecto de software para clínicas veterinarias por las siguientes razones:
+He optado por emprender como **autónoma** para el proyecto de software para clínicas veterinarias por las siguientes razones:
 
-- **Protección de activos personales**: ya que una SL proporciona una separación clara entre los bienes personales de los socios y los activos de la empresa. Esto significa que, en caso de que la empresa enfrente deudas o responsabilidades legales, los activos personales de los propietarios están protegidos, lo que reduce significativamente el riesgo financiero para los involucrados.
+- **Simplicidad en la constitución**
 
-- **Facilidad de crecimiento y ampliación de capital**: la SL permite la incorporación de nuevos socios o inversores sin complicaciones excesivas. Esto es fundamental si el proyecto crece y se requiere más capital para invertir en desarrollo, marketing o expansión del negocio.
+- **Costes reducidos**: operar como autónoma implica menores costes iniciales y de mantenimiento. Se especifica mejor en el aparatado [2.6- Forma xurídica](#26--forma-xurídica).
 
-- **Credibilidad ante clientes y proveedores**: contar con una forma jurídica reconocida como la SL puede aumentar la confianza de clientes y proveedores en el negocio.
+- **Control total sobre la gestión**: como autónoma, tengo un control completo sobre la toma de decisiones y la dirección del negocio, lo que facilita la flexibilidad y rapidez en la adaptación a cambios del mercado o necesidades de los clientes.
+
+- **Beneficios fiscales iniciales**: Se especifica mejor en el aparatado [2.7.1- Custos](#271--custos).
+
+- **Menos formalidades legales**
+
+- **Oportunidad de escalar a SL en el futuro**: si el proyecto crece y se estabiliza, tengo la opción de transformar la estructura en una Sociedad Limitada más adelante, lo que ofrece flexibilidad en la evolución del negocio.
 
 ### 2.7- Investimentos
 
@@ -232,15 +238,19 @@ He optado por constituir una **Sociedad Limitada (SL)** como forma jurídica par
   - Electricidad, agua y calefacción = 80€/mes aproximadamente
 
   - Mobiliario:
+
     - Silla: 109€ [Bricocentro Arousa](https://www.bricocentroarousa.es/producto/sillon-duke-simil-piel-blanco-atb-8000556)
     - Escritorio: 114'95€ [Bricocentro Arousa](https://www.bricocentroarousa.es/producto/escritorio-reversible-blanco-artik-75x138x50cm-ds-fores-82813)
     - Soportes ergonómicos ratón y teclado: 8,45€ [Shein](https://es.shein.com/2-In-1-Cloud-Shaped-Keyboard-And-Mouse-Wrist-Rest-Pad-Silicone-Skin-Hand-Support-High-Density-Memory-Foam-For-Ergonomic-Wrist-Support-For-Office-Computer-Laptop-Gaming-Mouse-Pad-White-p-31630192.html?src_identifier=st%3D2%60sc%3Dnube%20teclado%60sr%3D0%60ps%3D1&src_module=search&src_tab_page_id=page_home1726504418616&mallCode=1&pageListType=4&imgRatio=1-1)
+
+  - Salario: 2000€/mes
 
 - **Costes variables**:
 
   - Material de oficina (papelería, tinta, etc.): 30€/mes aproximadamente
   - Software y herramientas:
     - Hosting (incluye dominio y base de datos): 36€/año el primer año [Arsys](https://www.arsys.es/hosting)
+  - Marketing digital: 700€/mes [Agencia de marketing digital NeoAttack](https://neoattack.com/blog/cuanto-cuesta-adwords-tarifas-y-consejos-para-empezar/)
 
 - **Impuestos**:
 
