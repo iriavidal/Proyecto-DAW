@@ -235,7 +235,7 @@ He optado por emprender como **autónoma** para el proyecto de software para cl�
 
   - Conexión a internet: 35€/mes [Vodafone](https://oferta.vodafone.es/empresas/vodafone-one/?cid=187410880:dt-20140601:cp-vdf_toe_continuidad:cn-sem:kw-303347455189:cl-no_cliente:sp-Google:cr-:gk-marca:st-prospecting:ta-base:md-empresas:ds-responsive:pr-one:wn-toe:pl-/VDF-TOE-PureBrand-Def-BASE&gad_source=1&gclid=Cj0KCQjwrp-3BhDgARIsAEWJ6SzRmeV6WUeBEDHSEE574VMvzBWwF_NcX9ZGhkNOA0xXin03-xTFNUQaAnw2EALw_wcB)
 
-  - Electricidad, agua y calefacción = 80€/mes aproximadamente
+  - Electricidad, agua y calefacción = 60€/mes aproximadamente
 
   - Mobiliario:
 
@@ -243,14 +243,14 @@ He optado por emprender como **autónoma** para el proyecto de software para cl�
     - Escritorio: 114'95€ [Bricocentro Arousa](https://www.bricocentroarousa.es/producto/escritorio-reversible-blanco-artik-75x138x50cm-ds-fores-82813)
     - Soportes ergonómicos ratón y teclado: 8,45€ [Shein](https://es.shein.com/2-In-1-Cloud-Shaped-Keyboard-And-Mouse-Wrist-Rest-Pad-Silicone-Skin-Hand-Support-High-Density-Memory-Foam-For-Ergonomic-Wrist-Support-For-Office-Computer-Laptop-Gaming-Mouse-Pad-White-p-31630192.html?src_identifier=st%3D2%60sc%3Dnube%20teclado%60sr%3D0%60ps%3D1&src_module=search&src_tab_page_id=page_home1726504418616&mallCode=1&pageListType=4&imgRatio=1-1)
 
-  - Salario: 2000€/mes
+  - Salario: 1500€/mes
 
 - **Costes variables**:
 
   - Material de oficina (papelería, tinta, etc.): 30€/mes aproximadamente
   - Software y herramientas:
     - Hosting (incluye dominio y base de datos): 36€/año el primer año [Arsys](https://www.arsys.es/hosting)
-  - Marketing digital: 700€/mes [Agencia de marketing digital NeoAttack](https://neoattack.com/blog/cuanto-cuesta-adwords-tarifas-y-consejos-para-empezar/)
+  - Marketing digital: 300€/mes
 
 - **Impuestos**:
 
@@ -264,19 +264,19 @@ He optado por emprender como **autónoma** para el proyecto de software para cl�
 
 **Estimación de ventas basada en un modelo B2B** (Business to Business):
 
-- Número de clientes potenciales: en el mercado español, hay más de 7000 clínicas veterinarias, de las cuales aproximadamente el 70% son pequeñas y medianas ([estudiosveterinarios](https://estudiosveterinarios.com/resumen-anual/)), lo que las convierte en clientes potenciales.
-- Penetración de mercado: asumiendo que en el primer año podemos llegar a captar un 1% de ese mercado, eso implicaría 49 clientes anuales.
-- Crecimiento anual: suponiendo un crecimiento moderado, podríamos elevar un 5% el número de clientes en el segundo año, 51 clientes.
+- Número de clientes potenciales: en el mercado gallego, hay más de 400 clínicas veterinarias, de las cuales aproximadamente el 70% son pequeñas y medianas ([estudiosveterinarios](https://estudiosveterinarios.com/resumen-anual/)), lo que las convierte en clientes potenciales.
+- Penetración de mercado: asumiendo que en el primer año podemos llegar a captar un 5% de ese mercado, eso implicaría 20 clientes anuales.
+- Crecimiento anual: suponiendo un crecimiento moderado, podríamos elevar un 8% el número de clientes en el segundo año, 32 clientes.
 
 **Política de precios**:
 He decidido realizar una estrategia combinada de modelo de negocio, que mezcla el modelo de tarifa única con el modelo de suscripción.
-Esto implicaría ofrecer una tarifa inicial de 300€ por la creación de la web, y una suscripción mensual de 30€ para mantenimiento y actualizaciones.
+Esto implicaría ofrecer una tarifa inicial de 500€ por la creación de la web, y una suscripción mensual de 70€ para mantenimiento y actualizaciones.
 Los precios pueden variar según las necesidades del cliente, pero para los cálculos cogeremos estas cifras estándar.
 
-- Ingresos iniciales: 49 clientes x 300€ = **14700€**
-- Ingresos recurrentes: 49 clientes x 30€/mes x 12 meses = **17640€**
+- Ingresos iniciales: 20 clientes x 500€ = **10000€**
+- Ingresos recurrentes: 20 clientes x 70€/mes x 12 meses = **16800€**
 
-**Ingresos totales el primer año: 32340€**
+**Ingresos totales el primer año: 26800€**
 
 ### 2.8- Viabilidade
 
@@ -301,15 +301,15 @@ Basándonos en los datos aportados en el punto anterior (investimentos):
 
 - **Costes**:
 
-  - **Costes fijos estimados**: alrededor de 1181,4€ (incluyendo equipos electrónicos, mobiliario, conexión a internet).
+  - **Costes fijos estimados**: alrededor de 19855€/año (incluyendo equipos electrónicos, mobiliario, conexión a internet y salario).
 
-  - **Costes variables estimados**: aproximadamente 30€/mes en materiales de oficina y 36€/año en hosting.
+  - **Costes variables estimados**: aproximadamente 30€/mes en materiales de oficina, 36€/año en hosting y 300€/mes en marketing digital.
 
 - **Impuestos**: gracias a los beneficios fiscales para menores de 30 años y la cuota cero, los primeros meses tienen una importante reducción de costos.
 
-- **Ingresos**: según la previsión de ventas, se podría generar 32.340€ en el primer año.
+- **Ingresos**: según la previsión de ventas, se podría generar 26800€ en el primer año.
 
-- **Rentabilidad**: comparando los costes fijos y variables con los ingresos, el proyecto es rentable desde el primer año. Con una inversión inicial relativamente baja y un margen de ingresos recurrentes sólido, los beneficios netos superan ampliamente los costes operativos.
+- **Rentabilidad**: comparando los costes fijos y variables con los ingresos, el proyecto es rentable desde el primer año, con un beneficio anual de casi 3000€.
 
 #### 2.8.3- Conclusión
 
@@ -324,11 +324,7 @@ Sí, el proyecto es viable tanto técnica como económicamente. Los recursos est
 Sí, según las previsiones, los ingresos del primer año cubren todos los costes iniciales y operativos, generando un beneficio neto.
 
 **¿Se pueden cubrir las pérdidas vía financiación?**
-Dado que el proyecto no anticipa pérdidas y, además, se puede acoger a ayudas y subvenciones como las de la Xunta para nuevos autónomos (_cuota cero_), las necesidades de financiación externa serían mínimas, en caso de ser necesarias. Aun así, tendré en cuenta una serie de subvenciones a las que podría ser candidata y que enumeraré a continuación:
-
-1. **Programa Kit Digital**: es una iniciativa del Gobierno de España destinada a pymes y autónomos para promover la digitalización de sus negocios. Cubre entre 2000€ y 12.000€, dependiendo del tamaño de tu empresa, para aspectos como la creación de páginas web, gestión de clientes o analítica de datos. [Ministerio de Transformación Digital](https://sede.red.gob.es/es/procedimientos/convocatoria-de-ayudas-destinadas-la-digitalizacion-de-empresas-del-segmento-iii)
-
-2. **Subvenciones del Programa de Fomento del Emprendimiento Femenino**: ofrecer tanto apoyo económico como asesoría empresarial. La ayuda máxima varía según la convocatoria, pero puede llegar a cubrir hasta un 50% de los gastos. [Consellería de Política Social](https://igualdade.xunta.gal/es/ayudas/subvenciones-para-el-apoyo-al-emprendimiento-femenino-programa-emega-ano-2023)
+Dado que el proyecto no anticipa pérdidas y, además, se puede acoger a ayudas y subvenciones como las de la Xunta para nuevos autónomos (_cuota cero_), las necesidades de financiación externa serían mínimas, en caso de ser necesarias.
 
 ## 3- Requirimentos técnicos
 
