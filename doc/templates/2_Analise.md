@@ -33,6 +33,13 @@ Exemplo:
 | Modificar productos        | Modificación de productos na base de datos   |
 | Presentación dos productos | Mostra dos productos por medio da páxina web |
 
+| Acción                                        | Descrición                                                                 |
+| --------------------------------------------- | -------------------------------------------------------------------------- |
+| Alta de usuarios/mascotas/historiales/citas   | Dar de alta nuevos usuarios/mascotas/historiales/citas en la base de datos |
+| Modificar usuarios/mascotas/historiales/citas | Modificación de usuarios/mascotas/historiales/citas en la base de datos    |
+| Eliminar usuarios/mascotas/historiales/citas  | Eliminación de usuarios/mascotas/historiales/citas en la base de datos     |
+| Mostrar usuarios/mascotas/historiales/citas   | Presentación de usuarios/mascotas/historiales/citas por medio de la web    |
+
 ## 3- Tipos de usuarios
 
 > _EXPLICACION_ Describir os tipos de usuario que poderán acceder ao noso sistema. Habitualmente os tipos de usuario veñen definidos polas funcionalidades ás cales teñen acceso. En termos xerais existen moitos grupos de usuarios: anónimos, novos, rexistrados, bloqueados, confirmados, verificados, administradores, etc.
