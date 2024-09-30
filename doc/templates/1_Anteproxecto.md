@@ -86,42 +86,33 @@ Una última desventaja de dichos softwares es que no puedes ver un ejemplo de é
 
 Las clínicas veterinarias son un segmento de mercado insuficientemente atendido, ya que la oferta en el mencado va dirigida a grandes clínicas y no a la pequeña y mediana clínica que no necesita la mitad de las cosas que se le ofrecen, no tiene el material necesario (ordenadores que soporten esos softwares), ni tampoco la economía ni el tiempo para aprender a instalar y manejar el gestor, lo cual convierte a dichos softwares en productos ineficientes que esas clínicas ni se plantean contratar.
 
-[cronoshare: "Mejores programas de gestión veterinaria"](https://www.cronoshare.com/comunidad/p/autonomos-empresas/mas-clientes/mejores-programas-gestion-veterinaria)
-[softwarepara: "Software Veterinario – Guía y herramientas imprescindibles en tu clínica"](https://softwarepara.net/veterinario/)
-
 **DAFO**:
 
 - **Debilidades**:
 
-  - **Competencia con grandes actores**: empresas como IDEXX y VetZ dominan el mercado, lo que puede dificultar la entrada y el posicionamiento de nuevas soluciones en el mercado global.
-  - **Falta de conocimiento tecnológico en pequeñas clínicas**: muchas clínicas pequeñas aún carecen de conocimientos o voluntad para adoptar nuevas tecnologías, lo que puede limitar la tasa de adopción del software.
-  - **Restricciones presupuestarias**: aunque el software es accesible, algunas clínicas pequeñas pueden tener dificultades para justificar incluso una pequeña inversión inicial en tecnología​.
+  - **Periodos de desarrollo más lentos** que los de empresas más grandes, lo que puede hacer que el producto tarde más en estar completamente optimizado o disponible para nuevos clientes.
+  - **Falta de recursos humanos**: al ser un proyecto pequeño o individual, puede haber limitaciones en cuanto al soporte o la capacidad de respuesta rápida ante incidencias técnicas.
 
 - **Amenazas**:
 
-  - **Competencia**: otros proveedores pueden desarrollar soluciones similares o superiores que compitan directamente con la plantilla web propuesta.
-  - **Resistencia al cambio**: algunas clínicas, especialmente en áreas rurales o con personal veterano, pueden resistirse al cambio tecnológico, prefiriendo sistemas tradicionales.
-  - **Rápida evolución tecnológica**
+  - **Competencia con grandes actores**: empresas como IDEXX y VetZ dominan el mercado, lo que puede dificultar la entrada y el posicionamiento de nuevas soluciones en el mercado global.
+  - **Resistencia al cambio**: algunas clínicas, especialmente las más pequeñas, pueden ser reacias a adoptar nuevas tecnologías por temor a complejidad, costes ocultos o la falta de conocimientos tecnológicos.
+  - **Rápida evolución tecnológica**: el software de gestión clínica está en constante evolución, lo que puede hacer que las soluciones queden obsoletas rápidamente si no se actualizan con frecuencia.
 
 - **Fortalezas**:
 
-  - **Acceso web**: la plantilla permite a los clientes y veterinarios acceder a la gestión de citas y la información médica a través de una web accesible desde cualquier dispositivo sin necesidad de instalaciones.
+  - **Plataforma todo en uno**: la integración de la gestión interna con la captación de clientes en una sola plataforma es un punto diferenciador frente a la competencia, que solo ofrece soluciones parciales.
+  - **Acceso web multiplataforma**: permite a clientes y veterinarios acceder a la gestión de citas y a los historiales médicos desde cualquier dispositivo con conexión a internet, sin necesidad de instalaciones locales.
   - **Facilidad de uso**: la posibilidad de ver un calendario de citas y gestionar todo desde una sola web hace el proceso más eficiente y cómodo para los usuarios.
-  - **Personalización y flexibilidad**: la plantilla es completamente personalizable, lo que permite adaptarla a las necesidades específicas de cada clínica.
-  - **Ejemplos disponibles**: se puede mostrar un ejemplo funcional de la plantilla a potenciales clientes, lo que facilita la toma de decisiones.
-  - **Creciente demanda de software veterinario**: la adopción de software de gestión en el sector veterinario está en aumento, impulsada por la digitalización de la atención médica para mascotas.
+  - **Personalización y flexibilidad**: cada clínica puede adaptar el software a sus necesidades específicas, lo que da un valor añadido a la solución frente a otras opciones más rígidas.
+  - **Ejemplos funcionales disponibles**: se puede mostrar un ejemplo funcional del software a potenciales clientes, lo que facilita la toma de decisiones.
 
 - **Oportunidades**:
 
   - **Crecimiento del mercado veterinario**: el número de clínicas veterinarias está en aumento, y con él la necesidad de soluciones tecnológicas que mejoren la eficiencia y reduzcan los costos administrativos.
 
   - **Demanda de Soluciones Accesibles**: existe una demanda creciente de soluciones accesibles y fáciles de usar que no requieran instalaciones complicadas ni equipos especializados. [animalshealth](https://www.animalshealth.es/empresas/barreras-entrada-algunos-centros-veterinarios-resisten-adoptar-nuevas-tecnologias#:~:text=Los%20principales%20factores,ser%20prohibitivos%E2%80%9D%2C%20se%C3%B1alan.)
-
-  - **Simplificación de procesos**: la plantilla puede simplificar la gestión diaria tanto para clientes como para veterinarios, mejorando la eficiencia y la satisfacción.
-
-  - **Expansión internacional**: hay oportunidades de expansión fuera de España, especialmente en regiones donde el uso de software veterinario es aún incipiente, como América Latina​.
-
-[Global Market Insights: "Tamaño del mercado del software veterinario, Compartir, Tendencias ¦ Forecast – 2032"](https://www.gminsights.com/es/industry-analysis/veterinary-software-market)
+  - **Tendencia a la digitalización**: la transformación digital en el sector veterinario es cada vez más importante, y muchas clínicas buscan software que les permita reducir el papeleo y mejorar la eficiencia operativa.
 
 ### 2.3- Segmento de clientes
 
