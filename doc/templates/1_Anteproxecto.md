@@ -56,11 +56,9 @@ Para el front-end usaría Angular, HTML y CSS. Para el back-end crearía una API
 
 > _EXPLICACIÓN_: Define o producto central, o valor engadido e a utilidade. Se se ogrecen productos aumentados, indicalo tamén.
 
-La <u>idea central</u> del proyecto es desarrollar una **plantilla web para clínicas veterinarias** que ofrezca una solución completa y personalizable, tanto para atraer a nuevos clientes como para facilitar la gestión diaria de los veterinarios. El **producto central** es una plantilla fácil de implementar que permitirá a las clínicas tener un primer vistazo atractivo para captar clientes y, a su vez, ofrecer herramientas intuitivas que faciliten la **gestión de citas** y el **acceso al historial clínico de mascotas**.
-
-El <u>valor añadido</u> de esta plantilla es que será completamente **personalizable**, lo que permitirá a cada clínica ajustar el diseño y las funcionalidades a sus propias necesidades. Además, las clínicas podrán gestionar las citas y ampliar rápidamente el historial clínico de los pacientes, lo que mejorará la organización diaria y la eficiencia en la atención al cliente.
-
-Como <u>producto aumentado</u>, ofreceremos actualizaciones periódicas, y servicios adicionales como la capacitación para el personal de la clínica en el uso de la web.
+- **Producto central**: una solución web integral que permite tanto la gestión interna de la clínica como la captación de clientes a través de su imagen online.
+- **Valor añadido**: actualizaciones periódicas y soporte técnico, asegurando que las clínicas siempre cuenten con las últimas mejoras y puedan resolver cualquier incidencia rápidamente.
+- **Utilidad**: la comodidad para la gestión de la clínica y el ahorro y facilidad que les supone tener dos servicios contratando solo uno. Por ejemplo, las clínicas podrán gestionar sus citas y actualizar historiales médicos sin necesidad de usar múltiples herramientas, lo que reducirá el tiempo administrativo y permitirá dedicar más atención a sus pacientes.
 
 ### 2.2- Xustificación da idea
 
