@@ -33,33 +33,20 @@
 > - ¿O desenvolvemento da aplicación abre unha oportunidade de negocio? ¿É posible comercializala? Como?
 > - ¿Que tecnoloxías son as máis axeitadas para a realización do proxecto?
 
-Mi proyecto consiste en una **web para una clínica veterinaria**, cuyo propósito es acercar la clínica a sus pacientes y facilitarle la vida tanto a los clientes como a los propios veterinarios y veterinarias.
+Mi proyecto consiste en un **software para clínicas veterinarias**, cuyo propósito es acercar la clínica a sus pacientes y facilitarle la vida tanto a los clientes como a los propios veterinarios y veterinarias.
 
-El principal atractivo de mi producto y lo que lo diferencia de la competencia es su manera de facilitarle la vida al profesional veterinario, ya que esta web auna la gestión interna de la clínica y su imagen al exterior con la que se comunicará y captará posibles clientes. Esto quiere decir que nuestro cliente recibirá dos productos solo teniendo que contratar uno.
+El proyecto **no es solo una web para clínicas veterinarias, sino una plataforma integral** que combina la gestión interna de la clínica (citas, historiales médicos, etc.) con una herramienta de captación y comunicación externa. Esto significa que la clínica puede gestionar todo en una única plataforma, tanto para su funcionamiento interno como para su imagen hacia los clientes.
 
-La web será totalmente personalizable para cada clínica que la compre, consiguiendo que con la base de la misma web cada clínica tenga su propia página totalmente diferenciada de los demás.
+Dicho software consistirá en dos partes:
 
-El objetivo de la web en la parte del cliente es tener un primer vistazo atractivo, que te haga elegirlos frente a otras clínicas, y que después decidas quedarte por la facilidad para pedir, modificar y anular tus citas, y gestionar la información clínica de tus amadas mascotas.
+1. Una parte para el cliente cuyo objetivo es tener un primer vistazo atractivo, que te haga elegirlos frente a otras clínicas, y que después decidas quedarte por la facilidad para pedir, modificar y anular tus citas, y gestionar la información clínica de tus mascotas.
 
-Por otro lado, el objetivo en la parte del veterinario o veterinaria es poder organizar tu día con facilidad teniendo todas tus citas en un mismo lugar, y pudiendo consultar y ampliar rápidamente el historial clínico de tu paciente para dar el mejor servicio a tu cliente.
+2. Una parte para el profesional veterinario cuyo objetivo es poder organizar su día con facilidad teniendo todas sus citas en un mismo lugar, y pudiendo consultar y ampliar rápidamente el historial clínico de su paciente para dar el mejor servicio a su cliente.
 
-Las tecnologías para la web serían:
+La web será totalmente personalizable para cada clínica que la compre, consiguiendo que con la base de la misma web cada clínica tenga su propia página totalmente diferenciada de los demás. Podrán personalizar desde los colores y el logotipo hasta funciones específicas según sus necesidades.
 
-- Infraestructura:
-
-  - Alojamiento (hosting)
-  - Certificado SSL
-  - Base de datos: MariaDB
-
-- En el front-end:
-
-  - HTML
-  - CSS
-  - Javascript
-
-- En el back-end:
-  - SQL
-  - PHP
+**Tecnologías**:
+Para el front-end usaría Angular, HTML y CSS. Para el back-end crearía una API sencilla con Slim (PHP y SQL). Y para la implementación contrataría un hosting externo y un dominio.
 
 ## 2- Empresa
 
