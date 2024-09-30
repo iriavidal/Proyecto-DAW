@@ -334,21 +334,7 @@ Dado que el proyecto no anticipa pérdidas y, además, se puede acoger a ayudas 
 > - **Backend:** tecnoloxías usadas.
 > - **Frontend:** tecnoloxías usadas
 
-- **Infraestructura**:
-
-  - Alojamiento (hosting)
-  - Certificado SSL
-  - Base de datos: MariaDB
-
-- **En el front-end**:
-
-  - HTML
-  - CSS
-  - Javascript
-
-- **En el back-end**:
-  - SQL
-  - PHP
+Para el front-end usaría **Angular, HTML y CSS**. Para el back-end crearía una **API sencilla con Slim (PHP y SQL)**. Y para la implementación contrataría un **hosting externo y un dominio**.
 
 ## 4- Planificación
 
@@ -369,7 +355,7 @@ Dado que el proyecto no anticipa pérdidas y, además, se puede acoger a ayudas 
 
   - Fase: estudio preliminar
   - Duración: 16 - 22 de septiembre
-  - Breve descripción: eb esta fase se realizará el anteproyecto en el que se dará una explicación tanto empresarial como ténica del proyecto a realizar
+  - Breve descripción: en esta fase se realizará el anteproyecto en el que se dará una explicación tanto empresarial como ténica del proyecto a realizar
 
 - **Semana 2**:
 
