@@ -127,20 +127,17 @@ Las clínicas veterinarias son un segmento de mercado insuficientemente atendido
 
 #### **Segmentos Principales del Mercado**
 
-**Clínicas Veterinarias Pequeñas y Medianas**
+El segmento principal serán **clínicas veterinarias pequeñas y medianas en la región de Galicia**.
 
-- **Características Principales**:
-  - **Tamaño**: clínicas con un número limitado de empleados (generalmente menos de 20).
-  - **Necesidades**: buscan soluciones de gestión que sean fáciles de implementar y usar sin complicaciones técnicas. [animalshealth](https://www.animalshealth.es/empresas/barreras-entrada-algunos-centros-veterinarios-resisten-adoptar-nuevas-tecnologias#:~:text=Adem%C3%A1s%2C%20la%20personalizaci%C3%B3n,sus%20caracter%C3%ADsticas%E2%80%9D%2C%20indican.)
-  - **Presupuesto**: limitado en comparación con grandes clínicas, buscando opciones más accesibles y con buena relación coste-beneficio.
-  - **Problemas actuales**: uso de software complejo destinado a grandes clínicas que no se adapta a sus necesidades específicas, falta de integración en la web y dificultades en la gestión de citas y acceso a historiales médicos.
-- **Cuantificación del Mercado**:
-  - **Número de clínicas**: en el mercado español, hay más de 7000 clínicas veterinarias, de las cuales aproximadamente el 70% son pequeñas y medianas ([estudiosveterinarios](https://estudiosveterinarios.com/resumen-anual/)).
-  - **Tendencia de digitalización**: un creciente porcentaje de estas clínicas están buscando soluciones digitales para mejorar su gestión, como lo refleja la adopción creciente de tecnologías en pequeñas empresas. ([INE](https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=estadistica_C&cid=1254736176743&menu=ultiDatos&idp=1254735576799))
+La estrategia inicial se centrará en el mercado local, donde se planificará una combinación de tácticas para atraer a los primeros clientes. Para ello:
+
+- **Demostraciones presenciales y online**: se ofrecerán sesiones de demostración personalizadas, donde los veterinarios podrán experimentar la plataforma y ver su utilidad en acción.
+- **Campañas de marketing digital**: se implementará una estrategia en redes sociales y Google Ads dirigida específicamente a la audiencia de Galicia, destacando los beneficios del software y compartiendo testimonios de clínicas que ya lo utilizan.
+- **Networking y relaciones personales**: se buscará establecer conexiones con veterinarios a través de eventos locales, ferias y conferencias, facilitando un espacio para que puedan conocer el producto de forma más directa.
 
 #### **Diferenciación entre Usuario y Cliente**
 
-- **Cliente**: en este caso, el cliente es la clínica veterinaria que compra la plantilla web. Son los que tomarán la decisión de adquirir y pagar por el producto.
+- **Cliente**: en este caso, el cliente es la clínica veterinaria que compra el servicio web. Son los que tomarán la decisión de adquirir y pagar por el producto.
 - **Usuario**: los usuarios finales serán los veterinarios, el personal de la clínica y los clientes de la clínica que interactuarán con la plataforma para gestionar citas y acceder a la información médica.
 
 ### 2.4- Competencia
