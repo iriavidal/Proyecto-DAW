@@ -114,6 +114,8 @@ Las clínicas veterinarias son un segmento de mercado insuficientemente atendido
   - **Demanda de Soluciones Accesibles**: existe una demanda creciente de soluciones accesibles y fáciles de usar que no requieran instalaciones complicadas ni equipos especializados. [animalshealth](https://www.animalshealth.es/empresas/barreras-entrada-algunos-centros-veterinarios-resisten-adoptar-nuevas-tecnologias#:~:text=Los%20principales%20factores,ser%20prohibitivos%E2%80%9D%2C%20se%C3%B1alan.)
   - **Tendencia a la digitalización**: la transformación digital en el sector veterinario es cada vez más importante, y muchas clínicas buscan software que les permita reducir el papeleo y mejorar la eficiencia operativa.
 
+  ![DAFO cruzado](../img/DAFO_cruzado.png)
+
 ### 2.3- Segmento de clientes
 
 > _EXPLICACIÓN_: Neste apartado debes indicar a quen irá dirixido o negocio, os potenciales clientes, respostando as seguinte pregunta: ¿A quen está dirixido?
