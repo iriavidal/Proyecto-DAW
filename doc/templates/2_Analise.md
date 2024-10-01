@@ -145,3 +145,5 @@ El usuario puede permitir, bloquear o eliminar las cookies instaladas en su disp
 ## 6- Melloras futuras
 
 > _EXPLICACION_ É posible que o noso proxecto se centre en resolver un problema concreto que se poderá ampliar no futuro con novas funcionalidades, novas interfaces, etc.
+
+La idea del proyecto es cumplir las necesidades que cada clínica tenga a demanda. El software base gestionará citas e historiales, pero en un futuro la clínica que lo desee podrá también tener una tienda online o un blog.
