@@ -49,6 +49,11 @@ Exemplo:
 > - Usuario xenérico, que terá acceso a ...
 > - Usuario técnico, que poderá...
 
+- Usuario **anónimo**, no estará registrado y por lo tanto solo tendrá acceso al home de la web.
+- Usuario **registrado**, tendrá acceso al home y al menú donde podrá registrar sus mascotas, pedirles cita y ver toda su información.
+- Usuario **administrador**, serán los profesionales de la clínica, que tendrán acceso al home y a un menú especial para ellos en el que verás las citas que tienen en el día y la información de sus pacientes. Podrán añadir historiales médicos a los perfiles de las mascotas.
+- Usuario **técnico**, tendrá acceso a todo para poder solucionar posibles fallos e implementar nuevas actualizaciones y servicios.
+
 ## 4- Contorno operacional
 
 > _EXPLICACION_ Neste apartado deben describirse os recursos necesarios, dende o punto de vista do usuario, para poder operar coa aplicación web. Habitualmente consiste nun navegador web actualizado e unha conexión a internet.
