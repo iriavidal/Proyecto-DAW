@@ -14,9 +14,9 @@
 
 > _EXPLICACION_: Descrición Xeral do proxecto
 
-Mi proyecto consiste en un **software para clínicas veterinarias**, cuyo propósito es acercar la clínica a sus pacientes y facilitarle la vida tanto a los clientes como a los propios veterinarios y veterinarias.
+Este proyecto consiste en la creación de una plataforma web para la gestión de citas y el seguimiento médico de mascotas en clínicas veterinarias.
 
-El proyecto **no es solo una web para clínicas veterinarias, sino una plataforma integral** que combina la gestión interna de la clínica (citas, historiales médicos, etc.) con una herramienta de captación y comunicación externa. Esto significa que la clínica puede gestionar todo en una única plataforma, tanto para su funcionamiento interno como para su imagen hacia los clientes.
+La base de la plataforma web será Angular, que unirá el front-end con el back-end. El front consistirá en HTML y CSS (utilizando el framework de Sass) y back en una API que almacenará una base de datos en MariaDB, que se creará con el framework Slim, en PHP.
 
 ## 2- Funcionalidades
 
@@ -33,12 +33,12 @@ Exemplo:
 | Modificar productos        | Modificación de productos na base de datos   |
 | Presentación dos productos | Mostra dos productos por medio da páxina web |
 
-| Acción                                        | Descrición                                                                 |
-| --------------------------------------------- | -------------------------------------------------------------------------- |
-| Alta de usuarios/mascotas/historiales/citas   | Dar de alta nuevos usuarios/mascotas/historiales/citas en la base de datos |
-| Modificar usuarios/mascotas/historiales/citas | Modificación de usuarios/mascotas/historiales/citas en la base de datos    |
-| Eliminar usuarios/mascotas/historiales/citas  | Eliminación de usuarios/mascotas/historiales/citas en la base de datos     |
-| Mostrar usuarios/mascotas/historiales/citas   | Presentación de usuarios/mascotas/historiales/citas por medio de la web    |
+| Acción                                                     | Descrición                                                                              |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Alta de usuarios/mascotas/historiales/citas/veterinarios   | Dar de alta nuevos usuarios/mascotas/historiales/citas/veterinarios en la base de datos |
+| Modificar usuarios/mascotas/historiales/citas/veterinarios | Modificación de usuarios/mascotas/historiales/citas/veterinarios en la base de datos    |
+| Eliminar usuarios/mascotas/historiales/citas/veterinarios  | Eliminación de usuarios/mascotas/historiales/citas/veterinarios en la base de datos     |
+| Mostrar usuarios/mascotas/historiales/citas/veterinarios   | Presentación de usuarios/mascotas/historiales/citas/veterinarios por medio de la web    |
 
 ## 3- Tipos de usuarios
 
@@ -49,10 +49,11 @@ Exemplo:
 > - Usuario xenérico, que terá acceso a ...
 > - Usuario técnico, que poderá...
 
-- Usuario **anónimo**, no estará registrado y por lo tanto solo tendrá acceso al home de la web.
 - Usuario **registrado**, tendrá acceso al home y al menú donde podrá registrar sus mascotas, pedirles cita y ver toda su información.
-- Usuario **administrador**, serán los profesionales de la clínica, que tendrán acceso al home y a un menú especial para ellos en el que verás las citas que tienen en el día y la información de sus pacientes. Podrán añadir historiales médicos a los perfiles de las mascotas.
+- Usuario **administrador**, serán los profesionales veterinarios de la clínica, que tendrán acceso al home y a un menú especial para ellos en el que verás las citas que tienen en el día y la información de sus pacientes. Podrán añadir historiales médicos a los perfiles de las mascotas.
 - Usuario **técnico**, tendrá acceso a todo para poder solucionar posibles fallos e implementar nuevas actualizaciones y servicios.
+
+Los usuarios técnicos serán los que den el alta a los veterinarios a petición de las clínicas. Los usurios registrados podrán registrarse ellos mismos. Los administrares podrán añadir y eliminar solo historiales médicos, y visualizar todas las citas de la clínica. Los registrados podrán ver crear, modificar y eliminar sus propias citas.
 
 ## 4- Contorno operacional
 
