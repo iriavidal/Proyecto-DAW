@@ -127,7 +127,7 @@ Las clínicas veterinarias son un segmento de mercado insuficientemente atendido
 
 #### **Segmentos Principales del Mercado**
 
-El segmento principal serán **clínicas veterinarias pequeñas y medianas en la región de Galicia**.
+El segmento principal serán **clínicas veterinarias de Pontevedra y A Coruña**.
 
 La estrategia inicial se centrará en el mercado local, donde se planificará una combinación de tácticas para atraer a los primeros clientes. Para ello:
 
@@ -157,7 +157,7 @@ El mercado de software veterinario es moderadamente competitivo, con varias empr
 
 - **Covetrus, Inc.**: ha emergido como un actor clave en la gestión veterinaria, ofreciendo software basado en la nube que facilita la administración de clínicas veterinarias. Su enfoque en soluciones tecnológicas de última generación, combinadas con su fuerte presencia en América del Norte y Europa, le asegura una importante participación en el mercado.
 
-Aunque la competencia en el mercado del software veterinario es fuerte, mi producto ofrece una **solución más accesible** y específica para **clínicas pequeñas y medianas** que no necesitan todas las funcionalidades de los grandes softwares, pero sí un sistema ágil y fácil de usar.
+Aunque la competencia en el mercado del software veterinario es fuerte, mi producto ofrece una **solución más accesible** y específica para **clínicas pequeñas y medianas** que no necesitan todas las funcionalidades de los grandes softwares, pero sí un sistema ágil y fácil de usar. También cuento con la ventaja de la proximidad, lo cual puede infundir más confianza al cliente.
 
 **Productos y servicios sustitutos:**
 Existen productos sustitutos en el mercado, como software de gestión general adaptable a clínicas veterinarias o incluso soluciones de código abierto. Sin embargo, estos productos no están diseñados específicamente para la gestión veterinaria, lo que hace que las soluciones dedicadas, como las ofrecidas por las empresas mencionadas, sean preferidas por la mayoría de las clínicas.
@@ -173,7 +173,7 @@ Existen productos sustitutos en el mercado, como software de gestión general ad
 
 - **Diferencia frente a los competidores**:
 
-  - Enfoque en clínicas pequeñas y medianas
+  - Enfoque en clínicas cercanas (Pontevedra y A Coruña)
   - Accesibilidad y facilidad de uso
   - Diseño atractivo y funcionalidad integrada (gestión de citas e historial médico)
 
@@ -264,19 +264,19 @@ He optado por emprender como **autónoma** para el proyecto de software para cl�
 
 **Estimación de ventas basada en un modelo B2B** (Business to Business):
 
-- Número de clientes potenciales: en el mercado gallego, hay más de 400 clínicas veterinarias, de las cuales aproximadamente el 70% son pequeñas y medianas ([estudiosveterinarios](https://estudiosveterinarios.com/resumen-anual/)), lo que las convierte en clientes potenciales.
-- Penetración de mercado: asumiendo que en el primer año podemos llegar a captar un 5% de ese mercado, eso implicaría 20 clientes anuales.
-- Crecimiento anual: suponiendo un crecimiento moderado, podríamos elevar un 8% el número de clientes en el segundo año, 32 clientes.
+- Número de clientes potenciales: en el mercado gallego, más concretamente en las provincias de Pontevedra y A Coruña, tenemos aproximadamente 320 clínicas ([estudiosveterinarios](https://estudiosveterinarios.com/resumen-anual/)), lo que las convierte en clientes potenciales.
+- Penetración de mercado: asumiendo que en el primer año podemos llegar a captar un 5% de ese mercado, eso implicaría 16 clientes anuales.
+- Crecimiento anual: suponiendo un crecimiento moderado, podríamos elevar un 9% el número de clientes en el segundo año, 29 clientes.
 
 **Política de precios**:
 He decidido realizar una estrategia combinada de modelo de negocio, que mezcla el modelo de tarifa única con el modelo de suscripción.
-Esto implicaría ofrecer una tarifa inicial de 500€ por la creación de la web, y una suscripción mensual de 70€ para mantenimiento y actualizaciones.
+Esto implicaría ofrecer una tarifa inicial de 700€ por la creación de la web, y una suscripción mensual de 70€ para mantenimiento y actualizaciones.
 Los precios pueden variar según las necesidades del cliente, pero para los cálculos cogeremos estas cifras estándar.
 
-- Ingresos iniciales: 20 clientes x 500€ = **10000€**
-- Ingresos recurrentes: 20 clientes x 70€/mes x 12 meses = **16800€**
+- Ingresos iniciales: 16 clientes x 700€ = **11200€**
+- Ingresos recurrentes: 16 clientes x 70€/mes x 12 meses = **13440€**
 
-**Ingresos totales el primer año: 26800€**
+**Ingresos totales el primer año: 24640€**
 
 ### 2.8- Viabilidade
 
@@ -307,9 +307,9 @@ Basándonos en los datos aportados en el punto anterior (investimentos):
 
 - **Impuestos**: gracias a los beneficios fiscales para menores de 30 años y la cuota cero, los primeros meses tienen una importante reducción de costos.
 
-- **Ingresos**: según la previsión de ventas, se podría generar 26800€ en el primer año.
+- **Ingresos**: según la previsión de ventas, se podría generar 24640€ en el primer año.
 
-- **Rentabilidad**: comparando los costes fijos y variables con los ingresos, el proyecto es rentable desde el primer año, con un beneficio anual de casi 3000€.
+- **Rentabilidad**: comparando los costes fijos y variables con los ingresos, el proyecto es rentable desde el primer año, con un beneficio anual de casi 2000€.
 
 #### 2.8.3- Conclusión
 
