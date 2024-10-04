@@ -109,7 +109,7 @@ Las clínicas veterinarias son un segmento de mercado insuficientemente atendido
 
 - **Oportunidades**:
 
-  - **Crecimiento del mercado veterinario**: el número de clínicas veterinarias está en aumento, y con él la necesidad de soluciones tecnológicas que mejoren la eficiencia y reduzcan los costos administrativos.
+  - **Crecimiento del mercado veterinario**: el número de clínicas veterinarias está en aumento, y con él la necesidad de soluciones tecnológicas que mejoren la eficiencia y reduzcan los costos administrativos. [portalveterinaria](https://www.portalveterinaria.com/animales-de-compania/actualidad/43192/el-sector-veterinario-en-espana-experimenta-un-crecimiento-importante.html)
 
   - **Demanda de Soluciones Accesibles**: existe una demanda creciente de soluciones accesibles y fáciles de usar que no requieran instalaciones complicadas ni equipos especializados. [animalshealth](https://www.animalshealth.es/empresas/barreras-entrada-algunos-centros-veterinarios-resisten-adoptar-nuevas-tecnologias#:~:text=Los%20principales%20factores,ser%20prohibitivos%E2%80%9D%2C%20se%C3%B1alan.)
   - **Tendencia a la digitalización**: la transformación digital en el sector veterinario es cada vez más importante, y muchas clínicas buscan software que les permita reducir el papeleo y mejorar la eficiencia operativa.
