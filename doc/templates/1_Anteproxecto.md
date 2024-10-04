@@ -314,6 +314,9 @@ Basándonos en los datos aportados en el punto anterior (investimentos):
 
 - **Rentabilidad**: comparando los costes fijos y variables con los ingresos, el proyecto es rentable desde el primer año, con un beneficio anual de casi 2000€.
 
+![Umbral de rentabilidad](../img/punto_muerto.png)
+Esto significa que se necesitarán aproximadamente 13 clientes al año para cubrir los costes fijos y alcanzar el umbral de rentabilidad. Cualquier cliente adicional generará beneficios netos. Lo cual es factible ya que se prevee captar 16 clientes el primer año.
+
 #### 2.8.3- Conclusión
 
 > - É viable?
