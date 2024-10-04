@@ -205,7 +205,7 @@ He optado por emprender como **autónoma** para el proyecto de software para cl�
 
 - **Simplicidad en la constitución**
 
-- **Costes reducidos**: operar como autónoma implica menores costes iniciales y de mantenimiento. Se especifica mejor en el aparatado [2.6- Forma xurídica](#26--forma-xurídica).
+- **Costes reducidos**: operar como autónoma implica menores costes iniciales y de mantenimiento.
 
 - **Control total sobre la gestión**: como autónoma, tengo un control completo sobre la toma de decisiones y la dirección del negocio, lo que facilita la flexibilidad y rapidez en la adaptación a cambios del mercado o necesidades de los clientes.
 
