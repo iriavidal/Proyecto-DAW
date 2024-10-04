@@ -6,21 +6,25 @@
   - [3- Diagrama de Base de Datos](#3--diagrama-de-base-de-datos)
   - [4- Deseño de interface de usuarios](#4--deseño-de-interface-de-usuarios)
 
-> *EXPLICACIÓN:* Este documento inclúe os diferentes diagramas, esquemas e deseños que axuden a describir mellor o [nome do proxecto] detallando os seus compoñentes, funcionalidades, bases de datos e interface.
+> _EXPLICACIÓN:_ Este documento inclúe os diferentes diagramas, esquemas e deseños que axuden a describir mellor o [nome do proxecto] detallando os seus compoñentes, funcionalidades, bases de datos e interface.
 
 ## 1- Diagrama da arquitectura
 
-> *EXPLICACIÓN:* Incluír os diagramas de arquitectura que representen de forma gráfica a aplicación, os seus compoñentes e a súa interrelación: front-end, back-end, bases de datos, nube, microservizos, etc.
+> _EXPLICACIÓN:_ Incluír os diagramas de arquitectura que representen de forma gráfica a aplicación, os seus compoñentes e a súa interrelación: front-end, back-end, bases de datos, nube, microservizos, etc.
+
+![Diagrama de la arquitectura del software](../img/arquitectura.png)
 
 ## 2- Casos de uso
 
-> *EXPLICACIÓN:* Facer os diagramas de casos de uso que representen como as persoas usuarias interaccionan co sistema.
+> _EXPLICACIÓN:_ Facer os diagramas de casos de uso que representen como as persoas usuarias interaccionan co sistema.
 >
->Deben incluírse o(s) tipo(s) de usuario implicados en cada caso de uso.
+> Deben incluírse o(s) tipo(s) de usuario implicados en cada caso de uso.
+
+![Diagrama de casos de uso](../img/usos.png)
 
 ## 3- Diagrama de Base de Datos
 
-> *EXPLICACIÓN:* Neste apartado incluiranse os diagramas relacionados coa Base de Datos:
+> _EXPLICACIÓN:_ Neste apartado incluiranse os diagramas relacionados coa Base de Datos:
 >
 > - Modelo Entidade/relación
 > - Modelo relacional
@@ -29,7 +33,7 @@
 
 ## 4- Deseño de interface de usuarios
 
-> *EXPLICACIÓN:* Neste apartado deben incluírse unha mostra representativan dos mockups da aplicación. Estes mockups deben incluír todas as vistas da aplicación, é dicir, todas as páxinas diferentes que unha persoa usuaria (de calquera tipo) vai poder ver. Tamén se debe incluír información de como navegar dunha ventá a outra.
+> _EXPLICACIÓN:_ Neste apartado deben incluírse unha mostra representativan dos mockups da aplicación. Estes mockups deben incluír todas as vistas da aplicación, é dicir, todas as páxinas diferentes que unha persoa usuaria (de calquera tipo) vai poder ver. Tamén se debe incluír información de como navegar dunha ventá a outra.
 >
 > Os mockups axudan no deseño da aplicación. Poden facerse á man, cunha aplicación ou a través dunha web do estilo: diagrams Un mockup permite ver como se verá unha páxina concreta dunha aplicación web. O deseño de mockups axuda a:
 >
