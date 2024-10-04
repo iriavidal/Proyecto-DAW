@@ -158,6 +158,8 @@ El mercado de software veterinario es moderadamente competitivo, con varias empr
 
 - **Covetrus, Inc.**: ha emergido como un actor clave en la gestión veterinaria, ofreciendo software basado en la nube que facilita la administración de clínicas veterinarias. Su enfoque en soluciones tecnológicas de última generación, combinadas con su fuerte presencia en América del Norte y Europa, le asegura una importante participación en el mercado.
 
+Datos: (mordorintelligence)[https://www.mordorintelligence.com/industry-reports/veterinary-software-market-/market-share]
+
 Aunque la competencia en el mercado del software veterinario es fuerte, mi producto ofrece una **solución más accesible** y específica para **clínicas pequeñas y medianas** que no necesitan todas las funcionalidades de los grandes softwares, pero sí un sistema ágil y fácil de usar. También cuento con la ventaja de la proximidad, lo cual puede infundir más confianza al cliente.
 
 **Productos y servicios sustitutos:**
