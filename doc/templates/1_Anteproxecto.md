@@ -131,7 +131,8 @@ El segmento principal serán **clínicas veterinarias de Pontevedra y A Coruña*
 
 La estrategia inicial se centrará en el mercado local, donde se planificará una combinación de tácticas para atraer a los primeros clientes. Para ello:
 
-- **Demostraciones presenciales y online**: se ofrecerán sesiones de demostración personalizadas, donde los veterinarios podrán experimentar la plataforma y ver su utilidad en acción.
+- **Demostraciones presenciales y online**: se ofrecerán sesiones de demostración personalizadas, donde los veterinarios podrán experimentar la plataforma y ver su utilidad en acción. Dichas sesiones serán preferiblemente presenciales, en la clínica. Solo se necesitará un portátil, o incluso el ordenador de la propia clínica, lo cual reforzará el punto de la facilidad de utilización del software.
+  Si las visitas no pueden ser presenciales por preferencias del cliente, se podrán realizar en cualquier plataforma de reunión online, como puede ser Google Meet, donde se compartirá pantalla para mostrarle al cliente todo lo que puede hacer y se le dará acceso momentáneo al prototipo para que lo pruebe él.
 - **Campañas de marketing digital**: se implementará una estrategia en redes sociales y Google Ads dirigida específicamente a la audiencia de Galicia, destacando los beneficios del software y compartiendo testimonios de clínicas que ya lo utilizan.
 - **Networking y relaciones personales**: se buscará establecer conexiones con veterinarios a través de eventos locales, ferias y conferencias, facilitando un espacio para que puedan conocer el producto de forma más directa.
 
