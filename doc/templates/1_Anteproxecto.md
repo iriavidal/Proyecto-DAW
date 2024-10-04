@@ -302,11 +302,7 @@ No existen impedimentos técnicos, ya que las tecnologías y servicios que se ut
 
 Basándonos en los datos aportados en el punto anterior (investimentos):
 
-- **Costes**:
-
-  - **Costes fijos estimados**: alrededor de 19855€/año (incluyendo equipos electrónicos, mobiliario, conexión a internet y salario).
-
-  - **Costes variables estimados**: aproximadamente 30€/mes en materiales de oficina, 36€/año en hosting y 300€/mes en marketing digital.
+- **Costes**: alrededor de 6000€ al año.
 
 - **Impuestos**: gracias a los beneficios fiscales para menores de 30 años y la cuota cero, los primeros meses tienen una importante reducción de costos.
 
