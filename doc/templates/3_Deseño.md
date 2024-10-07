@@ -31,6 +31,14 @@
 >
 > Pódese entregar a captura do phpMyAdmin se se emprega MariaDB como Modelo relacional.
 
+### Modelo entidad-relación
+
+![Modelo entidad-relación](../img/entidad-relacion.jpg)
+
+## Modelo relacional
+
+![Modelo relacional](../img/modelo-relacional.jpg)
+
 ## 4- Deseño de interface de usuarios
 
 > _EXPLICACIÓN:_ Neste apartado deben incluírse unha mostra representativan dos mockups da aplicación. Estes mockups deben incluír todas as vistas da aplicación, é dicir, todas as páxinas diferentes que unha persoa usuaria (de calquera tipo) vai poder ver. Tamén se debe incluír información de como navegar dunha ventá a outra.
