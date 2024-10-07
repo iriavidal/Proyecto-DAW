@@ -20,7 +20,7 @@
 >
 > Deben incluírse o(s) tipo(s) de usuario implicados en cada caso de uso.
 
-![Diagrama de casos de uso](../img/usos.png)
+![Diagrama de casos de uso](../img/usos.jpg)
 
 ## 3- Diagrama de Base de Datos
 
