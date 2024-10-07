@@ -12,7 +12,7 @@
 
 > _EXPLICACIÓN:_ Incluír os diagramas de arquitectura que representen de forma gráfica a aplicación, os seus compoñentes e a súa interrelación: front-end, back-end, bases de datos, nube, microservizos, etc.
 
-![Diagrama de la arquitectura del software](../img/arquitectura.png)
+![Diagrama de la arquitectura del software](../img/arquitectura.jpg)
 
 ## 2- Casos de uso
 
