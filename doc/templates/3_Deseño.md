@@ -49,3 +49,5 @@
 > - Visualizar a información que vai a ser necesaria mostrar. Sabendo con que información imos traballar e sabendo a información que necesitamos mostrar, podemos organizar os datos dunha forma axeitada para gardalos na base de datos.
 >
 > Se temos as ideas máis claras do noso proxecto podemos sustituir os mockups por prototipos.
+
+[Proyecto en Figma](https://www.figma.com/design/uxAOJqyHggyEfxbHwytm41/Veterinaria?node-id=341-2&t=ZkC8ttpsUvRu3kYV-1)
