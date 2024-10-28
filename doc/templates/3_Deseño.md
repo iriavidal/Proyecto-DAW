@@ -50,4 +50,4 @@
 >
 > Se temos as ideas máis claras do noso proxecto podemos sustituir os mockups por prototipos.
 
-[Proyecto en Figma](https://www.figma.com/design/uxAOJqyHggyEfxbHwytm41/Veterinaria?node-id=341-2&t=ZkC8ttpsUvRu3kYV-1)
+[Proyecto en Figma](https://www.figma.com/proto/uxAOJqyHggyEfxbHwytm41/Veterinaria?node-id=0-1&t=WKjNNUoZmPs43xJ0-1)
