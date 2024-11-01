@@ -11,39 +11,82 @@
   - [Guía de contribución](#guía-de-contribución)
   - [Links](#links)
 
-> *EXPLICACIÓN*: Este documento será a "*páxina de aterrizaxe*" do teu proxecto. Será ou primeiro que vexan vos que se interesen por el. Cúida a sua redacción con todo ou mimo. Elimina posteriormente todas as lineas "EXPLICACIÓN*" cando creas finalizada a súa redacción.
-> Podes acompañar á redacción deste ficheiro con imaxes ou gifs, pero non abuses deles.
-
 ## Taboleiro do proyecto
 
-> *EXPLICACIÓN:* neste punto indica se o proyecto está en fase de desenrolo ou finalizado.
+Este proyecto se encuentra en una fase de desarrollo temprana.
 
 ## Descrición
 
-> *EXPLICACIÓN*: Realiza unha breve descrición do proxecto. Non menos de 100 palabras e non máis de 300. Resalta o fundamental *coas túas propias palabras**. Utiliza unha linguaxe correcta, *pero natural**, que o entenda todo o mundo, mesmo e en especial, as persoas que non teñan un coñecemento técnico avanzado. Pode ser un estracto ou resumo de apartados que xa contemples noutros ficheiros.
-> Descrición básica das ferramentas/tecnoloxías/linguaxes de programación,... empregados.
+El proyecto es una **plataforma integral para clínicas veterinarias** que unifica la gestión interna y la comunicación externa, facilitando tanto la captación de clientes como la administración diaria de citas e historiales médicos. Diseñado para mejorar la experiencia del cliente y optimizar el trabajo del veterinario, el software ofrece dos interfaces:
+
+1. **Para los clientes**: Una web atractiva que los invita a elegir la clínica por su imagen profesional y facilidad de uso, permitiéndoles gestionar citas e información clínica de sus mascotas de forma intuitiva.
+
+2. **Para los veterinarios**: Un sistema centralizado para organizar citas y consultar o actualizar historiales médicos, simplificando su trabajo diario y permitiéndoles brindar un mejor servicio.
+
+Este proyecto utilizará Angular en su versión más reciente y una API propia en PHP.
 
 ## Instalación / Posta en marcha
 
-> *EXPLICACIÓN*: Neste apartado describe con toda precisión e a poder ser coa maior simplicidade/facilidade posible, como poñer en marcha a túa aplicación para probala (nun ambiente local). Valorarase moi positivamente que este proceso sexa o máis fácil posible, cunha simple instrución (p. e. un script de instalación, descarga e posta en marcha dun contedor,...).
->
+### 1. Clonar el Repositorio
+
+Usa el comando `git clone` con la URL del repositorio:
+
+```bash
+git clone https://github.com/iriavidal/Proyecto-DAW.git
+```
+
+Luego, entra en la carpeta del proyecto:
+
+```bash
+cd Proyecto-DAW
+```
+
+## 2. Instalar dependencias
+
+Ejecuta `npm install` para instalar las dependencias necesarias:
+
+```bash
+npm i
+```
+
+### 3. Iniciar el proyecto
+
+Inicia el servidor de desarrollo con `ng serve` (si dispones de Angular CLI) o con `npm start`:
+
+```bash
+npm start
+```
+
+Esto levantará el servidor en `http://localhost:4200` de forma predeterminada, donde podrás acceder al proyecto de forma local.
+
+`NOTA`: estas instrucciones asumen que el usuario que quiera realizar una prueba local en vez de visitar la web tiene instalado en su ordenador la última versión de **Node.js**. Si no es el caso, [aquí tienes el link para descargarlo](https://nodejs.org/en/).
 
 ## Uso
 
-> *EXPLICACIÓN*: É este apartado describe brevemente como se usará a aplicación Web do proxecto. Describe o uso da interface web *só o uso** (a modo de sumario) *dos aspectos máis relevantes do seu funcionamento** (máxima brevidade, coma se fose un anuncio reclamo ou comercial).
->
+Como veterinario podrás gestionar tus citas y consultar los historiales de tus pacientes.
+
+Como usuario de la clínica, podrás tener perfiles para tus mascotas donde consultarás sus historiales médicos y gestionarás sus citas con total comodidad y sencillez.
 
 ## Sobre o autor
 
-> *EXPLICACIÓN*: Realiza unha breve descrición de quen es (perfil profesional), os teus puntos fortes, ou tecnoloxías que máis dominas... a motivación do proxecto, tendo sobre todo en conta un nicho de mercado sen explotar.. *Non máis de 200 palabras**. Indica a forma fiable de contactar contigo durante o proceso de creación do proxecto.
+Mi nombre es Iria Vidal y soy una estudiante en su último año de desarrollo de aplicaciones web.
+Mi fuerte es el front-end, dominando con soltura HTML y CSS, y reforzando día a día mis conocimientos de Javascript y Angular.
+
+También tengo conocimientos de back-end, más concretamente en PHP, Java y conocimientos de gestión de bases de datos SQL.
+
+Mi motivación para realizar este proyecto es facilitar el día a día tanto de las clínicas veterinarias como de sus pacientes, algo que como usuaria siento necesario y me encantaría poder tener.
+
+Contacto: iriavidal96@gmail.com
 
 ## Licenza
 
-> *EXPLICACIÓN*: É requisito INDISPENSABLE o licenciar explicitamente o proxecto software. Recoméndase licenciar con GNU Free Documentation License Version 1.3*. Crear un ficheiro `LICENSE` na raiz do repo, co teu ficheiro de licenza. Lembra que se empregas unha licenza de software libre estás a autorizar a derivación da túa obra baixo a mesma licenza que elixas, podendo dar continuidade, p. e. outro alumno, para continuar o teu proxecto noutro curso.
+Este proyecto está licenciado bajo la `GNU Free Documentation License Version 1.3`. Esto implica que el código es de libre distribución, modificación y uso, siempre que se mantenga esta misma licencia para las obras derivadas. De este modo, se facilita la colaboración y continuidad del proyecto por parte de terceros, asegurando que los desarrollos futuros sigan las mismas normas de software libre.
+
+Para más detalles, consulta el archivo `LICENSE` incluido en la raíz del repositorio, donde se especifican los términos completos de esta licencia.
 
 ## Índice
 
-> *EXPLICACIÓN*: Simplemente indexa ordenadamente todo o tey proxecto.
+> _EXPLICACIÓN_: Simplemente indexa ordenadamente todo o tey proxecto.
 
 1. [Anteproyecto](doc/templates/1_Anteproxecto.md)
 2. [Análise](doc/templates/2_Analise.md)
@@ -55,8 +98,5 @@
 
 ## Guía de contribución
 
-> EXPLICACIÓN*: Tratándose dun proxecto de software libre, é moi importante que expoñas como se pode contribuír co teu proxecto. Algúns exemplos disto son realizar novas funcionalidades, corrección e/o optimización do código, realización de tests automatizados, novas interfaces de integración, desenvolvemento de plugins etc. Se o máis conciso que poidas.
-
-## Links
-
-> EXPLICACIÓN*: Ligazóns externas e descipciones destas ligazóns que creas conveniente indicar aquí. Xeralmente xa van estar integrados coa túa documentación, pero se requires realizar unha listaxe deles, leste é o lugar.
+- **Nuevas funcionalidades**: tanto la exposición de nuevas ideas como su implementación siempre serán bienvenidas.
+- **Pruebas y reportes de bugs**: se agradece la contribución y reporte de cualquier fallo que pueda presentar el software.

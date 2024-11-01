@@ -19,19 +19,7 @@
   - [3- Requirimentos técnicos](#3--requirimentos-técnicos)
   - [4- Planificación](#4--planificación)
 
-> _EXPLICACIÓN_: Este documento será a páxina de explicación de en que consiste o teu proxecto. Coida a súa redacción con todo ou teu mimo. Elimina posteriormente todas as lineas "EXPLICACIÓN" cando creas finalizada a súa redacción.
-> Podes acompañar á redacción deste ficheiro con imaxes, pero non abuses deles.
-> Explica da mellor forma posible de en que consiste o proxecto é que ferramentas e linguaxes de programación empregarás.
-
 ## 1- Descrición do proxecto
-
-> _EXPLICACIÓN_: Realiza unha breve descrición do anteproxecto.Resalta o fundamental *coas túas propias palabras\*\*. Utiliza unha linguaxe correcta, *pero natural\*\*, que o entenda todo o mundo, mesmo e en especial, as persoas que non teñan un coñecemento técnico avanzado. Pode ser un estracto ou resumo de apartados que xa contemples noutros ficheiros.
->
-> Neste apartado trátase de describir a análise realizada e a toma de decisións adoptada sobre aspectos básicos ou iniciais do proxecto como:
->
-> - ¿En que consiste o noso proxecto? ¿Cal é o propósito principal da aplicación a desenvolver? ¿Cales son os obxectivos?
-> - ¿O desenvolvemento da aplicación abre unha oportunidade de negocio? ¿É posible comercializala? Como?
-> - ¿Que tecnoloxías son as máis axeitadas para a realización do proxecto?
 
 Mi proyecto consiste en un **software para clínicas veterinarias**, cuyo propósito es acercar la clínica a sus pacientes y facilitarle la vida tanto a los clientes como a los propios veterinarios y veterinarias.
 
@@ -50,28 +38,13 @@ Para el front-end usaría Angular, HTML y CSS. Para el back-end crearía una API
 
 ## 2- Empresa
 
-> _EXPLICACIÓN_: Neste apartado desenvolveredes todo o referente os módulos de Empresa e iniciativa emprendedora e de FOL.
-
 ### 2.1- Idea de negocio
-
-> _EXPLICACIÓN_: Define o producto central, o valor engadido e a utilidade. Se se ogrecen productos aumentados, indicalo tamén.
 
 - **Producto central**: una solución web integral que permite tanto la gestión interna de la clínica como la captación de clientes a través de su imagen online.
 - **Valor añadido**: actualizaciones periódicas y soporte técnico, asegurando que las clínicas siempre cuenten con las últimas mejoras y puedan resolver cualquier incidencia rápidamente.
 - **Utilidad**: la comodidad para la gestión de la clínica y el ahorro y facilidad que les supone tener dos servicios contratando solo uno. Por ejemplo, las clínicas podrán gestionar sus citas y actualizar historiales médicos sin necesidad de usar múltiples herramientas, lo que reducirá el tiempo administrativo y permitirá dedicar más atención a sus pacientes.
 
 ### 2.2- Xustificación da idea
-
-> _EXPLICACIÓN_: Neste apartado incluirase a información necesaria para xustificar a realización do proxecto. Debe indicarse como xurdiu a idea do proxecto, que obxectivo se persegue coa súa posta en marcha e/ou que problema vai resolver.
->
-> En este apartado indicade a nivel de idea de negocio:
->
-> - ¿Cal é a necesidade ou necesidades que se pretenden cubrir ou satisfacer?
-> - ¿Existen na actualidade aplicacións ou productos que tenten dar resposta a esa(s) necesidade(s)? ¿En que medida o conseguen?
-> - ¿Trátase de un segmento de mercado desabastecido ou insuficientemente atendido?
-> - ¿Un produto ineficiente? Un mercado novo?
->
-> Para sustentar as xustificación deberás proporcionar datos. Fontes máis utilizadas: INE, IGE, Informes sectoriais de Industria, Statista... Deberás facer unha DAFO.
 
 La idea de este proyecto nace de una necesidad propia. Tengo una gata y una perra con diferentes problemas y necesidades médicas. Por ejemplo mi perra tiene una dieta de comida cocinada cuyas proporciones me encantaría tener a mano a unos pocos clics de distancia si alguna vez tengo alguna duda de las cantidades.
 También me resultaría mucho más cómodo a la hora de pedir una cita poder ver un calendario de fechas disponibles y sus horas, en vez de tener que perder mi tiempo y el de la persona al otro lado con una conversación de whatsapp o una llamada telefónica. Lo mismo a la hora de modificar o cancelar dicha cita si surge algún imprevisto.
@@ -118,13 +91,6 @@ Las clínicas veterinarias son un segmento de mercado insuficientemente atendido
 
 ### 2.3- Segmento de clientes
 
-> _EXPLICACIÓN_: Neste apartado debes indicar a quen irá dirixido o negocio, os potenciales clientes, respostando as seguinte pregunta: ¿A quen está dirixido?
->
-> Debes:
->
-> - Indicar o segmento ou segmentos cos rasgos principais e cuantificar o mercado.
-> - E se é o caso, diferenciar entre usuario e cliente.
-
 #### **Segmentos Principales del Mercado**
 
 El segmento principal serán **clínicas veterinarias de Pontevedra y A Coruña**.
@@ -142,8 +108,6 @@ La estrategia inicial se centrará en el mercado local, donde se planificará un
 - **Usuario**: los usuarios finales serán los veterinarios, el personal de la clínica y los clientes de la clínica que interactuarán con la plataforma para gestionar citas y acceder a la información médica.
 
 ### 2.4- Competencia
-
-> _EXPLICACIÓN_: Neste apartado deberase indicar que outras empresas operan no mercado. Que cota de mercado teñen e como están posicionadas. Existencia de productos/servizos substitutivos. Como están posicionados.
 
 **Empresas que operan en el mercado:**
 El mercado de software veterinario es moderadamente competitivo, con varias empresas bien establecidas y algunas emergentes que compiten por la cuota de mercado.
@@ -166,13 +130,6 @@ Aunque la competencia en el mercado del software veterinario es fuerte, mi produ
 Existen productos sustitutos en el mercado, como software de gestión general adaptable a clínicas veterinarias o incluso soluciones de código abierto. Sin embargo, estos productos no están diseñados específicamente para la gestión veterinaria, lo que hace que las soluciones dedicadas, como las ofrecidas por las empresas mencionadas, sean preferidas por la mayoría de las clínicas.
 
 ### 2.5- Proposta de valor
-
-> _EXPLICACIÓN_: **Apartado fundamental.**
->
-> - En que se diferencia fronte os competidores.
-> - Que melloras terá fronte os competidores.
-> - Que valor aporta ao mercado.
-> - ¿Porqué mercarán/contratarán este producto/servizo/idea fronte o resto?
 
 - **Diferencia frente a los competidores**:
 
@@ -199,8 +156,6 @@ Existen productos sustitutos en el mercado, como software de gestión general ad
 
 ### 2.6- Forma xurídica
 
-> _EXPLICACIÓN_: Neste apartado deberedes indicar a forma xurídica: autónomo, soc. Cooperativa, SL,.. Explicando (nun par de frases) por que escolledes esta forma
-
 He optado por emprender como **autónoma** para el proyecto de software para clínicas veterinarias por las siguientes razones:
 
 - **Simplicidad en la constitución**
@@ -217,14 +172,7 @@ He optado por emprender como **autónoma** para el proyecto de software para cl�
 
 ### 2.7- Investimentos
 
-> _EXPLICACIÓN_: Neste apartado idicaremos o investimentos, aínda que sexa, só unha enumeración de todo o que necesitan (locais, infraestruturas, equipos, suministros, mobiliario...) cuantificando cada elemento.
-
 #### 2.7.1- Custos
-
-> > _EXPLICACIÓN_: Neste apartado idicaremos o invertimento
->
-> - Diferenzando custos fixos de variables.
-> - Computando impostos e custos sociais.
 
 - **Costes fijos**:
 
@@ -263,8 +211,6 @@ He optado por emprender como **autónoma** para el proyecto de software para cl�
 
 #### 2.7.2- Ingresos
 
-> _EXPLICACIÓN_: Neste apartado indicarase unha previsión de ventas e unha política de prezos. Isto implicar apuntar unha previsión de ventas e unha política de prezos.
-
 **Estimación de ventas basada en un modelo B2B** (Business to Business):
 
 - Número de clientes potenciales: en el mercado gallego, más concretamente en las provincias de Pontevedra y A Coruña, tenemos aproximadamente 320 clínicas ([estudiosveterinarios](https://estudiosveterinarios.com/resumen-anual/)), lo que las convierte en clientes potenciales.
@@ -285,20 +231,12 @@ Los precios pueden variar según las necesidades del cliente, pero para los cál
 
 #### 2.8.1- Viabilidade técnica
 
-> _EXPLICACIÓN_: Neste subapartado deberás defender tendo en conta os datos xa aportados, a viabilidade da realización do proyecto.
-> Evidentemente, para poder xustificar a viabilidade económica do proyecto deberás ter en conta os ingresos. **Ainda que está na parte de empresa, este apartado é interesante dende o punto de vista técnico**
->
-> - Será posible dispoñer dos recursos humanos e medios de produción necesarios (materias primas, maquinaria, instalacións, etc.)?
-> - Existe algún impedimento técnico que dificulte o proceso produtivo?
-
 Este proyecto tiene viabilidad técnica, ya que el desarrollo web y la infraestructura necesaria pueden llevarse a cabo con los recursos humanos y tecnológicos disponibles.
 Aunque solo sea una persona, como desarrolladora web puedo enmcargarme tanto del frontend como del backend. Las herramientas tecnológicas ya mencionadas en este documento son accesibles y tienen grandes comunidades de soporte, lo que permite resolver problemas técnicos sin necesidad de un equipo grande. Además, el hecho de tener la plantilla hecha lo más detalladamente posible permite que una vez entramos en el mercado su personalización es más rápida de lo que sería si se hicieran webs desde cero a cada cliente.
 
 No existen impedimentos técnicos, ya que las tecnologías y servicios que se utilizarán son ampliamente usados y documentados, lo que garantiza que el proceso de desarrollo sea fluido.
 
 #### 2.8.2 - Viabilidade económica
-
-> _EXPLICACIÓN_: Neste subapartado deberás defender con datos a viabilidade da realización do proyecto, para elo debes indicar os custos e investimentos:
 
 Basándonos en los datos aportados en el punto anterior (investimentos):
 
@@ -315,10 +253,6 @@ Esto significa que se necesitarán aproximadamente 13 clientes al año para cubr
 
 #### 2.8.3- Conclusión
 
-> - É viable?
-> - Os beneficios do proxecto son superiores aos costes?
-> - As perdas poden cubrirse vía financiamento (por parte da administración pública, con subvencións, etc)?
-
 **¿Es viable?**
 Sí, el proyecto es viable tanto técnica como económicamente. Los recursos están disponibles y son suficientes para llevar a cabo el desarrollo de la plataforma, y las cifras de ingresos superan los costos.
 
@@ -330,26 +264,9 @@ Dado que el proyecto no anticipa pérdidas y, además, se puede acoger a ayudas 
 
 ## 3- Requirimentos técnicos
 
-> _EXPLICACIÓN_: Descrición dos medios materiais e das tecnoloxías necesarias que se usarán para desenvolver o proxecto incluíndo as linguaxes de programación frontend e backend, técnicas, librerías, bases de datos, servizos usados, servidores, API’s, etc.
->
-> - **Infraestructura:** dominio web, servidor web dedicado, servidor de base de datos, almacenamento, memoria, ...
-> - **Backend:** tecnoloxías usadas.
-> - **Frontend:** tecnoloxías usadas
-
 Para el front-end usaría **Angular, HTML y CSS**. Para el back-end crearía una **API sencilla con Slim (PHP y SQL)**. Y para la implementación contrataría un **hosting externo y un dominio**.
 
 ## 4- Planificación
-
-> _EXPLICACIÓN_: Inclúe un calendario co tempo estimado a adicar a cada fase do proxecto.
->
-> O proxecto estará formado polas seguintes fases:
->
-> - Estudo preliminar
-> - Análise
-> - Deseño
-> - Codificación e probas (debe ser a fase máis longa).
->
-> Debe facerse un calendario ou un diagrama de Gantt indicando, para cada fase, a data de inicio, a súa duración e breve descrición das tarefas a realizar.
 
 - **Estudio preliminar**
 
