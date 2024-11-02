@@ -8,30 +8,13 @@
   - [5- Normativa](#5--normativa)
   - [6- Melloras futuras](#6--melloras-futuras)
 
-> _EXPLICACION_: Este documento describe os requirimentos para "nome do proxecto" especificando que funcionalidade ofrecerá e de que xeito.
-
 ## 1- Descrición Xeral
-
-> _EXPLICACION_: Descrición Xeral do proxecto
 
 Este proyecto consiste en la creación de una plataforma web para la gestión de citas y el seguimiento médico de mascotas en clínicas veterinarias.
 
 La base de la plataforma web será Angular, que unirá el front-end con el back-end. El front consistirá en HTML y CSS (utilizando el framework de Sass) y back en una API que almacenará una base de datos en MariaDB, que se creará con el framework Slim, en PHP.
 
 ## 2- Funcionalidades
-
-> _EXPLICACION_ Describir que servizos ou operacións se van poder realizar por medio do noso proxecto, indicando que actores interveñen en cada caso.
->
-> Enumeradas, de maneira que na fase de deseño poidamos definir o diagrama ou configuración correspondente a cada funcionalidade.
-> Cada función ten uns datos de entrada e uns datos de saída. Entre os datos de entrada e de saída, realízase un proceso, que debe ser explicado.
-
-Exemplo:
-
-| Acción                     | Descrición                                   |
-| -------------------------- | -------------------------------------------- |
-| Alta de productos          | Dar de alta os productos na base de datos    |
-| Modificar productos        | Modificación de productos na base de datos   |
-| Presentación dos productos | Mostra dos productos por medio da páxina web |
 
 | Acción                                                     | Descrición                                                                              |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -42,13 +25,6 @@ Exemplo:
 
 ## 3- Tipos de usuarios
 
-> _EXPLICACION_ Describir os tipos de usuario que poderán acceder ao noso sistema. Habitualmente os tipos de usuario veñen definidos polas funcionalidades ás cales teñen acceso. En termos xerais existen moitos grupos de usuarios: anónimos, novos, rexistrados, bloqueados, confirmados, verificados, administradores, etc.
->
-> Exemplo:
->
-> - Usuario xenérico, que terá acceso a ...
-> - Usuario técnico, que poderá...
-
 - Usuario **registrado**, tendrá acceso al home y al menú donde podrá registrar sus mascotas, pedirles cita y ver toda su información.
 - Usuario **administrador**, serán los profesionales veterinarios de la clínica, que tendrán acceso al home y a un menú especial para ellos en el que verás las citas que tienen en el día y la información de sus pacientes. Podrán añadir historiales médicos a los perfiles de las mascotas.
 - Usuario **técnico**, tendrá acceso a todo para poder solucionar posibles fallos e implementar nuevas actualizaciones y servicios.
@@ -57,24 +33,9 @@ Los usuarios técnicos serán los que den el alta a los veterinarios a petición
 
 ## 4- Contorno operacional
 
-> _EXPLICACION_ Neste apartado deben describirse os recursos necesarios, dende o punto de vista do usuario, para poder operar coa aplicación web. Habitualmente consiste nun navegador web actualizado e unha conexión a internet.
-> Se é necesario algún hardware ou software adicional, deberá indicarse.
-
 El usuario solo necesitará un navegador web actualizado, por ejemplo Google Chrome, y una conexión a internet. Podrá acceder tanto desde el ordenador como desde el móvil.
 
 ## 5- Normativa
-
-> _EXPLICACION_ Investigarase que normativa vixente afecta ao desenvolvemento do proxecto e de que maneira. O proxecto debe adaptarse ás esixencias legais dos territorios onde vai operar.
->
-> Pola natureza dos sistema de información, unha lei que se vai a ter que mencionar de forma obrigatoria é la [Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDPGDD)](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673). O ámbito da LOPDPGDD é nacional. Se a aplicación está pensada para operar a nivel europeo, tamén se debe facer referencia á [General Data Protection Regulation (GDPR)](https://eur-lex.europa.eu/eli/reg/2016/679/oj). Na documentación debe afirmarse que o proxecto cumpre coa normativa vixente.
->
-> Para cumplir a LOPDPGDD e/ou GDPR debe ter un apartado na web onde se indique quen é a persoa responsable do tratamento dos datos e para que fins se van utilizar. Habitualmente esta información estructúrase nos seguintes apartados:
->
-> - Aviso legal.
-> - Política de privacidade.
-> - Política de cookies.
->
-> É acosenllable ver [exemplos de webs](https://www.spotify.com/es/legal/privacy-policy/) que conteñan textos legais referenciando a LOPDPGDD ou GDPR.
 
 El ámbito de la web al principio será autonómico, más concretamente en Galicia. Se espera que en un futuro escale a nivel nacional, pero no entra en los planes a futuro operar a nivel europeo.
 
@@ -144,7 +105,5 @@ El usuario puede permitir, bloquear o eliminar las cookies instaladas en su disp
 - [Edge](https://support.microsoft.com/es-es/microsoft-edge/eliminar-cookies-en-microsoft-edge-63947406-0407-4a8e-8af0-96d6b7b172eb)
 
 ## 6- Melloras futuras
-
-> _EXPLICACION_ É posible que o noso proxecto se centre en resolver un problema concreto que se poderá ampliar no futuro con novas funcionalidades, novas interfaces, etc.
 
 La idea del proyecto es cumplir las necesidades que cada clínica tenga a demanda. El software base gestionará citas e historiales, pero en un futuro la clínica que lo desee podrá también tener una tienda online o un blog.
