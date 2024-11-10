@@ -6,6 +6,8 @@ use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
 use App\Controllers\CitasController;
 use App\Middleware\CitasMiddleware;
+use App\Controllers\HistorialesController;
+use App\Middleware\HistorialesMiddleware;
 
 define("APP_ROOT", dirname(__DIR__));
 
@@ -36,13 +38,13 @@ $error_handler->forceContentType("application/json");
 
 $app->group("/api", function (RouteCollectorProxy $group) {
 
+    /* CITAS */
     /* Define una ruta GET /api/citas que llama al controlador CitasController para obtener todas las citas. */
     $group->get("/citas", [CitasController::class, "getAllCitas"]);
 
     /* Define una ruta POST /api/citas que llama al método createCita en CitasController para crear una nueva cita. */
     $group->post("/citas", [CitasController::class, "createCita"]);
 
-    /* Agrupa rutas que trabajan con un ID de cita y aplica el middleware CitaMiddleware, que verifica la existencia de la cita antes de procesar la solicitud. */
         /* Ruta para obtener una cita específica por idCita */
         $group->get("/citas/{idCita:[0-9]+}", CitasController::class . ":getCitaById")->add(CitasMiddleware::class);
 
@@ -57,6 +59,13 @@ $app->group("/api", function (RouteCollectorProxy $group) {
 
         /* Ruta para eliminar una cita específica por idCita */
         $group->delete("/citas/{idCita:[0-9]+}", CitasController::class . ":deleteCita")->add(CitasMiddleware::class);
+
+
+    /* HISTORIALES */
+    $group->get("/historiales", [HistorialesController::class, "getAllHistoriales"]);
+    $group->post("/historiales", [HistorialesController::class, "createHistorial"]);
+    $group->get("/historiales/{idHistorial:[0-9]+}", HistorialesController::class . ":getHistorialById")->add(HistorialesMiddleware::class);
+    $group->delete("/historiales/{idHistorial:[0-9]+}", HistorialesController::class . ":deleteHistorial")->add(HistorialesMiddleware::class);
 });
 
 $app->run();
