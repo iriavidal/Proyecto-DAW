@@ -13,7 +13,7 @@ class CitasRepository
     }
 
     /* Este método obtiene todas las citas de la base de datos */
-    public function getAllCitas(): array
+    public function getAllCitas(): array|bool
     {
         $pdo = $this->database->getConnection();
         $sql = $pdo->query("SELECT * FROM Citas");
@@ -22,7 +22,7 @@ class CitasRepository
     }
 
     /* Este método obtiene una cita en base a su id */
-    public function getCitasById(int $id): array
+    public function getCitasById(int $id): array|bool
     {
         $sql = ("SELECT * FROM Citas WHERE idCita = :id");
         $pdo = $this->database->getConnection();
@@ -35,7 +35,7 @@ class CitasRepository
     }
 
     /* Este meétodo obtiene todas las citas de una mascota */
-    public function getAllCitasByMascotaId(int $id): array
+    public function getAllCitasByMascotaId(int $id): array|bool
     {
         $sql = ("SELECT * FROM Citas WHERE idMascota = :id");
         $pdo = $this->database->getConnection();
@@ -48,7 +48,7 @@ class CitasRepository
     }
 
     /* Este método obtiene todas las citas asociadas a un veterinario */
-    public function getAllCitasByVeterinarioId(int $id): array
+    public function getAllCitasByVeterinarioId(int $id): array|bool
     {
         $sql = ("SELECT * FROM Citas WHERE idVeterinario = :id");
         $pdo = $this->database->getConnection();
