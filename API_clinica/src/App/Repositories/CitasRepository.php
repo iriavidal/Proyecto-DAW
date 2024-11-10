@@ -16,7 +16,7 @@ class CitasRepository
     public function getAllCitas(): array
     {
         $pdo = $this->database->getConnection();
-        $sql = $pdo->query("SELECT * FROM citas");
+        $sql = $pdo->query("SELECT * FROM Citas");
 
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -24,7 +24,7 @@ class CitasRepository
     /* Este método obtiene una cita en base a su id */
     public function getCitasById(int $id): array
     {
-        $sql = ("SELECT * FROM citas WHERE idCita = :id");
+        $sql = ("SELECT * FROM Citas WHERE idCita = :id");
         $pdo = $this->database->getConnection();
 
         $consulta = $pdo->prepare($sql);
@@ -37,33 +37,33 @@ class CitasRepository
     /* Este meétodo obtiene todas las citas de una mascota */
     public function getAllCitasByMascotaId(int $id): array
     {
-        $sql = ("SELECT * FROM citas WHERE idMascota = :id");
+        $sql = ("SELECT * FROM Citas WHERE idMascota = :id");
         $pdo = $this->database->getConnection();
 
         $consulta = $pdo->prepare($sql);
         $consulta->bindParam(":id", $id, PDO::PARAM_INT);
         $consulta->execute();
 
-        return $consulta->fetch(PDO::FETCH_ASSOC);
+        return $consulta->fetchAll(PDO::FETCH_ASSOC);
     }
 
     /* Este método obtiene todas las citas asociadas a un veterinario */
     public function getAllCitasByVeterinarioId(int $id): array
     {
-        $sql = ("SELECT * FROM citas WHERE idVeterinario = :id");
+        $sql = ("SELECT * FROM Citas WHERE idVeterinario = :id");
         $pdo = $this->database->getConnection();
 
         $consulta = $pdo->prepare($sql);
         $consulta->bindParam(":id", $id, PDO::PARAM_INT);
         $consulta->execute();
 
-        return $consulta->fetch(PDO::FETCH_ASSOC);
+        return $consulta->fetchAll(PDO::FETCH_ASSOC);
     }
 
     /* Este método crea una nueva cita en la base de datos */
     public function createCita(array $data): string
     {
-        $sql = "INSERT INTO citas (idMascota, idVeterinario, fecha_y_hora)
+        $sql = "INSERT INTO Citas (idMascota, idVeterinario, fecha_y_hora)
                 VALUES (:idMascota, :idVeterinario, :fecha_y_hora)";
         $pdo = $this->database->getConnection();
 
@@ -79,7 +79,7 @@ class CitasRepository
     /* Este método modifica la fecha de una cita ya existente en la base de datos */
     public function updateFechaCita(int $idCita, string $nuevaFecha): int
     {
-        $sql = "UPDATE citas
+        $sql = "UPDATE Citas
                 SET fecha_y_hora = :nuevaFecha
                 WHERE idCita = :idCita";
         $pdo = $this->database->getConnection();

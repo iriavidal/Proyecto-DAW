@@ -43,22 +43,20 @@ $app->group("/api", function (RouteCollectorProxy $group) {
     $group->post("/citas", [CitasController::class, "createCita"]);
 
     /* Agrupa rutas que trabajan con un ID de cita y aplica el middleware CitaMiddleware, que verifica la existencia de la cita antes de procesar la solicitud. */
-    $group->group("", function (RouteCollectorProxy $group) {
         /* Ruta para obtener una cita específica por idCita */
-        $group->get("/{idCita:[0-9]+}", [CitasController::class, "getCitaById"]);
+        $group->get("/citas/{idCita:[0-9]+}", CitasController::class . ":getCitaById")->add(CitasMiddleware::class);
 
         /* Ruta para obtener todas las citas de una mascota específica por idMascota */
-        $group->get("/mascota/{idMascota:[0-9]+}", [CitasController::class, "getAllCitasByMascota"]);
+        $group->get("/citas/mascota/{idMascota:[0-9]+}", CitasController::class . ":getAllCitasByMascota")->add(CitasMiddleware::class);
 
         /* Ruta para obtener todas las citas asociadas a un veterinario específico por idVeterinario */
-        $group->get("/veterinario/{idVeterinario:[0-9]+}", [CitasController::class, "getAllCitasByVeterinario"]);
+        $group->get("/citas/veterinario/{idVeterinario:[0-9]+}", CitasController::class . ":getAllCitasByVeterinario")->add(CitasMiddleware::class);
 
         /* Ruta para actualizar una cita específica por idCita */
-        $group->put("/{idCita:[0-9]+}", [CitasController::class, "updateFechaCita"]);
+        $group->patch("/citas/{idCita:[0-9]+}", CitasController::class . ":updateFechaCita")->add(CitasMiddleware::class);
 
         /* Ruta para eliminar una cita específica por idCita */
-        $group->delete("/{idCita:[0-9]+}", [CitasController::class, "deleteCita"]);
-    })->add(CitasMiddleware::class);
+        $group->delete("/citas/{idCita:[0-9]+}", CitasController::class . ":deleteCita")->add(CitasMiddleware::class);
 });
 
 $app->run();

@@ -14,7 +14,6 @@ class CitasController
     public function __construct(private CitasRepository $repository, private Validator $validator)
     {
         $this->validator->mapFieldsRules([
-            "idCita" => ["required", "integer"],
             "idMascota" => ["required", "integer"],
             "idVeterinario" => ["required", "integer"],
             "fecha_y_hora" => ["required"],
@@ -30,16 +29,19 @@ class CitasController
 
     // Obtener una cita específica (usando el middleware para obtener el atributo "cita")
     public function getCitaById(Request $request, Response $response): Response
-    {
-        $cita = $request->getAttribute("cita");
+{
+    $cita = $request->getAttribute("cita");
 
-        if (!$cita) {
-            throw new HttpBadRequestException($request, "Cita no encontrada");
-        }
-
-        $response->getBody()->write(json_encode($cita));
-        return $response->withHeader('Content-Type', 'application/json');
+    if (!$cita) {
+        throw new HttpBadRequestException($request, "Cita no encontrada");
     }
+
+    // Si se obtiene un array (lista de citas), se puede retornar directamente
+    $response->getBody()->write(json_encode($cita));
+
+    return $response->withHeader('Content-Type', 'application/json');
+}
+
 
     // Crear una nueva cita
     public function createCita(Request $request, Response $response): Response
@@ -64,23 +66,19 @@ class CitasController
 
     // Actualizar la fecha de una cita existente
     public function updateFechaCita(Request $request, Response $response, array $args): Response
-    {
-        $idCita = (int) $args['idCita'];
+{
+    $idCita = (int) $args['idCita'];
 
-        $data = $request->getParsedBody();
-        $this->validator = $this->validator->withData($data);
+    $data = $request->getParsedBody();
 
-        if (!$this->validator->validate()) {
-            $response->getBody()->write(json_encode($this->validator->errors()));
+    $rows = $this->repository->updateFechaCita($idCita, $data['fecha_y_hora']);
 
-            return $response->withStatus(422);
-        }
+    $response->getBody()->write(json_encode(['rows' => $rows]));
 
-        $rows = $this->repository->updateFechaCita($idCita, $data['fecha_y_hora']);
-        $response->getBody()->write(json_encode(['rows' => $rows]));
+    return $response->withHeader('Content-Type', 'application/json');
+}
 
-        return $response->withHeader('Content-Type', 'application/json');
-    }
+
 
     // Eliminar una cita existente
     public function deleteCita(Request $request, Response $response, array $args): Response
