@@ -9,11 +9,13 @@ import { ServiciosComponent } from './home/componentes/servicios/servicios.compo
 import { CitasComponent } from './home/componentes/citas/citas.component';
 import { CardComponent } from './home/componentes/citas/card/card.component';
 import { EquipoComponent } from './home/componentes/equipo/equipo.component';
+import { MarcasComponent } from './home/componentes/marcas/marcas.component';
+import { ContactoComponent } from './home/componentes/contacto/contacto.component';
 
 import { CardModule, CarouselModule } from '@coreui/angular';
 import { RouterLink } from '@angular/router';
-import { MarcasComponent } from './home/componentes/marcas/marcas.component';
-import { ContactoComponent } from './home/componentes/contacto/contacto.component';
+import { InViewDirective } from '../directives/in-view.directive';
+import { LayoutModule } from '../layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { ContactoComponent } from './home/componentes/contacto/contacto.componen
     EquipoComponent,
     MarcasComponent,
     ContactoComponent,
+    InViewDirective,
   ],
   imports: [
     CommonModule,
@@ -33,6 +36,7 @@ import { ContactoComponent } from './home/componentes/contacto/contacto.componen
     CarouselModule,
     RouterLink,
     CardModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [],
