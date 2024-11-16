@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FeatureModule } from './features/feature.module';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,6 +14,7 @@ import { FeatureModule } from './features/feature.module';
     BrowserModule,
     AppRoutingModule,
     FeatureModule,
+    LayoutModule,
     BrowserAnimationsModule,
   ],
   providers: [],
