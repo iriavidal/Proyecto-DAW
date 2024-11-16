@@ -7,9 +7,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { TituloComponent } from './home/componentes/titulo/titulo.component';
 import { ServiciosComponent } from './home/componentes/servicios/servicios.component';
 
+import { CarouselModule } from '@coreui/angular';
+
+import { RouterLink } from '@angular/router';
+
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, TituloComponent, ServiciosComponent],
-  imports: [BrowserModule, MatIconModule],
+  declarations: [
+    HomeComponent,
+    HeaderComponent,
+    TituloComponent,
+    ServiciosComponent,
+  ],
+  imports: [BrowserModule, MatIconModule, CarouselModule, RouterLink],
   providers: [],
   bootstrap: [],
 })
