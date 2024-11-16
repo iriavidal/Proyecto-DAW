@@ -5,4 +5,10 @@ main {
   gap: 96px;
 
   margin: 96px 0;
+
+  @media screen and (min-width: 1024px) {
+    gap: 400px;
+
+    margin: 200px 0;
+  }
 }
