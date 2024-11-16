@@ -9,7 +9,7 @@
   width: 350px;
 
   h2 {
-    font-family: "Playfair Display", serif;
+    font-family: $fuente-titulos;
     font-weight: 400;
     font-size: 48px;
     color: $primary-900;
@@ -22,5 +22,21 @@
 
   p {
     text-align: center;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 1062px;
+
+    h2 {
+      font-size: 96px;
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 24px;
+    }
   }
 }
