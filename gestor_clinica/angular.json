@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "gestor_clinica:build:production"
+              "buildTarget": "gestor_clinica:build:production"
             },
             "development": {
-              "browserTarget": "gestor_clinica:build:development"
+              "buildTarget": "gestor_clinica:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gestor_clinica:build"
+            "buildTarget": "gestor_clinica:build"
           }
         },
         "test": {
