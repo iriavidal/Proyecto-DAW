@@ -20,6 +20,10 @@ main {
     align-items: center;
     gap: 22px;
 
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
     h6 {
       font-size: 20px;
       width: 290px;
@@ -44,5 +48,26 @@ main {
 
       box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2);
     }
+
+    @media screen and (min-width: 1024px) {
+      gap: 70px;
+
+      h6 {
+        font-size: 40px;
+        width: 100%;
+      }
+
+      button {
+        width: 384px;
+        height: 96px;
+
+        font-size: 36px;
+      }
+    }
+  }
+
+  .contacto.in-view {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
