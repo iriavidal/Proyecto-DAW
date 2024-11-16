@@ -7,9 +7,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { TituloComponent } from './home/componentes/titulo/titulo.component';
 import { ServiciosComponent } from './home/componentes/servicios/servicios.component';
 import { CitasComponent } from './home/componentes/citas/citas.component';
+import { CardComponent } from './home/componentes/citas/card/card.component';
+import { EquipoComponent } from './home/componentes/equipo/equipo.component';
 
-import { CarouselModule } from '@coreui/angular';
+import { CardModule, CarouselModule } from '@coreui/angular';
 import { RouterLink } from '@angular/router';
+import { MarcasComponent } from './home/componentes/marcas/marcas.component';
+import { ContactoComponent } from './home/componentes/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +22,18 @@ import { RouterLink } from '@angular/router';
     TituloComponent,
     ServiciosComponent,
     CitasComponent,
+    CardComponent,
+    EquipoComponent,
+    MarcasComponent,
+    ContactoComponent,
   ],
-  imports: [CommonModule, MatIconModule, CarouselModule, RouterLink],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    CarouselModule,
+    RouterLink,
+    CardModule,
+  ],
   providers: [],
   bootstrap: [],
 })
