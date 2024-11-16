@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './home/componentes/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { TituloComponent } from './home/componentes/titulo/titulo.component';
 import { ServiciosComponent } from './home/componentes/servicios/servicios.component';
+import { CitasComponent } from './home/componentes/citas/citas.component';
 
 import { CarouselModule } from '@coreui/angular';
-
 import { RouterLink } from '@angular/router';
 
 @NgModule({
@@ -17,8 +17,9 @@ import { RouterLink } from '@angular/router';
     HeaderComponent,
     TituloComponent,
     ServiciosComponent,
+    CitasComponent,
   ],
-  imports: [BrowserModule, MatIconModule, CarouselModule, RouterLink],
+  imports: [CommonModule, MatIconModule, CarouselModule, RouterLink],
   providers: [],
   bootstrap: [],
 })
