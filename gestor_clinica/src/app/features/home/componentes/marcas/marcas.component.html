@@ -1,0 +1,10 @@
+<section class="marcas-container">
+  <h4>Marcas</h4>
+  <article class="slider">
+    <div class="slide-track">
+      <div class="slide" *ngFor="let marca of marcas">
+        <img [src]="marca.src" [alt]="marca.marca" />
+      </div>
+    </div>
+  </article>
+</section>

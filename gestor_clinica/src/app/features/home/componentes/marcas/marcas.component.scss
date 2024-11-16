@@ -1,0 +1,71 @@
+@import "src/styles/variables";
+
+.marcas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 95vw;
+
+  h4 {
+    padding: 0.5rem 2rem;
+
+    background-color: $primary-900;
+    color: $gray-100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    font-family: $fuente-titulos;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .slider {
+    width: 100%;
+    height: auto;
+
+    overflow: hidden;
+
+    .slide-track {
+      display: flex;
+      gap: 7rem;
+      animation: scroll 40s linear infinite;
+      -webkit-animation: scroll 40s lineal infinite;
+      width: calc(200px * 12);
+
+      .slide {
+        width: 200px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    h4 {
+      font-size: 48px;
+
+      border-radius: 40px;
+
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(calc(-200px * 6));
+    transform: translateX(calc(-200px * 6));
+  }
+}
