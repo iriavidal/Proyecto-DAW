@@ -1,3 +1,5 @@
+@import "src/styles/variables";
+
 main {
   display: flex;
   flex-direction: column;
@@ -7,8 +9,40 @@ main {
   margin: 96px 0;
 
   @media screen and (min-width: 1024px) {
-    gap: 400px;
+    gap: 300px;
 
     margin: 200px 0;
+  }
+
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+
+    h6 {
+      font-size: 20px;
+      width: 290px;
+      text-align: center;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 192px;
+      height: 48px;
+
+      background-color: $primary-800;
+      color: $primary-100;
+
+      border: none;
+      border-radius: 8px;
+
+      font-size: 18px;
+
+      box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2);
+    }
   }
 }
