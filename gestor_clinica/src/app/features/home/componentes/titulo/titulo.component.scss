@@ -8,14 +8,14 @@
 
   width: 350px;
 
-  h2 {
+  h1 {
     font-family: $fuente-titulos;
     font-weight: 400;
     font-size: 48px;
     color: $primary-900;
   }
 
-  h3 {
+  h2 {
     font-weight: 400;
     font-size: 20px;
   }
@@ -27,11 +27,11 @@
   @media screen and (min-width: 1024px) {
     width: 1062px;
 
-    h2 {
+    h1 {
       font-size: 96px;
     }
 
-    h3 {
+    h2 {
       font-size: 40px;
     }
 
