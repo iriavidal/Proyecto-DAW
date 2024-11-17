@@ -20,9 +20,9 @@ main {
     align-items: center;
     gap: 22px;
 
-    opacity: 0;
+    /* opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; */
 
     h6 {
       font-size: 20px;
@@ -38,7 +38,7 @@ main {
       width: 192px;
       height: 48px;
 
-      background-color: $primary-800;
+      background-color: $primary-900;
       color: $primary-100;
 
       border: none;
