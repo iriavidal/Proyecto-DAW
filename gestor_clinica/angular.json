@@ -7,7 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": false
         }
       },
       "root": "",
@@ -25,6 +26,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "@coreui/coreui/dist/css/coreui.min.css",
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles/variables.scss",
               "src/styles.scss"
@@ -62,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "gestor_clinica:build:production"
+              "buildTarget": "gestor_clinica:build:production"
             },
             "development": {
-              "browserTarget": "gestor_clinica:build:development"
+              "buildTarget": "gestor_clinica:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gestor_clinica:build"
+            "buildTarget": "gestor_clinica:build"
           }
         },
         "test": {
@@ -84,6 +86,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "@coreui/coreui/dist/css/coreui.min.css",
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles/variables.scss",
               "src/styles.scss"
