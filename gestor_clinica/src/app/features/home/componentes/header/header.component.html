@@ -3,7 +3,7 @@
     ><img src="assets/img/logo_apaisado.png" alt="Inicio"
   /></a>
   <!-- Botón de abrir -->
-  <input type="checkbox" id="menu-toggle" />
+  <input type="checkbox" id="menu-toggle" #menuToggle />
   <!-- Icono hamburguesa -->
   <label for="menu-toggle" class="menu-icon">
     <span></span>
@@ -13,11 +13,17 @@
   <!-- Menú -->
   <nav class="menu">
     <ul>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Gestiona tus citas</a></li>
-      <li><a href="#">Nuestro equipo</a></li>
-      <li><a href="#">Marcas</a></li>
-      <li><a href="#">Contacto</a></li>
+      <li>
+        <a href="#servicios" (click)="closeMenu(menuToggle)">Servicios</a>
+      </li>
+      <li>
+        <a href="#citas" (click)="closeMenu(menuToggle)">Gestiona tus citas</a>
+      </li>
+      <li>
+        <a href="#equipo" (click)="closeMenu(menuToggle)">Nuestro equipo</a>
+      </li>
+      <li><a href="#marcas" (click)="closeMenu(menuToggle)">Marcas</a></li>
+      <li><a href="#contacto" (click)="closeMenu(menuToggle)">Contacto</a></li>
     </ul>
     <a href="#" class="sesion">
       <button class="boton">
