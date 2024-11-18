@@ -1,0 +1,167 @@
+@import "src/styles/variables";
+
+.numeros {
+  padding: 70px;
+  padding-top: calc(70px * 2);
+  background-color: $primary-100;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+
+  .titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    h1 {
+      width: 290px;
+      font-family: $fuente-titulos;
+      font-size: 36px;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+
+    .card {
+      width: 250px;
+      height: 150px;
+
+      padding: 38px 29px;
+
+      background-color: $primary-900;
+      color: $primary-100;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+
+      box-shadow: 0 15px 35px hsla(0, 0%, 0%, 0.2);
+
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      p {
+        margin: 0;
+        font-size: 13px;
+      }
+
+      .telefono {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        a {
+          color: $primary-100;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  margin-bottom: 29px;
+}
+
+.direccion {
+  .datos {
+    width: 270px;
+    margin: 0 auto;
+    padding-bottom: 29px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    h3 {
+      color: $primary-900;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      width: 270px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 1025px) {
+  .numeros {
+    position: relative;
+    padding: 96px;
+    padding-top: calc(96px * 2);
+    overflow: visible;
+
+    .titulos {
+      h1 {
+        width: 100%;
+        font-size: 64px;
+      }
+    }
+
+    .cards {
+      flex-direction: row;
+
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 100%;
+      z-index: 1;
+
+      .card:first-of-type {
+        top: 25%;
+      }
+
+      .card:last-of-type {
+        top: 75%;
+      }
+    }
+  }
+
+  .direccion {
+    display: flex;
+    align-items: center;
+    margin-top: 135px;
+    border-top: 1px solid $gray-200;
+    padding: 1rem;
+
+    .datos {
+      width: 270px;
+      margin: 0 auto;
+
+      h3 {
+        font-size: 48px;
+        margin: 0;
+      }
+    }
+
+    .mapa {
+      width: 50%;
+    }
+  }
+}
