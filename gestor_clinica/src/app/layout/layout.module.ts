@@ -5,6 +5,7 @@ import { DialogPrivacidadComponent } from './footer/componentes/dialog-privacida
 import { DialogAvisoLegalComponent } from './footer/componentes/dialog-aviso-legal/dialog-aviso-legal.component';
 import { DialogCookiesComponent } from './footer/componentes/dialog-cookies/dialog-cookies.component';
 import { HeaderComponent } from './header-inicio/header-inicio.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { HeaderComponent } from './header-inicio/header-inicio.component';
     DialogAvisoLegalComponent,
     DialogCookiesComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [FooterComponent, HeaderComponent],
 })
 export class LayoutModule {}

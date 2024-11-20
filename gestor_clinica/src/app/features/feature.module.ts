@@ -12,9 +12,13 @@ import { MarcasComponent } from './home/componentes/marcas/marcas.component';
 import { ContactoComponent } from './home/componentes/contacto/contacto.component';
 
 import { CardModule, CarouselModule } from '@coreui/angular';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { InViewDirective } from '../directives/in-view.directive';
 import { LayoutModule } from '../layout/layout.module';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
+import { HomeLoginComponent } from './auth-layout/home-login/home-login.component';
+import { LoginComponent } from './auth-layout/login/login.component';
+import { RegisterComponent } from './auth-layout/register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { LayoutModule } from '../layout/layout.module';
     MarcasComponent,
     ContactoComponent,
     InViewDirective,
+    AuthLayoutComponent,
+    HomeLoginComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     CommonModule,
@@ -35,6 +43,7 @@ import { LayoutModule } from '../layout/layout.module';
     RouterLink,
     CardModule,
     LayoutModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [],
