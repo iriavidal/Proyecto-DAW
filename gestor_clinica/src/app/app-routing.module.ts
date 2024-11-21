@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 import { ContactoComponent } from './features/home/componentes/contacto/contacto.component';
+import { AuthLayoutComponent } from './features/auth-layout/auth-layout.component';
+import { HomeLoginComponent } from './features/auth-layout/home-login/home-login.component';
+import { LoginComponent } from './features/auth-layout/login/login.component';
+import { RegisterComponent } from './features/auth-layout/register/register.component';
 
 const routes: Routes = [
   {
@@ -12,6 +16,16 @@ const routes: Routes = [
     path: 'contacto',
     component: ContactoComponent,
   },
+  {
+    path: 'auth',
+    component: AuthLayoutComponent,
+    children: [
+      { path: '', component: HomeLoginComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+    ],
+  },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

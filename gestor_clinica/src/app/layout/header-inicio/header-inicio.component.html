@@ -27,7 +27,7 @@
         <a href="#contacto" (click)="closeMenu(menuToggle)">Contacto</a>
       </li>
     </ul>
-    <a href="#" class="sesion">
+    <a [routerLink]="['/auth']" class="sesion">
       <button class="boton">
         Log in
         <svg
@@ -43,7 +43,9 @@
           />
         </svg>
       </button>
-      <span class="texto">Registrarse o Iniciar sesión</span>
+      <span class="texto" [routerLink]="['/auth']"
+        >Registrarse o Iniciar sesión</span
+      >
     </a>
   </nav>
 </header>
