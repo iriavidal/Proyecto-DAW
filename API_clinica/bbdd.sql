@@ -44,9 +44,10 @@ CREATE TABLE Mascotas (
     fecha_nac DATE,
     nChip VARCHAR(50),
     raza VARCHAR(50),
-    FOREIGN KEY (idUsuario) REFERENCES Cliente(idCliente),
+    FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
     FOREIGN KEY (idTipo) REFERENCES TipoMascota(idTipo)
 );
+
 
 -- Tabla Historiales
 CREATE TABLE Historiales (
