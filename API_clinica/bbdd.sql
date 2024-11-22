@@ -19,18 +19,11 @@ CREATE TABLE Usuario (
     apellidos VARCHAR(100) NOT NULL,
     password VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    idRol INT NOT NULL,
-    FOREIGN KEY (idRol) REFERENCES Rol(idRol)
-);
-
--- Tabla Cliente (relacionada con Usuario)
-CREATE TABLE Cliente (
-    idCliente INT PRIMARY KEY AUTO_INCREMENT,
-    idUsuario INT NOT NULL,
     dni VARCHAR(15) NOT NULL,
     direccion VARCHAR(255),
     telefono VARCHAR(15) NOT NULL,
-    FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+    idRol INT NOT NULL,
+    FOREIGN KEY (idRol) REFERENCES Rol(idRol)
 );
 
 -- Tabla TipoMascota para almacenar los tipos de mascotas
