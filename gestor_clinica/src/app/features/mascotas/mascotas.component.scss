@@ -34,17 +34,32 @@ main {
       box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2);
       background-color: $primary-100;
 
+      width: 400px;
+
       display: flex;
+      align-items: center;
       padding: 1rem 2rem;
       gap: 1rem;
 
-      img {
+      .image-container {
         width: 100px;
         height: 100px;
+        margin: 0;
 
         border-radius: 50%;
         object-fit: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $primary-800;
+
+        mat-icon {
+          color: $primary-100;
+        }
       }
+
       .datos {
         h2 a {
           font-size: 32px;
