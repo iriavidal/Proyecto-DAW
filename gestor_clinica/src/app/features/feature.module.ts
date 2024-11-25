@@ -25,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MascotasComponent } from './mascotas/mascotas.component';
 import { MenuMascotaComponent } from './mascotas/menu-mascota/menu-mascota.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { MenuMascotaComponent } from './mascotas/menu-mascota/menu-mascota.compo
     MatSelectModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [],

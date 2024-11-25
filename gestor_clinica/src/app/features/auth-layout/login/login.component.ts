@@ -1,6 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-login',
@@ -14,26 +16,22 @@ export class LoginComponent {
 
   constructor(
     private fb: FormBuilder,
-    /* private authService: AuthService, */
-    private _router: Router
+    private authService: AuthService,
+    private _router: Router,
+    private tokenService: TokenService
   ) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
-      rememberMe: [false],
+      email_usuario: ['', [Validators.required, Validators.email]],
+      password_usuario: ['', [Validators.required]],
     });
   }
 
-  get email() {
-    return this.loginForm.get('email');
+  get email_usuario() {
+    return this.loginForm.get('email_usuario');
   }
 
-  get password() {
-    return this.loginForm.get('password');
-  }
-
-  get rememberMe() {
-    return this.loginForm.get('rememberMe');
+  get password_usuario() {
+    return this.loginForm.get('password_usuario');
   }
 
   hide = signal(true);
@@ -49,12 +47,30 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       this.loading = true;
-      const user = {
-        username: this.loginForm.get('email')?.value,
-        password: this.loginForm.get('password')?.value,
+      this.loginError = ''; // Limpia cualquier error previo
+
+      const credentials = {
+        email_usuario: this.email_usuario?.value,
+        password_usuario: this.password_usuario?.value,
       };
 
-      console.log(user);
+      this.authService.login(credentials).subscribe(
+        (response: any) => {
+          this.loading = false;
+          if (response.status === 200) {
+            //this._router.navigate(['/dashboard']);
+            const token = response.results[0].token_usuario;
+
+            this.tokenService.storeToken(token);
+
+            console.log(token);
+          }
+        },
+        (error) => {
+          this.loading = false;
+          this.loginError = error.message || 'Ha ocurrido un error inesperado.';
+        }
+      );
     } else {
       console.log('Formulario inválido');
     }

@@ -11,26 +11,31 @@
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <!-- Campo de email -->
       <div class="form-field">
-        <label for="email">Email</label>
+        <label for="email_usuario">Email</label>
         <div class="wrapper">
           <input
-            id="email"
+            id="email_usuario"
             type="email"
             placeholder="Introduce tu email"
-            formControlName="email"
-            [ngClass]="{ invalid: email?.invalid && email?.touched }"
+            formControlName="email_usuario"
+            [ngClass]="{
+              invalid: email_usuario?.invalid && email_usuario?.touched
+            }"
           />
           <span class="icono-input"><mat-icon>email</mat-icon></span>
         </div>
         <span
           class="error"
-          *ngIf="email?.hasError('required') && email?.touched"
+          *ngIf="email_usuario?.hasError('required') && email_usuario?.touched"
         >
           El email es obligatorio
         </span>
         <span
           class="error"
-          *ngIf="email?.hasError('email') && !email?.hasError('required')"
+          *ngIf="
+            email_usuario?.hasError('email') &&
+            !email_usuario?.hasError('required')
+          "
         >
           Introduce un email válido
         </span>
@@ -38,14 +43,16 @@
 
       <!-- Campo de contraseña -->
       <div class="form-field">
-        <label for="password">Contraseña</label>
+        <label for="password_usuario">Contraseña</label>
         <div class="wrapper">
           <input
-            id="password"
+            id="password_usuario"
             [type]="hide() ? 'password' : 'text'"
             placeholder="Introduce tu contraseña"
-            formControlName="password"
-            [ngClass]="{ invalid: password?.invalid && password?.touched }"
+            formControlName="password_usuario"
+            [ngClass]="{
+              invalid: password_usuario?.invalid && password_usuario?.touched
+            }"
           />
           <button
             type="button"
@@ -61,7 +68,9 @@
         </div>
         <span
           class="error"
-          *ngIf="password?.hasError('required') && password?.touched"
+          *ngIf="
+            password_usuario?.hasError('required') && password_usuario?.touched
+          "
         >
           La contraseña es obligatoria
         </span>
