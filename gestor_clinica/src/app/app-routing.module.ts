@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'menu', // Provisional para facilitar su maquetación
-    component: MenuMascotaComponent,
+    component: MascotasComponent,
   },
   { path: '**', redirectTo: '' },
 ];
