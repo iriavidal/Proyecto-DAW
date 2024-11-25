@@ -1,0 +1,118 @@
+@import "src/styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+
+  .logo {
+    .logo-img {
+      width: 300px;
+      height: 120px;
+    }
+  }
+
+  .form {
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .form-field {
+        label {
+          color: $primary-900;
+          font-weight: 700;
+        }
+
+        .wrapper {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          padding: 0 1rem;
+
+          border-bottom: 2px solid $primary-900;
+
+          input {
+            width: 256px;
+            height: 48px;
+
+            border: none;
+            background: none;
+
+            &:focus {
+              border: none;
+              outline: none;
+            }
+          }
+
+          /* input:-webkit-autofill {
+            background: none !important;
+          } */
+
+          .icono-input {
+            display: flex;
+            align-items: center;
+
+            transform: scale(1.5);
+
+            color: $primary-900;
+          }
+
+          button {
+            border: none;
+          }
+        }
+
+        .error {
+          font-size: 0.8rem;
+          color: $danger-700;
+        }
+      }
+
+      .error-message {
+        color: $danger-700;
+      }
+
+      .submit-button {
+        width: 192px;
+        height: 48px;
+
+        background-color: $primary-900;
+        color: $primary-100;
+
+        border-radius: 8px;
+        border: none;
+
+        font-size: 18px;
+
+        box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2);
+
+        &:disabled {
+          background-color: $primary-100;
+          color: $primary-900;
+        }
+      }
+
+      .internal-form-footer-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .olvidado {
+          color: $primary-800;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        .register-link {
+          color: $primary-900;
+        }
+      }
+    }
+  }
+}

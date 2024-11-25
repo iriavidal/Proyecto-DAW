@@ -1,0 +1,105 @@
+<section class="container">
+  <!-- <article class="logo">
+    <img
+      src="../../../../assets/img/logo_apaisado.png"
+      alt="Logo Del Campo"
+      class="logo-img"
+    />
+  </article> -->
+
+  <article class="form">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <!-- Campo de email -->
+      <div class="form-field">
+        <label for="email_usuario">Email</label>
+        <div class="wrapper">
+          <input
+            id="email_usuario"
+            type="email"
+            placeholder="Introduce tu email"
+            formControlName="email_usuario"
+            [ngClass]="{
+              invalid: email_usuario?.invalid && email_usuario?.touched
+            }"
+          />
+          <span class="icono-input"><mat-icon>email</mat-icon></span>
+        </div>
+        <span
+          class="error"
+          *ngIf="email_usuario?.hasError('required') && email_usuario?.touched"
+        >
+          El email es obligatorio
+        </span>
+        <span
+          class="error"
+          *ngIf="
+            email_usuario?.hasError('email') &&
+            !email_usuario?.hasError('required')
+          "
+        >
+          Introduce un email válido
+        </span>
+      </div>
+
+      <!-- Campo de contraseña -->
+      <div class="form-field">
+        <label for="password_usuario">Contraseña</label>
+        <div class="wrapper">
+          <input
+            id="password_usuario"
+            [type]="hide() ? 'password' : 'text'"
+            placeholder="Introduce tu contraseña"
+            formControlName="password_usuario"
+            [ngClass]="{
+              invalid: password_usuario?.invalid && password_usuario?.touched
+            }"
+          />
+          <button
+            type="button"
+            class="toggle-visibility"
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Ocultar contraseña'"
+            [attr.aria-pressed]="hide()"
+          >
+            <mat-icon class="icono-input">{{
+              hide() ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </button>
+        </div>
+        <span
+          class="error"
+          *ngIf="
+            password_usuario?.hasError('required') && password_usuario?.touched
+          "
+        >
+          La contraseña es obligatoria
+        </span>
+      </div>
+
+      <!-- Mensaje de error -->
+      <div *ngIf="loginError" class="error-message">
+        {{ loginError }}
+      </div>
+
+      <!-- Botón de inicio de sesión -->
+      <button
+        type="submit"
+        [disabled]="loginForm.invalid || loading"
+        class="submit-button"
+      >
+        <ng-container *ngIf="loading"> Cargando... </ng-container>
+        <ng-container *ngIf="!loading">Iniciar sesión</ng-container>
+      </button>
+
+      <!-- Enlace para registro -->
+      <div class="internal-form-footer-text">
+        <p (click)="showAlert()" class="olvidado">
+          ¿Has olvidado la contraseña?
+        </p>
+        <a [routerLink]="'/auth/register'" class="register-link"
+          >Registrarse ></a
+        >
+      </div>
+    </form>
+  </article>
+</section>
