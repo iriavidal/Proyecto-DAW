@@ -1,0 +1,23 @@
+# Deshabilitar el acceso directo a directorios
+Options -Indexes
+Options -MultiViews
+
+# Habilitar reescritura de URLs
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+# Permitir solicitudes desde cualquier origen
+Header set Access-Control-Allow-Origin "*"
+
+# Permitir ciertos métodos HTTP (GET, POST, PUT, DELETE, OPTIONS)
+Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+
+# Permitir encabezados específicos (por ejemplo, Authorization)
+Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+
+# Responder adecuadamente a solicitudes OPTIONS
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^(.*)$ $1 [R=200,L]
+</IfModule>

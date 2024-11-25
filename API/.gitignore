@@ -1,0 +1,26 @@
+# Ignorar la carpeta vendor (las dependencias de Composer)
+vendor/
+
+# Ignorar archivos de Composer que pueden ser regenerados
+composer.lock
+
+# Ignorar configuraciones específicas del entorno local
+.env
+
+# Ignorar logs y otros archivos temporales
+*.log
+*.cache
+*.tmp
+
+# Ignorar directorios comunes temporales y caché
+/cache/
+node_modules/
+
+# Ignorar configuraciones del editor o IDE
+.vscode/
+.idea/
+*.swp
+
+# Ignorar archivos del sistema operativo
+.DS_Store
+Thumbs.db
