@@ -6,6 +6,8 @@ import { AuthLayoutComponent } from './features/auth-layout/auth-layout.componen
 import { HomeLoginComponent } from './features/auth-layout/home-login/home-login.component';
 import { LoginComponent } from './features/auth-layout/login/login.component';
 import { RegisterComponent } from './features/auth-layout/register/register.component';
+import { MascotasComponent } from './features/mascotas/mascotas.component';
+import { MenuMascotaComponent } from './features/mascotas/menu-mascota/menu-mascota.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,10 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
     ],
+  },
+  {
+    path: 'menu', // Provisional para facilitar su maquetación
+    component: MascotasComponent,
   },
   { path: '**', redirectTo: '' },
 ];

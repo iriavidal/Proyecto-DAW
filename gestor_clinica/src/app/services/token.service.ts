@@ -23,4 +23,23 @@ export class TokenService {
   isAuthenticated(): boolean {
     return !!this.getToken();
   }
+
+  decodeToken(): any {
+    const token = this.getToken();
+    if (!token) return null;
+
+    try {
+      const payload = token.split('.')[1];
+      const decodedPayload = atob(payload);
+      return JSON.parse(decodedPayload);
+    } catch (error) {
+      console.error('Error al decodificar el token:', error);
+      return null;
+    }
+  }
+
+  getUserIdFromToken(): number | null {
+    const decodedToken = this.decodeToken();
+    return decodedToken?.data?.id || null;
+  }
 }

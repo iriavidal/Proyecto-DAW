@@ -1,0 +1,46 @@
+<app-header-usuario></app-header-usuario>
+<main>
+  <section>
+    <ng-container *ngIf="listadoMascotas.length > 0; else sinMascotas">
+      <ng-container *ngFor="let mascota of listadoMascotas">
+        <article class="card_mascota">
+          <figure class="image-container">
+            <img
+              *ngIf="mascota.foto"
+              [src]="mascota.foto"
+              [alt]="mascota.nombre_mascota"
+            />
+            <mat-icon *ngIf="!mascota.foto">image_not_supported</mat-icon>
+          </figure>
+          <div class="datos">
+            <h2>
+              <a [routerLink]="'/menu-mascota'">{{ mascota.nombre_mascota }}</a>
+            </h2>
+            <p>
+              Última visita:
+              {{ ultimasCitas[mascota.id_mascota] || "Cargando..." }}
+            </p>
+            <a href="#">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.5063 4.14563C15.8312 3.82067 15.8312 3.27908 15.5063 2.97079L13.5566 1.02106C13.2483 0.696105 12.7067 0.696105 12.3817 1.02106L10.8486 2.54585L13.9732 5.67041M0.75 12.6528V15.7773H3.87457L13.09 6.55363L9.96539 3.42906L0.75 12.6528Z"
+                  fill="#3399A6"
+                />
+              </svg>
+              Pedir cita
+            </a>
+          </div>
+        </article>
+      </ng-container>
+    </ng-container>
+    <ng-template #sinMascotas>Añada a su mascota...</ng-template>
+    <button class="add">+</button>
+  </section>
+</main>
+<app-footer></app-footer>

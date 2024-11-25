@@ -23,6 +23,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MascotasComponent } from './mascotas/mascotas.component';
+import { MenuMascotaComponent } from './mascotas/menu-mascota/menu-mascota.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -40,6 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeLoginComponent,
     LoginComponent,
     RegisterComponent,
+    MascotasComponent,
+    MenuMascotaComponent,
   ],
   imports: [
     CommonModule,
