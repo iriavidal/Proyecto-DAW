@@ -58,12 +58,11 @@ export class LoginComponent {
         (response: any) => {
           this.loading = false;
           if (response.status === 200) {
-            //this._router.navigate(['/dashboard']);
             const token = response.results[0].token_usuario;
 
             this.tokenService.storeToken(token);
 
-            console.log(token);
+            this._router.navigate(['/menu']);
           }
         },
         (error) => {
