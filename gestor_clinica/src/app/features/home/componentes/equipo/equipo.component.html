@@ -1,0 +1,29 @@
+<section class="equipo-container">
+  <h4>Nuestro equipo</h4>
+  <c-carousel [interval]="0">
+    <c-carousel-indicators></c-carousel-indicators>
+    <c-carousel-inner>
+      <c-carousel-item *ngFor="let trabajador of equipo">
+        <c-card>
+          <img cCardImg="top" [src]="trabajador.src" />
+          <c-card-body>
+            <h5 cCardTitle>{{ trabajador.nombre }}</h5>
+            <p cCardText>
+              {{ trabajador.puesto }}
+            </p>
+          </c-card-body>
+        </c-card>
+      </c-carousel-item>
+    </c-carousel-inner>
+    <c-carousel-control
+      [routerLink]
+      caption="Previous"
+      direction="prev"
+    ></c-carousel-control>
+    <c-carousel-control
+      [routerLink]
+      caption="Next"
+      direction="next"
+    ></c-carousel-control>
+  </c-carousel>
+</section>

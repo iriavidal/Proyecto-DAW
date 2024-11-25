@@ -1,0 +1,66 @@
+@import "src/styles/variables";
+
+.citas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  h4 {
+    padding: 0.5rem 2rem;
+
+    background-color: $primary-900;
+    color: $gray-100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    font-family: $fuente-titulos;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  p {
+    width: 290px;
+    text-align: center;
+  }
+
+  p:first-of-type {
+    font-size: 20px;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    h4 {
+      font-size: 48px;
+      border-radius: 40px;
+      padding: 1rem 2rem;
+    }
+
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+:host {
+  display: block;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+
+:host(.visible) {
+  opacity: 1;
+  transform: translateY(0);
+}

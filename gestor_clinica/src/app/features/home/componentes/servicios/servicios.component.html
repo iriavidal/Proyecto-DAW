@@ -1,0 +1,30 @@
+<section class="servicio-container">
+  <h4>Servicios</h4>
+  <c-carousel>
+    <c-carousel-indicators></c-carousel-indicators>
+    <c-carousel-inner>
+      <c-carousel-item *ngFor="let card of cards">
+        <img
+          alt="{{ card.titulo }}"
+          class="d-block w-100"
+          loading="lazy"
+          src="{{ card.src }}"
+        />
+        <c-carousel-caption class="d-md-block">
+          <h3>{{ card.titulo }}</h3>
+          <p>{{ card.subtitulo }}</p>
+        </c-carousel-caption>
+      </c-carousel-item>
+    </c-carousel-inner>
+    <c-carousel-control
+      [routerLink]
+      caption="Previous"
+      direction="prev"
+    ></c-carousel-control>
+    <c-carousel-control
+      [routerLink]
+      caption="Next"
+      direction="next"
+    ></c-carousel-control>
+  </c-carousel>
+</section>
