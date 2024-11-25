@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { confirmPasswordValidator } from 'src/app/validators/confirm-password.validator';
 
 @Component({
@@ -14,23 +15,27 @@ export class RegisterComponent {
   loading = false;
   hide = signal(true);
 
-  constructor(private fb: FormBuilder, private _router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private _router: Router,
+    private authService: AuthService
+  ) {
     this.loginForm = this.fb.group(
       {
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required]],
+        email_usuario: ['', [Validators.required, Validators.email]],
+        password_usuario: ['', [Validators.required]],
         password2: ['', [Validators.required]],
       },
       { validators: [confirmPasswordValidator] }
     );
   }
 
-  get email() {
-    return this.loginForm.get('email');
+  get email_usuario() {
+    return this.loginForm.get('email_usuario');
   }
 
-  get password() {
-    return this.loginForm.get('password');
+  get password_usuario() {
+    return this.loginForm.get('password_usuario');
   }
 
   get password2() {
@@ -45,12 +50,26 @@ export class RegisterComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       this.loading = true;
-      const user = {
-        username: this.loginForm.get('email')?.value,
-        password: this.loginForm.get('password')?.value,
+
+      const userData = {
+        email_usuario: this.email_usuario?.value,
+        password_usuario: this.password_usuario?.value,
       };
 
-      console.log(user);
+      console.log(userData);
+
+      this.authService.register(userData).subscribe({
+        next: (data) => {
+          console.log('Registro exitoso:', data);
+          // Redirigir al login o a otra página
+          this._router.navigate(['/auth/login']);
+        },
+        error: (err) => {
+          console.error('Error en el registro:', err);
+          this.loginError = err.message;
+        },
+        complete: () => (this.loading = false),
+      });
     } else {
       console.log('Formulario inválido');
     }
