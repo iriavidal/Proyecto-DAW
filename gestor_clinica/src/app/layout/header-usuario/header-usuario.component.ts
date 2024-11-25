@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header-usuario',
@@ -6,12 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './header-usuario.component.scss',
 })
 export class HeaderUsuarioComponent {
+  constructor(private authService: AuthService) {}
+
   closeMenu(menuToggle: HTMLInputElement): void {
     menuToggle.checked = false;
   }
 
   cerrarSesion() {
-    // Pendiente de enlazar a la API
-    console.log('Intento de cierre de sesión');
+    this.authService.logout();
   }
 }
