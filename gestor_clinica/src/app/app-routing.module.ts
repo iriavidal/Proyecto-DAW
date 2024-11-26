@@ -7,7 +7,7 @@ import { HomeLoginComponent } from './features/auth-layout/home-login/home-login
 import { LoginComponent } from './features/auth-layout/login/login.component';
 import { RegisterComponent } from './features/auth-layout/register/register.component';
 import { MascotasComponent } from './features/mascotas/mascotas.component';
-import { MenuMascotaComponent } from './features/mascotas/menu-mascota/menu-mascota.component';
+import { MenuMascotaComponent } from './features/menu-mascota/menu-mascota.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [

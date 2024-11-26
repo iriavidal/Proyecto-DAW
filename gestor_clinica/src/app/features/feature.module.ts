@@ -24,7 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MascotasComponent } from './mascotas/mascotas.component';
-import { MenuMascotaComponent } from './mascotas/menu-mascota/menu-mascota.component';
+import { MenuMascotaComponent } from './menu-mascota/menu-mascota.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
