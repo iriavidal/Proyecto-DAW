@@ -1,0 +1,101 @@
+<section>
+  <article class="mascota">
+    <div class="content-select">
+      <select
+        name="mascota"
+        id="mascota"
+        [(ngModel)]="selectedMascotaId"
+        (change)="onMascotaChange($event)"
+      >
+        <ng-container *ngFor="let mascota of listadoMascotas">
+          <option
+            [value]="mascota.id_mascota"
+            [selected]="mascota.id_mascota === selectedMascotaId"
+          >
+            {{ mascota.nombre_mascota }}
+          </option>
+        </ng-container>
+      </select>
+      <div class="flecha-select">
+        <svg
+          width="12"
+          height="6"
+          viewBox="0 0 12 6"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 0L6 6L12 0H0Z" fill="#3399A6" />
+        </svg>
+      </div>
+    </div>
+    <img
+      src="https://cdn.outsideonline.com/wp-content/uploads/2023/03/Funny_Dog_H.jpg?crop=16:9&width=960&enable=upscale&quality=100"
+      alt=""
+    />
+  </article>
+
+  <article class="menu">
+    <div class="boton citas">
+      <svg
+        width="44"
+        height="48"
+        viewBox="0 0 44 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.7999 21.6H9.9999V26.4H14.7999V21.6ZM24.3999 21.6H19.5999V26.4H24.3999V21.6ZM33.9999 21.6H29.1999V26.4H33.9999V21.6ZM38.7999 4.8H36.3999V0H31.5999V4.8H12.3999V0H7.5999V4.8H5.1999C2.5359 4.8 0.399902 6.96 0.399902 9.6V43.2C0.399902 44.473 0.905615 45.6939 1.80579 46.5941C2.70596 47.4943 3.92686 48 5.1999 48H38.7999C40.0729 48 41.2938 47.4943 42.194 46.5941C43.0942 45.6939 43.5999 44.473 43.5999 43.2V9.6C43.5999 8.32696 43.0942 7.10606 42.194 6.20589C41.2938 5.30571 40.0729 4.8 38.7999 4.8ZM38.7999 43.2H5.1999V16.8H38.7999V43.2Z"
+          fill="#3399A6"
+        />
+      </svg>
+      <p>Gestionar citas</p>
+    </div>
+    <div class="boton historial">
+      <svg
+        width="54"
+        height="48"
+        viewBox="0 0 54 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21.6666 0L16.3333 5.33333V10.6667H8.33329C5.26662 10.6667 3.31995 13.3333 2.99995 16L0.333286 42.6667C0.0132855 45.3333 1.77329 48 5.66662 48H48.3333C52.2266 48 53.9866 45.3333 53.6666 42.6667L51 16C50.68 13.3333 48.4933 10.6667 45.6666 10.6667H37.6666V5.33333L32.3333 0H21.6666ZM21.6666 5.33333H32.3333V10.6667H21.6666V5.33333ZM24.3333 18.6667H29.6666V26.6667H37.6666V32H29.6666V40H24.3333V32H16.3333V26.6667H24.3333V18.6667Z"
+          fill="#3399A6"
+        />
+      </svg>
+      <p>Historial médico</p>
+    </div>
+
+    <div class="boton recordatorios">
+      <svg
+        width="46"
+        height="48"
+        viewBox="0 0 46 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M45.8571 11.4286V25.1429H41.2857V11.4286M41.2857 29.7143H45.8571V34.2857H41.2857M20.7142 0C19.5018 0 18.3391 0.481631 17.4818 1.33894C16.6245 2.19625 16.1428 3.35901 16.1428 4.57143C16.1268 4.79209 16.1268 5.01362 16.1428 5.23429C9.55996 7.17714 4.71425 13.3029 4.71425 20.5714V34.2857L0.142822 38.8571V41.1429H41.2857V38.8571L36.7142 34.2857V20.5714C36.7142 13.3029 31.8685 7.17714 25.2857 5.23429C25.3017 5.01362 25.3017 4.79209 25.2857 4.57143C25.2857 3.35901 24.804 2.19625 23.9467 1.33894C23.0894 0.481631 21.9267 0 20.7142 0ZM16.1428 43.4286C16.1428 44.641 16.6245 45.8038 17.4818 46.6611C18.3391 47.5184 19.5018 48 20.7142 48C21.9267 48 23.0894 47.5184 23.9467 46.6611C24.804 45.8038 25.2857 44.641 25.2857 43.4286H16.1428Z"
+          fill="#3399A6"
+        />
+      </svg>
+      <p>Recordatorios</p>
+    </div>
+
+    <div class="boton datos">
+      <svg
+        width="48"
+        height="48"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M47.2201 10.7785C48.26 9.73865 48.26 8.00556 47.2201 7.01903L40.981 0.779892C39.9944 -0.259964 38.2613 -0.259964 37.2215 0.779892L32.3155 5.65921L42.3141 15.6578M0 38.0014V48H9.99861L39.4878 18.4841L29.4892 8.48549L0 38.0014Z"
+          fill="#3399A6"
+        />
+      </svg>
+      <p>Editar datos</p>
+    </div>
+  </article>
+</section>
