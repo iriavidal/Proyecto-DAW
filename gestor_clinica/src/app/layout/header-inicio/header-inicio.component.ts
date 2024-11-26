@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-inicio.component.scss'],
 })
 export class HeaderComponent {
+  isLoggedIn: boolean = false;
+
+  ngOnInit(): void {
+    this.isLoggedIn = !!sessionStorage.getItem('authToken');
+    console.log(this.isLoggedIn);
+  }
+
   closeMenu(menuToggle: HTMLInputElement): void {
     menuToggle.checked = false;
   }

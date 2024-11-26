@@ -27,25 +27,44 @@
         <a href="#contacto" (click)="closeMenu(menuToggle)">Contacto</a>
       </li>
     </ul>
-    <a [routerLink]="['/auth']" class="sesion">
-      <button class="boton">
-        Log in
-        <svg
-          width="20"
-          height="18"
-          viewBox="0 0 20 18"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M9 4L7.6 5.4L10.2 8H0V10H10.2L7.6 12.6L9 14L14 9L9 4ZM18 16H10V18H18C19.1 18 20 17.1 20 16V2C20 0.9 19.1 0 18 0H10V2H18V16Z"
-            fill="#d6efe5"
-          />
-        </svg>
-      </button>
-      <span class="texto" [routerLink]="['/auth']"
-        >Registrarse o Iniciar sesión</span
-      >
+    <a [routerLink]="isLoggedIn ? '/mascotas' : '/auth'" class="sesion">
+      <ng-container *ngIf="isLoggedIn; else notLoggedIn">
+        <button class="boton">
+          Ir al menú
+          <svg
+            width="20"
+            height="18"
+            viewBox="0 0 20 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 4L7.6 5.4L10.2 8H0V10H10.2L7.6 12.6L9 14L14 9L9 4ZM18 16H10V18H18C19.1 18 20 17.1 20 16V2C20 0.9 19.1 0 18 0H10V2H18V16Z"
+              fill="#d6efe5"
+            />
+          </svg>
+        </button>
+        <span class="texto">Ir al menú</span>
+      </ng-container>
+
+      <ng-template #notLoggedIn>
+        <button class="boton">
+          Log in
+          <svg
+            width="20"
+            height="18"
+            viewBox="0 0 20 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 4L7.6 5.4L10.2 8H0V10H10.2L7.6 12.6L9 14L14 9L9 4ZM18 16H10V18H18C19.1 18 20 17.1 20 16V2C20 0.9 19.1 0 18 0H10V2H18V16Z"
+              fill="#d6efe5"
+            />
+          </svg>
+        </button>
+        <span class="texto">Registrarse o Iniciar sesión</span>
+      </ng-template>
     </a>
   </nav>
 </header>

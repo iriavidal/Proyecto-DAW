@@ -25,9 +25,9 @@
       </li>
       <li><a href="#" (click)="closeMenu(menuToggle)">Editar datos</a></li>
     </ul>
-    <a class="sesion">
+    <a class="sesion" (click)="cerrarSesion()">
       <button class="boton">
-        Log in
+        Cerrar sesión
         <svg
           width="20"
           height="18"
@@ -41,7 +41,7 @@
           />
         </svg>
       </button>
-      <span class="texto" (click)="cerrarSesion()">Cerrar sesión</span>
+      <span class="texto">Cerrar sesión</span>
     </a>
   </nav>
 </header>
