@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MascotasService } from 'src/app/services/datos/mascotas.service';
 import { TokenService } from 'src/app/services/token.service';
 
@@ -14,7 +15,8 @@ export class MascotasComponent implements OnInit {
 
   constructor(
     private tokenService: TokenService,
-    private mascotasService: MascotasService
+    private mascotasService: MascotasService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -50,5 +52,9 @@ export class MascotasComponent implements OnInit {
     } else {
       console.error('No se pudo obtener el ID del usuario desde el token.');
     }
+  }
+
+  irAlMenuMascota(idMascota: number): void {
+    this.router.navigate(['/mascotas/menu', idMascota]);
   }
 }

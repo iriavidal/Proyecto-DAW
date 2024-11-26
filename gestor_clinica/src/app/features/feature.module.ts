@@ -21,7 +21,7 @@ import { RegisterComponent } from './auth-layout/register/register.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MascotasComponent } from './mascotas/mascotas.component';
 import { MenuMascotaComponent } from './mascotas/menu-mascota/menu-mascota.component';
@@ -59,6 +59,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatProgressSpinnerModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [],

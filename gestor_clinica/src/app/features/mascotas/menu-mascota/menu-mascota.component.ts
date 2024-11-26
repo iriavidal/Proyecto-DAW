@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MascotasService } from 'src/app/services/datos/mascotas.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-menu-mascota',
@@ -6,24 +9,47 @@ import { Component } from '@angular/core';
   styleUrl: './menu-mascota.component.scss',
 })
 export class MenuMascotaComponent {
-  idMascota: number = 1;
+  selectedMascotaId: number | null = null; // ID de la mascota seleccionada
+  listadoMascotas: any[] = []; // Todas las mascotas del usuario
+  userId: number | null = null; // ID del usuario logueado
 
-  listadoMascotas = [
-    {
-      id_mascota: 1,
-      nombre_mascota: 'Rex',
-      tipo_mascota: 'perro',
-      raza_mascota: 'Labrador',
-      fecha_nac_mascota: '2020-05-10',
-      nChip_mascota: '123456789012',
-    },
-    {
-      id_mascota: 2,
-      nombre_mascota: 'Miau',
-      tipo_mascota: 'gato',
-      raza_mascota: 'Siamés',
-      fecha_nac_mascota: '2021-08-15',
-      nChip_mascota: '987654321098',
-    },
-  ];
+  constructor(
+    private route: ActivatedRoute,
+    private mascotasService: MascotasService,
+    private tokenService: TokenService
+  ) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      if (params['id_mascota']) {
+        this.selectedMascotaId = +params['id_mascota'];
+      }
+    });
+
+    this.loadMascotas();
+  }
+
+  loadMascotas(): void {
+    this.userId = this.tokenService.getUserIdFromToken();
+
+    if (this.userId) {
+      this.mascotasService.getMascotasUser(this.userId).subscribe({
+        next: (data) => {
+          if (data.results && data.results.length > 0) {
+            this.listadoMascotas = data.results;
+          } else {
+            console.error('No se encontraron mascotas para este usuario.');
+          }
+        },
+        error: (err) => console.error('Error al obtener las mascotas:', err),
+      });
+    } else {
+      console.error('No se pudo obtener el ID del usuario desde el token.');
+    }
+  }
+
+  onMascotaChange(event: Event): void {
+    const selectElement = event.target as HTMLSelectElement;
+    this.selectedMascotaId = Number(selectElement.value);
+  }
 }
