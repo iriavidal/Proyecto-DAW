@@ -78,6 +78,11 @@ section {
       align-items: center;
       gap: 0.5rem;
 
+      svg,
+      p {
+        cursor: pointer;
+      }
+
       color: $primary-900;
 
       p {

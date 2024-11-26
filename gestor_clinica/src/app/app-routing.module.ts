@@ -10,6 +10,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { MenuMascotaComponent } from './features/menu-layout/menu-mascota/menu-mascota.component';
 import { MenuLayoutComponent } from './features/menu-layout/menu-layout.component';
 import { MascotasComponent } from './features/menu-layout/mascotas/mascotas.component';
+import { CitasComponent } from './features/home/componentes/citas/citas.component';
 
 const routes: Routes = [
   {
@@ -41,10 +42,15 @@ const routes: Routes = [
       {
         path: 'mascota',
         component: MenuMascotaComponent,
+        // Recordar añadir los hijos cuando se tenga un componente para envolverlos
       },
       {
         path: 'mascota/:id_mascota',
         component: MenuMascotaComponent,
+      },
+      {
+        path: 'citas/:id_mascota',
+        component: CitasComponent,
       },
     ],
   },
