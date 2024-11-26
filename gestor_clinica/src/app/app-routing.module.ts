@@ -29,8 +29,18 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'menu', // Provisional para facilitar su maquetación
+    path: 'mascotas',
     component: MascotasComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'mascotas/menu',
+    component: MenuMascotaComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'mascotas/menu/:id_mascota',
+    component: MenuMascotaComponent,
     canActivate: [AuthGuard],
   },
   { path: '**', redirectTo: '' },

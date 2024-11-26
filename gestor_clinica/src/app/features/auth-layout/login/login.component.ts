@@ -62,7 +62,7 @@ export class LoginComponent {
 
             this.tokenService.storeToken(token);
 
-            this._router.navigate(['/menu']);
+            this._router.navigate(['/mascotas']);
           }
         },
         (error) => {

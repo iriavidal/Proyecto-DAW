@@ -14,11 +14,13 @@
           </figure>
           <div class="datos">
             <h2>
-              <a [routerLink]="'/menu-mascota'">{{ mascota.nombre_mascota }}</a>
+              <a (click)="irAlMenuMascota(mascota.id_mascota)">{{
+                mascota.nombre_mascota
+              }}</a>
             </h2>
             <p>
               Última visita:
-              {{ ultimasCitas[mascota.id_mascota] || "Cargando..." }}
+              {{ ultimasCitas[mascota.id_mascota] || "cargando..." }}
             </p>
             <a href="#">
               <svg
