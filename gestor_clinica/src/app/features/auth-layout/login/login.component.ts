@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -18,7 +19,8 @@ export class LoginComponent {
     private fb: FormBuilder,
     private authService: AuthService,
     private _router: Router,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    private observer: BreakpointObserver
   ) {
     this.loginForm = this.fb.group({
       email_usuario: ['', [Validators.required, Validators.email]],
@@ -62,7 +64,17 @@ export class LoginComponent {
 
             this.tokenService.storeToken(token);
 
-            this._router.navigate(['/mascotas']);
+            this.observer
+              .observe(['(max-width: 767px)'])
+              .subscribe((screenSize) => {
+                if (screenSize.matches) {
+                  //console.log('Móvil');
+                  this._router.navigate(['/menu']);
+                } else {
+                  //console.log('Ordenador');
+                  this._router.navigate(['/menu/mascota']);
+                }
+              });
           }
         },
         (error) => {
