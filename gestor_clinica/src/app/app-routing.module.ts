@@ -6,9 +6,10 @@ import { AuthLayoutComponent } from './features/auth-layout/auth-layout.componen
 import { HomeLoginComponent } from './features/auth-layout/home-login/home-login.component';
 import { LoginComponent } from './features/auth-layout/login/login.component';
 import { RegisterComponent } from './features/auth-layout/register/register.component';
-import { MascotasComponent } from './features/mascotas/mascotas.component';
-import { MenuMascotaComponent } from './features/menu-mascota/menu-mascota.component';
 import { AuthGuard } from './guards/auth.guard';
+import { MenuMascotaComponent } from './features/menu-layout/menu-mascota/menu-mascota.component';
+import { MenuLayoutComponent } from './features/menu-layout/menu-layout.component';
+import { MascotasComponent } from './features/menu-layout/mascotas/mascotas.component';
 
 const routes: Routes = [
   {
@@ -29,20 +30,25 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'mascotas',
-    component: MascotasComponent,
+    path: 'menu',
+    component: MenuLayoutComponent,
     canActivate: [AuthGuard],
+    children: [
+      {
+        path: '',
+        component: MascotasComponent,
+      },
+      {
+        path: 'mascota',
+        component: MenuMascotaComponent,
+      },
+      {
+        path: 'mascota/:id_mascota',
+        component: MenuMascotaComponent,
+      },
+    ],
   },
-  {
-    path: 'mascotas/menu',
-    component: MenuMascotaComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'mascotas/menu/:id_mascota',
-    component: MenuMascotaComponent,
-    canActivate: [AuthGuard],
-  },
+
   { path: '**', redirectTo: '' },
 ];
 

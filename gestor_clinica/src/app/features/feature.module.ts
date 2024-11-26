@@ -23,9 +23,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MascotasComponent } from './mascotas/mascotas.component';
-import { MenuMascotaComponent } from './menu-mascota/menu-mascota.component';
+import { MascotasComponent } from './menu-layout/mascotas/mascotas.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuMascotaComponent } from './menu-layout/menu-mascota/menu-mascota.component';
+import { MenuLayoutComponent } from './menu-layout/menu-layout.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     MascotasComponent,
     MenuMascotaComponent,
+    MenuLayoutComponent,
   ],
   imports: [
     CommonModule,
