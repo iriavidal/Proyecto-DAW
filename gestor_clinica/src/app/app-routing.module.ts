@@ -11,6 +11,7 @@ import { MenuMascotaComponent } from './features/menu-layout/menu-mascota/menu-m
 import { MenuLayoutComponent } from './features/menu-layout/menu-layout.component';
 import { MascotasComponent } from './features/menu-layout/mascotas/mascotas.component';
 import { CitasMascotasComponent } from './features/menu-layout/menu-mascota/citas/citas-mascotas.component';
+import { PostCitaComponent } from './features/menu-layout/menu-mascota/citas/post-cita/post-cita.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,14 @@ const routes: Routes = [
       {
         path: 'citas/:id_mascota',
         component: CitasMascotasComponent,
+      },
+      {
+        path: 'cita/:id_mascota',
+        component: PostCitaComponent,
+      },
+      {
+        path: 'cita/:id_mascota/:id_cita',
+        component: PostCitaComponent,
       },
     ],
   },

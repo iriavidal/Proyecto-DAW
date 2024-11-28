@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CitasService } from 'src/app/core/services/datos/citas.service';
 import { MascotasService } from 'src/app/core/services/datos/mascotas.service';
 import { TokenService } from 'src/app/core/services/token.service';
 
@@ -18,6 +19,7 @@ export class CitasMascotasComponent {
   constructor(
     private route: ActivatedRoute,
     private mascotasService: MascotasService,
+    private citasService: CitasService,
     private tokenService: TokenService,
     private router: Router
   ) {}
@@ -30,6 +32,7 @@ export class CitasMascotasComponent {
     });
 
     this.loadMascotas();
+    this.loadCitas();
   }
 
   loadMascotas(): void {
@@ -40,10 +43,6 @@ export class CitasMascotasComponent {
         next: (data) => {
           if (data.results && data.results.length > 0) {
             this.listadoMascotas = data.results;
-
-            if (this.selectedMascotaId == null) {
-              this.selectedMascotaId = this.listadoMascotas[0].id_mascota;
-            }
           } else {
             console.error('No se encontraron mascotas para este usuario.');
           }
@@ -55,14 +54,49 @@ export class CitasMascotasComponent {
     }
   }
 
+  loadCitas(): void {
+    if (this.selectedMascotaId != null) {
+      this.citasService.getCitasMascota(this.selectedMascotaId).subscribe({
+        next: (data) => {
+          if (data.results && data.results.length > 0) {
+            this.citas = data.results;
+          } else {
+            this.citas = [];
+            console.error('No se encontraron citas para esta mascota.');
+          }
+        },
+        error: (err) => {
+          this.citas = [];
+          console.error('Error al obtener las citas:', err);
+        },
+      });
+    } else {
+      this.router.navigate(['/menu']);
+    }
+  }
+
   onMascotaChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
     this.selectedMascotaId = Number(selectElement.value);
+
+    console.log('Mascota seleccionada:', this.selectedMascotaId); // Verificar el ID seleccionado
+
+    this.loadCitas();
   }
 
-  irA(idMascota: number | null, boton: string) {
-    if (boton == 'citas') {
-      this.router.navigate(['/menu/citas', idMascota]);
-    }
+  atras() {
+    this.router.navigate([`/menu/mascota/${this.selectedMascotaId}`]);
+  }
+
+  editarCita(citaId: number) {
+    this.router.navigate([`/menu/cita/${this.selectedMascotaId}/${citaId}`]);
+  }
+
+  addCita() {
+    this.router.navigate([`/menu/cita/${this.selectedMascotaId}`]);
+  }
+
+  eliminarCita(citaId: number) {
+    console.log(`Eliminar cita: ${citaId}`);
   }
 }

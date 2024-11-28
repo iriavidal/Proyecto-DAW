@@ -28,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MenuMascotaComponent } from './menu-layout/menu-mascota/menu-mascota.component';
 import { MenuLayoutComponent } from './menu-layout/menu-layout.component';
 import { CitasMascotasComponent } from './menu-layout/menu-mascota/citas/citas-mascotas.component';
+import { CoreModule } from '../core/core.module';
+import { PostCitaComponent } from './menu-layout/menu-mascota/citas/post-cita/post-cita.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { CitasMascotasComponent } from './menu-layout/menu-mascota/citas/citas-m
     MenuLayoutComponent,
     CitasComponent,
     CitasMascotasComponent,
+    PostCitaComponent,
   ],
   imports: [
     CommonModule,
@@ -65,6 +68,7 @@ import { CitasMascotasComponent } from './menu-layout/menu-mascota/citas/citas-m
     MatProgressSpinnerModule,
     HttpClientModule,
     FormsModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [],

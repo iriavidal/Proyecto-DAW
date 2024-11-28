@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { FeatureModule } from './features/feature.module';
 import { LayoutModule } from './layout/layout.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { LayoutModule } from './layout/layout.module';
     FeatureModule,
     LayoutModule,
     BrowserAnimationsModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
