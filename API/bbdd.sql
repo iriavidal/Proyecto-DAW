@@ -79,6 +79,7 @@ CREATE TABLE Citas (
     id_cita INT PRIMARY KEY AUTO_INCREMENT,
     id_mascota INT,
     id_veterinario INT,
+    tipo_cita VARCHAR(20) NOT NULL,
     fecha_y_hora DATETIME,
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
