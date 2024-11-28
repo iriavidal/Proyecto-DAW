@@ -1,25 +1,86 @@
-<mat-form-field>
-  <mat-label>sdfgsd</mat-label>
-  <mtx-datetimepicker
-    #datetimePicker
-    [type]="'datetime'"
-    [multiYearSelector]="multiYearSelector"
-    [calendarHeaderComponent]="customHeader"
-    [startView]="startView"
-    [twelvehour]="twelvehour"
-    [timeInterval]="timeInterval"
-    [touchUi]="touchUi"
-    [timeInput]="timeInput"
+<section class="titulo">
+  <svg
+    (click)="atras()"
+    width="24"
+    height="16"
+    viewBox="0 0 24 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
   >
-  </mtx-datetimepicker>
-  <input
-    [mtxDatetimepicker]="datetimePicker"
-    [(ngModel)]="datetime"
-    matInput
-    required
-  />
-  <mtx-datetimepicker-toggle
-    [for]="datetimePicker"
-    matSuffix
-  ></mtx-datetimepicker-toggle>
-</mat-form-field>
+    <path
+      d="M24 6.66667H5.10667L9.88 1.88L8 0L0 8L8 16L9.88 14.1067L5.10667 9.33333H24V6.66667Z"
+      fill="#205047"
+    />
+  </svg>
+  <ng-container>
+    <h2>Nueva cita</h2>
+  </ng-container>
+  <ng-template #editar>
+    <h2>Editar cita</h2>
+  </ng-template>
+
+  <span></span>
+</section>
+<section class="formulario">
+  <mat-stepper orientation="vertical" [linear]="true" #stepper>
+    <!-- Primer Paso: Escoger un día -->
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Escoge un día</ng-template>
+        <mat-form-field>
+          <input
+            matInput
+            [matDatepicker]="datepicker"
+            formControlName="fecha"
+            placeholder="Selecciona un día"
+            (dateChange)="obtenerCita($event, 'fecha')"
+            [matDatepickerFilter]="fechaFiltro"
+            required
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="datepicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #datepicker></mat-datepicker>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Continuar</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- Segundo Paso: Escoger una hora -->
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Escoge una hora</ng-template>
+        <mat-form-field>
+          <mat-label>Hora</mat-label>
+          <input
+            matInput
+            type="time"
+            formControlName="hora"
+            required
+            (ngModelChange)="validarHora($event); obtenerCita($event, 'hora')"
+          />
+        </mat-form-field>
+        <p class="horario">Horario: 10:00 a 14:00 y 17:00 a 20:00</p>
+        <div class="pasos">
+          <button mat-button matStepperPrevious>Atrás</button>
+          <button mat-button matStepperNext>Continuar</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- Tercer Paso: Finalizar -->
+    <mat-step>
+      <ng-template matStepLabel>Finalizar</ng-template>
+      <p>
+        Fecha seleccionada: <strong>{{ cita | formatDateTime }}</strong>
+      </p>
+      <div class="pasos">
+        <button mat-button matStepperPrevious>Atrás</button>
+        <button mat-button (click)="stepper.reset()">Borrar</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</section>

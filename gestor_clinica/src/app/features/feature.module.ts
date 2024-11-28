@@ -30,6 +30,10 @@ import { MenuLayoutComponent } from './menu-layout/menu-layout.component';
 import { CitasMascotasComponent } from './menu-layout/menu-mascota/citas/citas-mascotas.component';
 import { CoreModule } from '../core/core.module';
 import { PostCitaComponent } from './menu-layout/menu-mascota/citas/post-cita/post-cita.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -69,8 +73,12 @@ import { PostCitaComponent } from './menu-layout/menu-mascota/citas/post-cita/po
     HttpClientModule,
     FormsModule,
     CoreModule,
+    MatStepperModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }], // dd/mm/yyyy
   bootstrap: [],
 })
 export class FeatureModule {}
