@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MascotasService } from 'src/app/services/datos/mascotas.service';
-import { TokenService } from 'src/app/services/token.service';
+import { MascotasService } from 'src/app/core/services/datos/mascotas.service';
+import { TokenService } from 'src/app/core/services/token.service';
 
 @Component({
   selector: 'app-mascotas',

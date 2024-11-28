@@ -6,11 +6,11 @@ import { AuthLayoutComponent } from './features/auth-layout/auth-layout.componen
 import { HomeLoginComponent } from './features/auth-layout/home-login/home-login.component';
 import { LoginComponent } from './features/auth-layout/login/login.component';
 import { RegisterComponent } from './features/auth-layout/register/register.component';
-import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from './core/guards/auth.guard';
 import { MenuMascotaComponent } from './features/menu-layout/menu-mascota/menu-mascota.component';
 import { MenuLayoutComponent } from './features/menu-layout/menu-layout.component';
 import { MascotasComponent } from './features/menu-layout/mascotas/mascotas.component';
-import { CitasComponent } from './features/home/componentes/citas/citas.component';
+import { CitasMascotasComponent } from './features/menu-layout/menu-mascota/citas/citas-mascotas.component';
 
 const routes: Routes = [
   {
@@ -50,7 +50,7 @@ const routes: Routes = [
       },
       {
         path: 'citas/:id_mascota',
-        component: CitasComponent,
+        component: CitasMascotasComponent,
       },
     ],
   },
