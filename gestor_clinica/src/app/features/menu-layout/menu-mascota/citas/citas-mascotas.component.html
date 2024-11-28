@@ -1,0 +1,58 @@
+<section class="perfil">
+  <article class="titulo">
+    <svg
+      width="24"
+      height="16"
+      viewBox="0 0 24 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M24 6.66667H5.10667L9.88 1.88L8 0L0 8L8 16L9.88 14.1067L5.10667 9.33333H24V6.66667Z"
+        fill="#205047"
+      />
+    </svg>
+    <h2>Proximas citas</h2>
+  </article>
+
+  <div class="content-select">
+    <select
+      name="mascota"
+      id="mascota"
+      [(ngModel)]="selectedMascotaId"
+      (change)="onMascotaChange($event)"
+    >
+      <ng-container *ngFor="let mascota of listadoMascotas">
+        <option
+          [value]="mascota.id_mascota"
+          [selected]="mascota.id_mascota === selectedMascotaId"
+        >
+          {{ mascota.nombre_mascota }}
+        </option>
+      </ng-container>
+    </select>
+    <div class="flecha-select">
+      <svg
+        width="12"
+        height="6"
+        viewBox="0 0 12 6"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0L6 6L12 0H0Z" fill="#205047" />
+      </svg>
+    </div>
+  </div>
+</section>
+<section class="citas">
+  <ng-container *ngIf="citas.length > 0; else sinCitas">
+    <ng-container *ngFor="let cita of citas">
+      <article>
+        <h3></h3>
+      </article>
+    </ng-container>
+  </ng-container>
+  <ng-template #sinCitas>
+    <p>No tienes ninguna cita pendiente...</p>
+  </ng-template>
+</section>
