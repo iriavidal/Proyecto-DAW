@@ -59,7 +59,12 @@ export class CitasMascotasComponent {
       this.citasService.getCitasMascota(this.selectedMascotaId).subscribe({
         next: (data) => {
           if (data.results && data.results.length > 0) {
-            this.citas = data.results;
+            // Ordenar citas por fecha
+            this.citas = data.results.sort((a: any, b: any) => {
+              const dateA = new Date(a.fecha_y_hora).getTime();
+              const dateB = new Date(b.fecha_y_hora).getTime();
+              return dateA - dateB;
+            });
           } else {
             this.citas = [];
             console.error('No se encontraron citas para esta mascota.');
