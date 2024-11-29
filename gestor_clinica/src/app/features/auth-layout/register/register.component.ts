@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
-import { confirmPasswordValidator } from 'src/app/validators/confirm-password.validator';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { confirmPasswordValidator } from 'src/app/core/validators/confirm-password.validator';
 
 @Component({
   selector: 'app-register',
@@ -61,7 +61,6 @@ export class RegisterComponent {
       this.authService.register(userData).subscribe({
         next: (data) => {
           console.log('Registro exitoso:', data);
-          // Redirigir al login o a otra página
           this._router.navigate(['/auth/login']);
         },
         error: (err) => {

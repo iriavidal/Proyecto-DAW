@@ -12,7 +12,7 @@ import { MarcasComponent } from './home/componentes/marcas/marcas.component';
 import { ContactoComponent } from './home/componentes/contacto/contacto.component';
 import { CardModule, CarouselModule } from '@coreui/angular';
 import { RouterLink, RouterModule } from '@angular/router';
-import { InViewDirective } from '../directives/in-view.directive';
+import { InViewDirective } from '../core/directives/in-view.directive';
 import { LayoutModule } from '../layout/layout.module';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { HomeLoginComponent } from './auth-layout/home-login/home-login.component';
@@ -27,6 +27,13 @@ import { MascotasComponent } from './menu-layout/mascotas/mascotas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuMascotaComponent } from './menu-layout/menu-mascota/menu-mascota.component';
 import { MenuLayoutComponent } from './menu-layout/menu-layout.component';
+import { CitasMascotasComponent } from './menu-layout/menu-mascota/citas/citas-mascotas.component';
+import { CoreModule } from '../core/core.module';
+import { PostCitaComponent } from './menu-layout/menu-mascota/citas/post-cita/post-cita.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -46,6 +53,9 @@ import { MenuLayoutComponent } from './menu-layout/menu-layout.component';
     MascotasComponent,
     MenuMascotaComponent,
     MenuLayoutComponent,
+    CitasComponent,
+    CitasMascotasComponent,
+    PostCitaComponent,
   ],
   imports: [
     CommonModule,
@@ -62,8 +72,13 @@ import { MenuLayoutComponent } from './menu-layout/menu-layout.component';
     MatProgressSpinnerModule,
     HttpClientModule,
     FormsModule,
+    CoreModule,
+    MatStepperModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }], // dd/mm/yyyy
   bootstrap: [],
 })
 export class FeatureModule {}

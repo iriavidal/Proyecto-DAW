@@ -6,10 +6,12 @@ import { AuthLayoutComponent } from './features/auth-layout/auth-layout.componen
 import { HomeLoginComponent } from './features/auth-layout/home-login/home-login.component';
 import { LoginComponent } from './features/auth-layout/login/login.component';
 import { RegisterComponent } from './features/auth-layout/register/register.component';
-import { MascotasComponent } from './features/menu-layout/mascotas/mascotas.component';
-import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from './core/guards/auth.guard';
 import { MenuMascotaComponent } from './features/menu-layout/menu-mascota/menu-mascota.component';
 import { MenuLayoutComponent } from './features/menu-layout/menu-layout.component';
+import { MascotasComponent } from './features/menu-layout/mascotas/mascotas.component';
+import { CitasMascotasComponent } from './features/menu-layout/menu-mascota/citas/citas-mascotas.component';
+import { PostCitaComponent } from './features/menu-layout/menu-mascota/citas/post-cita/post-cita.component';
 
 const routes: Routes = [
   {
@@ -41,10 +43,23 @@ const routes: Routes = [
       {
         path: 'mascota',
         component: MenuMascotaComponent,
+        // Recordar añadir los hijos cuando se tenga un componente para envolverlos
       },
       {
         path: 'mascota/:id_mascota',
         component: MenuMascotaComponent,
+      },
+      {
+        path: 'citas/:id_mascota',
+        component: CitasMascotasComponent,
+      },
+      {
+        path: 'cita/:id_mascota',
+        component: PostCitaComponent,
+      },
+      {
+        path: 'cita/:id_mascota/:id_cita',
+        component: PostCitaComponent,
       },
     ],
   },

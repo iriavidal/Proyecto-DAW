@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { MascotasService } from 'src/app/services/datos/mascotas.service';
-import { TokenService } from 'src/app/services/token.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MascotasService } from 'src/app/core/services/datos/mascotas.service';
+import { TokenService } from 'src/app/core/services/token.service';
 
 @Component({
   selector: 'app-menu-mascota',
@@ -16,7 +16,8 @@ export class MenuMascotaComponent {
   constructor(
     private route: ActivatedRoute,
     private mascotasService: MascotasService,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -37,6 +38,10 @@ export class MenuMascotaComponent {
         next: (data) => {
           if (data.results && data.results.length > 0) {
             this.listadoMascotas = data.results;
+
+            if (this.selectedMascotaId == null) {
+              this.selectedMascotaId = this.listadoMascotas[0].id_mascota;
+            }
           } else {
             console.error('No se encontraron mascotas para este usuario.');
           }
@@ -51,5 +56,11 @@ export class MenuMascotaComponent {
   onMascotaChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
     this.selectedMascotaId = Number(selectElement.value);
+  }
+
+  irA(idMascota: number | null, boton: string) {
+    if (boton == 'citas') {
+      this.router.navigate(['/menu/citas', idMascota]);
+    }
   }
 }

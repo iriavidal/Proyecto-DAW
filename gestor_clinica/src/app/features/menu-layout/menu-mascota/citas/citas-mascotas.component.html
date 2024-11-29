@@ -1,0 +1,92 @@
+<section class="perfil">
+  <article class="titulo">
+    <svg
+      (click)="atras()"
+      width="24"
+      height="16"
+      viewBox="0 0 24 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M24 6.66667H5.10667L9.88 1.88L8 0L0 8L8 16L9.88 14.1067L5.10667 9.33333H24V6.66667Z"
+        fill="#205047"
+      />
+    </svg>
+    <h2>Proximas citas</h2>
+    <span></span>
+  </article>
+
+  <div class="content-select">
+    <select
+      name="mascota"
+      id="mascota"
+      [(ngModel)]="selectedMascotaId"
+      (change)="onMascotaChange($event)"
+    >
+      <ng-container *ngFor="let mascota of listadoMascotas">
+        <option
+          [value]="mascota.id_mascota"
+          [selected]="mascota.id_mascota === selectedMascotaId"
+        >
+          {{ mascota.nombre_mascota }}
+        </option>
+      </ng-container>
+    </select>
+    <div class="flecha-select">
+      <svg
+        width="12"
+        height="6"
+        viewBox="0 0 12 6"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0L6 6L12 0H0Z" fill="#205047" />
+      </svg>
+    </div>
+  </div>
+</section>
+<section class="citas">
+  <ng-container *ngIf="citas.length > 0; else sinCitas">
+    <ng-container *ngFor="let cita of citas">
+      <article class="card-cita">
+        <h3>{{ cita.tipo_cita }}</h3>
+        <p>{{ cita.fecha_y_hora | formatDateTime }}</p>
+        <div class="opciones">
+          <span class="editar" (click)="editarCita(cita.id_cita)">
+            <svg
+              width="27"
+              height="25"
+              viewBox="0 0 27 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.4079 11.8421L22.0658 10.1842C22.6447 9.60526 23.3816 9.28947 24.1842 9.21053V7.89474L16.2895 0H3.13158C1.67105 0 0.5 1.17105 0.5 2.63158V21.0526C0.5 22.5 1.67105 23.6842 3.13158 23.6842H11.0263V21.2237L11.1974 21.0526H3.13158V2.63158H12.3421V11.8421H20.4079ZM14.9737 1.97368L22.2105 9.21053H14.9737V1.97368ZM21.7237 14.25L24.4079 16.9342L16.3421 25H13.6579V22.3158L21.7237 14.25ZM26.6184 14.7237L25.3289 16.0132L22.6447 13.3289L23.9342 12.0395C24.1842 11.7763 24.6184 11.7763 24.8816 12.0395L26.6184 13.7763C26.8816 14.0395 26.8816 14.4737 26.6184 14.7237Z"
+                fill="#4d897b"
+              />
+            </svg>
+          </span>
+          <span class="eliminar" (click)="eliminarCita(cita.id_cita)">
+            <svg
+              width="26"
+              height="25"
+              viewBox="0 0 26 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.3157 0C20.1907 0 25.8157 5.625 25.8157 12.5C25.8157 19.375 20.1907 25 13.3157 25C6.44067 25 0.815674 19.375 0.815674 12.5C0.815674 5.625 6.44067 0 13.3157 0ZM13.3157 2.5C10.9407 2.5 8.81567 3.25 7.19067 4.625L21.1907 18.625C22.4407 16.875 23.3157 14.75 23.3157 12.5C23.3157 7 18.8157 2.5 13.3157 2.5ZM19.4407 20.375L5.44067 6.375C4.06567 8 3.31567 10.125 3.31567 12.5C3.31567 18 7.81567 22.5 13.3157 22.5C15.6907 22.5 17.8157 21.75 19.4407 20.375Z"
+                fill="#a82b2b"
+              />
+            </svg>
+          </span>
+        </div>
+      </article>
+    </ng-container>
+  </ng-container>
+  <ng-template #sinCitas>
+    <p>No tienes ninguna cita pendiente...</p>
+  </ng-template>
+  <button class="add" (click)="addCita()">+</button>
+</section>

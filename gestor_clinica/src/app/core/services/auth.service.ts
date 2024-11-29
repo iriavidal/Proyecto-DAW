@@ -5,7 +5,7 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, throwError } from 'rxjs';
-import { environment } from '../environment';
+import { environment } from '../../environment';
 import { AuthResponse } from '../models/auth-response.interface';
 import { TokenService } from './token.service';
 import { Router } from '@angular/router';
@@ -99,7 +99,7 @@ export class AuthService {
       }
     }
 
-    // Retornar el error con un mensaje claro
+    // Retornar el error
     return throwError(() => new Error(errorMessage));
   }
 }
