@@ -99,7 +99,7 @@ export class AuthService {
       }
     }
 
-    // Retornar el error con un mensaje claro
+    // Retornar el error
     return throwError(() => new Error(errorMessage));
   }
 }

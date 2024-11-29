@@ -12,7 +12,7 @@
       fill="#205047"
     />
   </svg>
-  <ng-container>
+  <ng-container *ngIf="!esEdicion; else editar">
     <h2>Nueva cita</h2>
   </ng-container>
   <ng-template #editar>
@@ -33,7 +33,7 @@
             [matDatepicker]="datepicker"
             formControlName="fecha"
             placeholder="Selecciona un día"
-            (dateChange)="obtenerCita($event, 'fecha')"
+            (dateChange)="obtenerCita($event, null, 'fecha')"
             [matDatepickerFilter]="fechaFiltro"
             required
           />
@@ -60,7 +60,9 @@
             type="time"
             formControlName="hora"
             required
-            (ngModelChange)="validarHora($event); obtenerCita($event, 'hora')"
+            (ngModelChange)="
+              validarHora($event); obtenerCita($event, null, 'hora')
+            "
           />
         </mat-form-field>
         <p class="horario">Horario: 10:00 a 14:00 y 17:00 a 20:00</p>
@@ -71,15 +73,51 @@
       </form>
     </mat-step>
 
-    <!-- Tercer Paso: Finalizar -->
+    <!-- Tercer Paso: Escoger un motivo -->
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>Escoge un motivo</ng-template>
+        <mat-form-field>
+          <mat-label>Motivo</mat-label>
+          <mat-select
+            name="motivo"
+            id="motivo"
+            formControlName="motivo"
+            (ngModelChange)="obtenerCita(null, $event, 'motivo')"
+          >
+            <ng-container *ngFor="let motivo of tiposCitaKeys">
+              <mat-option [value]="motivo">
+                {{ tiposCitaEnum[motivo] }}
+              </mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+        <div class="pasos">
+          <button mat-button matStepperPrevious>Atrás</button>
+          <button mat-button matStepperNext>Continuar</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- Cuarto Paso: Finalizar -->
     <mat-step>
       <ng-template matStepLabel>Finalizar</ng-template>
       <p>
         Fecha seleccionada: <strong>{{ cita | formatDateTime }}</strong>
       </p>
+      <p>
+        Motivo de la cita: <strong>{{ motivo }}</strong>
+      </p>
       <div class="pasos">
         <button mat-button matStepperPrevious>Atrás</button>
         <button mat-button (click)="stepper.reset()">Borrar</button>
+        <button
+          mat-button
+          (click)="esEdicion ? editarCita() : registrarCita()"
+          class="submit"
+        >
+          {{ esEdicion ? "Guardar cambios" : "Pedir cita" }}
+        </button>
       </div>
     </mat-step>
   </mat-stepper>

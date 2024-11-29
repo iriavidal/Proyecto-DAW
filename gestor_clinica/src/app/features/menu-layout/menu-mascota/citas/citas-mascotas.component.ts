@@ -97,6 +97,16 @@ export class CitasMascotasComponent {
   }
 
   eliminarCita(citaId: number) {
-    console.log(`Eliminar cita: ${citaId}`);
+    this.citasService
+      .deleteCita(citaId, sessionStorage['authToken'])
+      .subscribe({
+        next: (data) => {
+          console.log('Borrado exitoso:', data);
+          this.loadCitas();
+        },
+        error: (err) => {
+          console.error('Error en el registro:', err);
+        },
+      });
   }
 }
