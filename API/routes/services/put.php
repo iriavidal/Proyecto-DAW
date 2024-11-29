@@ -5,8 +5,7 @@ require_once "controllers/put.controller.php";
 
 if (isset($_GET["id"]) && isset($_GET["nameId"])) {
     /* Capturamos los datos del formulario */
-    $data = array();
-    parse_str(file_get_contents("php://input"), $data);
+    $data = json_decode(file_get_contents("php://input"), true);
 
     /* Separar propiedades en un array */
     $columns = array();
