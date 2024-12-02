@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { confirmPasswordValidator } from 'src/app/core/validators/confirm-password.validator';
+import { dniValidator } from 'src/app/core/validators/dni.validator';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-register',
@@ -11,15 +13,25 @@ import { confirmPasswordValidator } from 'src/app/core/validators/confirm-passwo
 })
 export class RegisterComponent {
   loginForm: FormGroup = new FormGroup({});
+  datosForm: FormGroup = new FormGroup({});
   loginError: string = '';
   loading = false;
   hide = signal(true);
+  orientation: boolean = false;
 
   constructor(
     private fb: FormBuilder,
     private _router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private observer: BreakpointObserver
   ) {
+    this.datosForm = this.fb.group({
+      nombre_usuario: ['', [Validators.required]],
+      apellidos_usuario: ['', [Validators.required]],
+      dni_usuario: ['', [Validators.required, dniValidator()]],
+      direccion_usuario: ['', [Validators.required]],
+    });
+
     this.loginForm = this.fb.group(
       {
         email_usuario: ['', [Validators.required, Validators.email]],
@@ -28,6 +40,16 @@ export class RegisterComponent {
       },
       { validators: [confirmPasswordValidator] }
     );
+
+    this.observer.observe(['(max-width: 767px)']).subscribe((screenSize) => {
+      if (screenSize.matches) {
+        //console.log('Móvil');
+        this.orientation = true;
+      } else {
+        //console.log('Ordenador');
+        this.orientation = false;
+      }
+    });
   }
 
   get email_usuario() {
@@ -42,6 +64,22 @@ export class RegisterComponent {
     return this.loginForm.get('password2');
   }
 
+  get nombre_usuario() {
+    return this.datosForm.get('nombre_usuario');
+  }
+
+  get apellidos_usuario() {
+    return this.datosForm.get('apellidos_usuario');
+  }
+
+  get dni_usuario() {
+    return this.datosForm.get('dni_usuario');
+  }
+
+  get direccion_usuario() {
+    return this.datosForm.get('direccion_usuario');
+  }
+
   clickEvent(event: MouseEvent) {
     this.hide.set(!this.hide());
     event.stopPropagation();
@@ -52,8 +90,13 @@ export class RegisterComponent {
       this.loading = true;
 
       const userData = {
+        nombre_usuario: this.nombre_usuario?.value,
+        apellidos_usuario: this.apellidos_usuario?.value,
         email_usuario: this.email_usuario?.value,
         password_usuario: this.password_usuario?.value,
+        dni_usuario: this.dni_usuario?.value,
+        direccion_usuario: this.direccion_usuario?.value,
+        id_rol: 1,
       };
 
       console.log(userData);
