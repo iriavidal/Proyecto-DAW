@@ -61,8 +61,13 @@ export class AuthService {
   }
 
   register(userData: {
+    nombre_usuario: string;
+    apellidos_usuario: string;
     email_usuario: string;
     password_usuario: string;
+    dni_usuario: string;
+    direccion_usuario: string;
+    id_rol: number;
   }): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',

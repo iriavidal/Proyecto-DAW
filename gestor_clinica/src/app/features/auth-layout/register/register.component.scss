@@ -8,6 +8,8 @@
   gap: 1.5rem;
   width: 100%;
 
+  padding: 1rem;
+
   .logo {
     .logo-img {
       width: 300px;
@@ -21,6 +23,27 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
+
+      margin-top: 2rem;
+
+      @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .form-field {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .form-field label {
+          margin-bottom: 4px;
+        }
+
+        .form-field .wrapper {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
 
       .form-field {
         label {
@@ -97,16 +120,21 @@
           color: $primary-900;
         }
       }
+    }
 
-      .internal-form-footer-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .internal-form-footer-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-        .login-link {
-          color: $primary-900;
-        }
+      .login-link {
+        color: $primary-900;
       }
+    }
+
+    .mat-stepper-vertical,
+    .mat-stepper-horizontal {
+      background-color: transparent;
     }
   }
 }

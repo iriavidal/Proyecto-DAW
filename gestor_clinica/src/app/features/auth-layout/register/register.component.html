@@ -8,130 +8,208 @@
   </article> -->
 
   <article class="form">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <!-- Campo de email -->
-      <div class="form-field">
-        <label for="email_usuario">Email</label>
-        <div class="wrapper">
-          <input
-            id="email_usuario"
-            type="email"
-            placeholder="Introduce tu email"
-            formControlName="email_usuario"
-            [ngClass]="{
-              invalid: email_usuario?.invalid && email_usuario?.touched
-            }"
-          />
-          <span class="icono-input"><mat-icon>email</mat-icon></span>
-        </div>
-        <span
-          class="error"
-          *ngIf="email_usuario?.hasError('required') && email_usuario?.touched"
-        >
-          El email es obligatorio
-        </span>
-        <span
-          class="error"
-          *ngIf="
-            email_usuario?.hasError('email') &&
-            !email_usuario?.hasError('required')
-          "
-        >
-          Introduce un email válido
-        </span>
-      </div>
+    <mat-stepper
+      [orientation]="orientation ? 'vertical' : 'horizontal'"
+      [linear]="true"
+      #stepper
+    >
+      <mat-step [stepControl]="datosForm">
+        <form [formGroup]="datosForm">
+          <ng-template matStepLabel>Datos del usuario</ng-template>
 
-      <!-- Campo de contraseña -->
-      <div class="form-field">
-        <label for="password_usuario">Contraseña</label>
-        <div class="wrapper">
-          <input
-            id="password_usuario"
-            [type]="hide() ? 'password' : 'text'"
-            placeholder="Introduce tu contraseña"
-            formControlName="password_usuario"
-            [ngClass]="{
-              invalid: password_usuario?.invalid && password_usuario?.touched
-            }"
-          />
-          <button
-            type="button"
-            class="toggle-visibility"
-            (click)="clickEvent($event)"
-            [attr.aria-label]="'Ocultar contraseña'"
-            [attr.aria-pressed]="hide()"
-          >
-            <mat-icon class="icono-input">{{
-              hide() ? "visibility_off" : "visibility"
-            }}</mat-icon>
-          </button>
-        </div>
-        <span
-          class="error"
-          *ngIf="
-            password_usuario?.hasError('required') && password_usuario?.touched
-          "
-        >
-          La contraseña es obligatoria
-        </span>
-      </div>
+          <!-- Campo de nombre -->
+          <div class="form-field">
+            <label for="nombre_usuario">Nombre</label>
+            <div class="wrapper">
+              <input
+                id="nombre_usuario"
+                type="text"
+                placeholder="Introduce tu nombre"
+                formControlName="nombre_usuario"
+              />
+            </div>
+          </div>
 
-      <!-- Campo de repetir contraseña -->
-      <div class="form-field">
-        <label for="password2">Repite la contraseña</label>
-        <div class="wrapper">
-          <input
-            id="password2"
-            [type]="hide() ? 'password' : 'text'"
-            placeholder="Repite tu contraseña"
-            formControlName="password2"
-            [ngClass]="{
-              invalid:
-                (password2?.invalid && password2?.touched) ||
-                password2?.hasError('PasswordNoMatch')
-            }"
-          />
-          <button
-            type="button"
-            class="toggle-visibility"
-            (click)="clickEvent($event)"
-            [attr.aria-label]="'Ocultar contraseña'"
-            [attr.aria-pressed]="hide()"
-          >
-            <mat-icon class="icono-input">{{
-              hide() ? "visibility_off" : "visibility"
-            }}</mat-icon>
-          </button>
-        </div>
+          <!-- Campo de apellidos -->
+          <div class="form-field">
+            <label for="apellidos_usuario">Apellidos</label>
+            <div class="wrapper">
+              <input
+                id="apellidos_usuario"
+                type="text"
+                placeholder="Introduce tus apellidos"
+                formControlName="apellidos_usuario"
+              />
+            </div>
+          </div>
 
-        <!-- Error de contraseña no coincide -->
-        <span
-          *ngIf="loginForm.hasError('PasswordNoMatch') && password2?.touched"
-          class="error"
-        >
-          Las contraseñas no coinciden
-        </span>
-      </div>
+          <!-- Campo de DNI -->
+          <div class="form-field">
+            <label for="dni_usuario">DNI</label>
+            <div class="wrapper">
+              <input
+                id="dni_usuario"
+                type="text"
+                placeholder="Introduce tu DNI"
+                formControlName="dni_usuario"
+              />
+            </div>
+          </div>
 
-      <!-- Mensaje de error -->
-      <div *ngIf="loginError" class="error-message">
-        {{ loginError }}
-      </div>
+          <!-- Campo de apellidos -->
+          <div class="form-field">
+            <label for="direccion_usuario">Dirección</label>
+            <div class="wrapper">
+              <input
+                id="direccion_usuario"
+                type="text"
+                placeholder="Introduce tu dirección"
+                formControlName="direccion_usuario"
+              />
+            </div>
+          </div>
+          <div class="form-field-button">
+            <button mat-button matStepperNext>Siguiente</button>
+          </div>
+        </form>
+      </mat-step>
 
-      <!-- Botón de inicio de sesión -->
-      <button
-        type="submit"
-        [disabled]="loginForm.invalid || loading"
-        class="submit-button"
-      >
-        <ng-container *ngIf="loading"> Cargando... </ng-container>
-        <ng-container *ngIf="!loading">Registrarse</ng-container>
-      </button>
+      <mat-step [stepControl]="loginForm">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <ng-template matStepLabel>Datos de inicio de sesión</ng-template>
+          <!-- Campo de email -->
+          <div class="form-field">
+            <label for="email_usuario">Email</label>
+            <div class="wrapper">
+              <input
+                id="email_usuario"
+                type="email"
+                placeholder="Introduce tu email"
+                formControlName="email_usuario"
+                [ngClass]="{
+                  invalid: email_usuario?.invalid && email_usuario?.touched
+                }"
+              />
+              <span class="icono-input"><mat-icon>email</mat-icon></span>
+            </div>
+            <span
+              class="error"
+              *ngIf="
+                email_usuario?.hasError('required') && email_usuario?.touched
+              "
+            >
+              El email es obligatorio
+            </span>
+            <span
+              class="error"
+              *ngIf="
+                email_usuario?.hasError('email') &&
+                !email_usuario?.hasError('required')
+              "
+            >
+              Introduce un email válido
+            </span>
+          </div>
 
-      <!-- Enlace para registro -->
-      <div class="internal-form-footer-text">
-        <a [routerLink]="'/auth/login'" class="login-link">Iniciar sesión ></a>
-      </div>
-    </form>
+          <!-- Campo de contraseña -->
+          <div class="form-field">
+            <label for="password_usuario">Contraseña</label>
+            <div class="wrapper">
+              <input
+                id="password_usuario"
+                [type]="hide() ? 'password' : 'text'"
+                placeholder="Introduce tu contraseña"
+                formControlName="password_usuario"
+                [ngClass]="{
+                  invalid:
+                    password_usuario?.invalid && password_usuario?.touched
+                }"
+              />
+              <button
+                type="button"
+                class="toggle-visibility"
+                (click)="clickEvent($event)"
+                [attr.aria-label]="'Ocultar contraseña'"
+                [attr.aria-pressed]="hide()"
+              >
+                <mat-icon class="icono-input">{{
+                  hide() ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </div>
+            <span
+              class="error"
+              *ngIf="
+                password_usuario?.hasError('required') &&
+                password_usuario?.touched
+              "
+            >
+              La contraseña es obligatoria
+            </span>
+          </div>
+
+          <!-- Campo de repetir contraseña -->
+          <div class="form-field">
+            <label for="password2">Repite la contraseña</label>
+            <div class="wrapper">
+              <input
+                id="password2"
+                [type]="hide() ? 'password' : 'text'"
+                placeholder="Repite tu contraseña"
+                formControlName="password2"
+                [ngClass]="{
+                  invalid:
+                    (password2?.invalid && password2?.touched) ||
+                    password2?.hasError('PasswordNoMatch')
+                }"
+              />
+              <button
+                type="button"
+                class="toggle-visibility"
+                (click)="clickEvent($event)"
+                [attr.aria-label]="'Ocultar contraseña'"
+                [attr.aria-pressed]="hide()"
+              >
+                <mat-icon class="icono-input">{{
+                  hide() ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </div>
+
+            <!-- Error de contraseña no coincide -->
+            <span
+              *ngIf="
+                loginForm.hasError('PasswordNoMatch') && password2?.touched
+              "
+              class="error"
+            >
+              Las contraseñas no coinciden
+            </span>
+          </div>
+
+          <!-- Mensaje de error -->
+          <div *ngIf="loginError" class="error-message">
+            {{ loginError }}
+          </div>
+
+          <span>
+            <button mat-button matStepperPrevious>Atrás</button>
+
+            <!-- Botón de inicio de sesión -->
+            <button
+              type="submit"
+              [disabled]="loginForm.invalid || loading"
+              class="submit-button"
+            >
+              <ng-container *ngIf="loading"> Cargando... </ng-container>
+              <ng-container *ngIf="!loading">Registrarse</ng-container>
+            </button>
+          </span>
+        </form>
+      </mat-step>
+    </mat-stepper>
+    <div class="internal-form-footer-text">
+      <a [routerLink]="'/auth/login'" class="login-link">Iniciar sesión ></a>
+    </div>
   </article>
 </section>
