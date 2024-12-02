@@ -57,4 +57,8 @@ export class MascotasComponent implements OnInit {
   irAlMenuMascota(idMascota: number): void {
     this.router.navigate(['/menu/mascota', idMascota]);
   }
+
+  pedirCita(idMascota: number) {
+    this.router.navigate(['/menu/cita', idMascota]);
+  }
 }

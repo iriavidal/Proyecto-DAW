@@ -20,7 +20,7 @@
             Última visita:
             {{ ultimasCitas[mascota.id_mascota] || "cargando..." }}
           </p>
-          <a href="#">
+          <a (click)="pedirCita(mascota.id_mascota)">
             <svg
               width="16"
               height="16"
