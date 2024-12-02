@@ -33,9 +33,13 @@
   }
 
   .cards-container {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     gap: 24px;
   }
 
@@ -49,6 +53,11 @@
     p {
       width: 100%;
       text-align: center;
+    }
+
+    .cards-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
     }
   }
 }
