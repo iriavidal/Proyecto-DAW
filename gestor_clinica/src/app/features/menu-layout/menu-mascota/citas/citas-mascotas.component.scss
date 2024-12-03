@@ -73,6 +73,12 @@
   gap: 2rem;
   padding: 2rem;
 
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5rem;
+  }
+
   .card-cita {
     border-radius: 5px;
     box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2);
