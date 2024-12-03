@@ -63,4 +63,8 @@ export class MenuMascotaComponent {
       this.router.navigate(['/menu/citas', idMascota]);
     }
   }
+
+  addMascota() {
+    this.router.navigate(['/menu/datos-mascota']);
+  }
 }

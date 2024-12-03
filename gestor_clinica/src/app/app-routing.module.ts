@@ -12,6 +12,7 @@ import { MenuLayoutComponent } from './features/menu-layout/menu-layout.componen
 import { MascotasComponent } from './features/menu-layout/mascotas/mascotas.component';
 import { CitasMascotasComponent } from './features/menu-layout/menu-mascota/citas/citas-mascotas.component';
 import { PostCitaComponent } from './features/menu-layout/menu-mascota/citas/post-cita/post-cita.component';
+import { DatosMascotaComponent } from './features/menu-layout/datos-mascota/datos-mascota.component';
 
 const routes: Routes = [
   {
@@ -43,7 +44,6 @@ const routes: Routes = [
       {
         path: 'mascota',
         component: MenuMascotaComponent,
-        // Recordar añadir los hijos cuando se tenga un componente para envolverlos
       },
       {
         path: 'mascota/:id_mascota',
@@ -60,6 +60,14 @@ const routes: Routes = [
       {
         path: 'cita/:id_mascota/:id_cita',
         component: PostCitaComponent,
+      },
+      {
+        path: 'datos-mascota',
+        component: DatosMascotaComponent,
+      },
+      {
+        path: 'datos-mascota/:id_mascota',
+        component: DatosMascotaComponent,
       },
     ],
   },
