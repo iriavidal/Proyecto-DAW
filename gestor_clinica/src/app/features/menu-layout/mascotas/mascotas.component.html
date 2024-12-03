@@ -18,9 +18,14 @@
           </h2>
           <p>
             Última visita:
-            {{ ultimasCitas[mascota.id_mascota] || "cargando..." }}
+            {{
+              ultimasCitas[mascota.id_mascota]
+                ? (ultimasCitas[mascota.id_mascota] | formatDateTime)
+                : "cargando..."
+            }}
           </p>
-          <a href="#">
+
+          <a (click)="pedirCita(mascota.id_mascota)">
             <svg
               width="16"
               height="16"
