@@ -1,0 +1,123 @@
+<section class="titulo">
+  <svg
+    (click)="atras()"
+    width="24"
+    height="16"
+    viewBox="0 0 24 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M24 6.66667H5.10667L9.88 1.88L8 0L0 8L8 16L9.88 14.1067L5.10667 9.33333H24V6.66667Z"
+      fill="#205047"
+    />
+  </svg>
+  <ng-container *ngIf="!esEdicion; else editar">
+    <h2>Nueva mascota</h2>
+  </ng-container>
+  <ng-template #editar>
+    <h2>Editar mascota</h2>
+  </ng-template>
+  <span></span>
+</section>
+<section class="formulario">
+  <form [formGroup]="datosMascota" (submit)="onSubmit()">
+    <!-- Campo de tipo_id -->
+    <div class="form-field">
+      <label for="id_tipo">Tipo de mascota</label>
+      <div class="content-select">
+        <select
+          (change)="recogerDatos($event, 'tipo')"
+          formControlName="id_tipo"
+        >
+          <option *ngFor="let item of tiposMascota" [value]="item.id_tipo">
+            {{ item.tipo }}
+          </option>
+        </select>
+
+        <div class="flecha-select">
+          <svg
+            width="12"
+            height="6"
+            viewBox="0 0 12 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0L6 6L12 0H0Z" fill="#205047" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Campo de nombre_mascota -->
+    <div class="form-field">
+      <label for="nombre_mascota">Nombre</label>
+      <div class="wrapper">
+        <input
+          id="nombre_mascota"
+          type="text"
+          placeholder="Introduce el nombre de tu mascota"
+          formControlName="nombre_mascota"
+          (ngModelChange)="recogerDatos($event, 'nombre')"
+        />
+      </div>
+    </div>
+
+    <!-- Campo de fecha_nac_mascota -->
+    <div class="form-field">
+      <label for="nombre_mascota">Fecha de nacimiento</label>
+      <mat-form-field>
+        <mat-label>Escoge una fecha</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [max]="maxDate"
+          formControlName="fecha_nac_mascota"
+          (ngModelChange)="recogerDatos($event, 'fecha')"
+        />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <!-- Campo de nChip_mascota -->
+    <div class="form-field">
+      <label for="nChip_mascota">Nº de chip</label>
+      <div class="wrapper">
+        <input
+          id="nChip_mascota"
+          type="text"
+          placeholder="Introduce el número de chip"
+          formControlName="nChip_mascota"
+          (ngModelChange)="recogerDatos($event, 'chip')"
+        />
+      </div>
+    </div>
+
+    <!-- Campo de raza_mascota -->
+    <div class="form-field">
+      <label for="raza_mascota">Raza</label>
+      <div class="wrapper">
+        <input
+          id="raza_mascota"
+          type="text"
+          placeholder="Introduce la raza de tu mascota"
+          formControlName="raza_mascota"
+          (ngModelChange)="recogerDatos($event, 'raza')"
+        />
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="datosMascota.invalid"
+      class="submit-button"
+    >
+      <ng-container *ngIf="esEdicion"> Editar datos </ng-container>
+      <ng-container *ngIf="!esEdicion">Registrar mascota</ng-container>
+    </button>
+  </form>
+</section>

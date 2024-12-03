@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MascotasService } from 'src/app/core/services/datos/mascotas.service';
@@ -16,10 +17,20 @@ export class MascotasComponent implements OnInit {
   constructor(
     private tokenService: TokenService,
     private mascotasService: MascotasService,
-    private router: Router
+    private router: Router,
+    private observer: BreakpointObserver
   ) {}
 
   ngOnInit(): void {
+    this.observer.observe(['(max-width: 767px)']).subscribe((screenSize) => {
+      if (screenSize.matches) {
+        //console.log('Móvil');
+      } else {
+        //console.log('Ordenador');
+        this.router.navigate(['/menu/mascota']);
+      }
+    });
+
     this.userId = this.tokenService.getUserIdFromToken();
 
     if (this.userId) {
@@ -60,5 +71,9 @@ export class MascotasComponent implements OnInit {
 
   pedirCita(idMascota: number) {
     this.router.navigate(['/menu/cita', idMascota]);
+  }
+
+  addMascota() {
+    this.router.navigate(['/menu/datos-mascota']);
   }
 }

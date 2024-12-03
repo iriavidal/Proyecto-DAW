@@ -34,6 +34,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
+import { DatosMascotaComponent } from './menu-layout/datos-mascota/datos-mascota.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
     CitasComponent,
     CitasMascotasComponent,
     PostCitaComponent,
+    DatosMascotaComponent,
   ],
   imports: [
     CommonModule,
