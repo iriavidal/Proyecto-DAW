@@ -92,6 +92,15 @@ section {
     padding: 5rem 2rem;
     gap: 1.5rem 0;
 
+    @media screen and (min-width: 1024px) {
+      padding: 5rem;
+      gap: 5rem 0;
+
+      p {
+        font-size: 1.7rem;
+      }
+    }
+
     .boton {
       display: flex;
       flex-direction: column;

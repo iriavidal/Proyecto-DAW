@@ -32,7 +32,6 @@ export class CitasMascotasComponent {
     });
 
     this.loadMascotas();
-    this.loadCitas();
   }
 
   loadMascotas(): void {
@@ -43,6 +42,12 @@ export class CitasMascotasComponent {
         next: (data) => {
           if (data.results && data.results.length > 0) {
             this.listadoMascotas = data.results;
+
+            if (this.selectedMascotaId == null) {
+              this.selectedMascotaId = this.listadoMascotas[0].id_mascota;
+            }
+
+            this.loadCitas();
           } else {
             console.error('No se encontraron mascotas para este usuario.');
           }

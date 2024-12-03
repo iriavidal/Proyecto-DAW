@@ -50,6 +50,10 @@ const routes: Routes = [
         component: MenuMascotaComponent,
       },
       {
+        path: 'citas',
+        component: CitasMascotasComponent,
+      },
+      {
         path: 'citas/:id_mascota',
         component: CitasMascotasComponent,
       },

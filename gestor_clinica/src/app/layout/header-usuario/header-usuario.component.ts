@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
@@ -7,10 +8,16 @@ import { AuthService } from 'src/app/core/services/auth.service';
   styleUrl: './header-usuario.component.scss',
 })
 export class HeaderUsuarioComponent {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   closeMenu(menuToggle: HTMLInputElement): void {
     menuToggle.checked = false;
+  }
+
+  irA(boton: string) {
+    if (boton == 'citas') {
+      this.router.navigate(['/menu/citas']);
+    }
   }
 
   cerrarSesion() {
