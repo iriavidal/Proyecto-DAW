@@ -35,6 +35,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { DatosMascotaComponent } from './menu-layout/datos-mascota/datos-mascota.component';
+import { HistorialesComponent } from './menu-layout/menu-mascota/historiales/historiales.component';
+import { HistorialComponent } from './menu-layout/menu-mascota/historiales/historial/historial.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { DatosMascotaComponent } from './menu-layout/datos-mascota/datos-mascota
     CitasMascotasComponent,
     PostCitaComponent,
     DatosMascotaComponent,
+    HistorialesComponent,
+    HistorialComponent,
   ],
   imports: [
     CommonModule,

@@ -1,21 +1,25 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HistorialesService } from 'src/app/core/services/datos/historiales.service';
 import { MascotasService } from 'src/app/core/services/datos/mascotas.service';
 import { TokenService } from 'src/app/core/services/token.service';
 
 @Component({
-  selector: 'app-menu-mascota',
-  templateUrl: './menu-mascota.component.html',
-  styleUrl: './menu-mascota.component.scss',
+  selector: 'app-historiales',
+  templateUrl: './historiales.component.html',
+  styleUrl: './historiales.component.scss',
 })
-export class MenuMascotaComponent {
+export class HistorialesComponent {
   selectedMascotaId: number | null = null; // ID de la mascota seleccionada
   listadoMascotas: any[] = []; // Todas las mascotas del usuario
   userId: number | null = null; // ID del usuario logueado
 
+  historiales: any[] = [];
+
   constructor(
     private route: ActivatedRoute,
     private mascotasService: MascotasService,
+    private historialesService: HistorialesService,
     private tokenService: TokenService,
     private router: Router
   ) {}
@@ -42,6 +46,8 @@ export class MenuMascotaComponent {
             if (this.selectedMascotaId == null) {
               this.selectedMascotaId = this.listadoMascotas[0].id_mascota;
             }
+
+            this.loadHistoriales();
           } else {
             console.error('No se encontraron mascotas para este usuario.');
           }
@@ -53,22 +59,50 @@ export class MenuMascotaComponent {
     }
   }
 
+  loadHistoriales(): void {
+    if (this.selectedMascotaId != null) {
+      this.historialesService
+        .getHistorialesMascota(this.selectedMascotaId)
+        .subscribe({
+          next: (data) => {
+            if (data.results && data.results.length > 0) {
+              // Ordenar citas por fecha
+              this.historiales = data.results.sort((a: any, b: any) => {
+                const dateA = new Date(a.fecha_y_hora).getTime();
+                const dateB = new Date(b.fecha_y_hora).getTime();
+                return dateA - dateB;
+              });
+            } else {
+              this.historiales = [];
+              console.error('No se encontraron historiales para esta mascota.');
+            }
+          },
+          error: (err) => {
+            this.historiales = [];
+            console.error('Error al obtener las historiales:', err);
+          },
+        });
+    } else {
+      this.router.navigate(['/menu']);
+    }
+  }
+
   onMascotaChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
     this.selectedMascotaId = Number(selectElement.value);
+
+    console.log('Mascota seleccionada:', this.selectedMascotaId); // Verificar el ID seleccionado
+
+    this.loadHistoriales();
   }
 
-  irA(idMascota: number | null, boton: string) {
-    if (boton == 'citas') {
-      this.router.navigate(['/menu/citas', idMascota]);
-    }
-
-    if (boton == 'historiales') {
-      this.router.navigate(['/menu/historiales', idMascota]);
-    }
+  verHistorial(idHistorial: number) {
+    this.router.navigate([
+      `/menu/historial/${this.selectedMascotaId}/${idHistorial}`,
+    ]);
   }
 
-  addMascota() {
-    this.router.navigate(['/menu/datos-mascota']);
+  atras() {
+    this.router.navigate([`/menu/mascota/${this.selectedMascotaId}`]);
   }
 }

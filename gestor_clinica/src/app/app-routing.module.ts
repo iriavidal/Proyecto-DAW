@@ -13,6 +13,8 @@ import { MascotasComponent } from './features/menu-layout/mascotas/mascotas.comp
 import { CitasMascotasComponent } from './features/menu-layout/menu-mascota/citas/citas-mascotas.component';
 import { PostCitaComponent } from './features/menu-layout/menu-mascota/citas/post-cita/post-cita.component';
 import { DatosMascotaComponent } from './features/menu-layout/datos-mascota/datos-mascota.component';
+import { HistorialesComponent } from './features/menu-layout/menu-mascota/historiales/historiales.component';
+import { HistorialComponent } from './features/menu-layout/menu-mascota/historiales/historial/historial.component';
 
 const routes: Routes = [
   {
@@ -72,6 +74,18 @@ const routes: Routes = [
       {
         path: 'datos-mascota/:id_mascota',
         component: DatosMascotaComponent,
+      },
+      {
+        path: 'historiales/:id_mascota',
+        component: HistorialesComponent,
+      },
+      {
+        path: 'historiales',
+        component: HistorialesComponent,
+      },
+      {
+        path: 'historial/:id_mascota/:id_historial',
+        component: HistorialComponent,
       },
     ],
   },

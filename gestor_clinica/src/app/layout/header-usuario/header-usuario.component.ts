@@ -18,6 +18,10 @@ export class HeaderUsuarioComponent {
     if (boton == 'citas') {
       this.router.navigate(['/menu/citas']);
     }
+
+    if (boton == 'historiales') {
+      this.router.navigate(['/menu/historiales']);
+    }
   }
 
   cerrarSesion() {

@@ -13,6 +13,15 @@ import { environment } from 'src/app/environment';
 export class MascotasService {
   constructor(private http: HttpClient) {}
 
+  getMascota(mascotaId: number): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.get<any>(
+      `${environment.URLServer}/mascotas?linkTo=id_mascota&equalTo=${mascotaId}`,
+      { headers }
+    );
+  }
+
   getMascotasUser(userId: number): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
