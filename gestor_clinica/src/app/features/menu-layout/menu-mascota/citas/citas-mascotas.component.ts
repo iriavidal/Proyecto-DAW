@@ -89,7 +89,7 @@ export class CitasMascotasComponent {
     const selectElement = event.target as HTMLSelectElement;
     this.selectedMascotaId = Number(selectElement.value);
 
-    console.log('Mascota seleccionada:', this.selectedMascotaId); // Verificar el ID seleccionado
+    console.log('Mascota seleccionada:', this.selectedMascotaId);
 
     this.loadCitas();
   }
@@ -115,7 +115,7 @@ export class CitasMascotasComponent {
           this.loadCitas();
         },
         error: (err) => {
-          console.error('Error en el registro:', err);
+          console.error('Error en el borrado:', err);
         },
       });
   }
