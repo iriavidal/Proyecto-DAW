@@ -27,7 +27,9 @@ Este proyecto utilizará Angular en su versión más reciente y una API propia e
 
 ## Instalación / Posta en marcha
 
-### 1. Clonar el Repositorio
+### Web clínica:
+
+#### 1. Clonar el Repositorio
 
 Usa el comando `git clone` con la URL del repositorio:
 
@@ -38,10 +40,10 @@ git clone https://github.com/iriavidal/Proyecto-DAW.git
 Luego, entra en la carpeta del proyecto:
 
 ```bash
-cd Proyecto-DAW
+cd Proyecto-DAW/gestor_clinica
 ```
 
-## 2. Instalar dependencias
+#### 2. Instalar dependencias
 
 Ejecuta `npm install` para instalar las dependencias necesarias:
 
@@ -49,7 +51,7 @@ Ejecuta `npm install` para instalar las dependencias necesarias:
 npm i
 ```
 
-### 3. Iniciar el proyecto
+#### 3. Iniciar el proyecto
 
 Inicia el servidor de desarrollo con `ng serve` (si dispones de Angular CLI) o con `npm start`:
 
@@ -60,6 +62,40 @@ npm start
 Esto levantará el servidor en `http://localhost:4200` de forma predeterminada, donde podrás acceder al proyecto de forma local.
 
 `NOTA`: estas instrucciones asumen que el usuario que quiera realizar una prueba local en vez de visitar la web tiene instalado en su ordenador la última versión de **Node.js**. Si no es el caso, [aquí tienes el link para descargarlo](https://nodejs.org/en/).
+
+### API:
+
+#### 1. Acceso a la carpeta
+
+Una vez clonado el repositorio en el paso anterior, se accede a la carpeta de la API:
+
+```bash
+cd Proyecto-DAW/API
+```
+
+#### 2. Instalar dependencias
+
+Ejecuta `composer install` para instalar las dependencias necesarias:
+
+```bash
+composer i
+```
+
+#### 3. Iniciar el proyecto
+
+```bash
+php -S localhost:8081
+```
+
+`NOTA`: estas instrucciones asumen que el usuario que quiera realizar una prueba local en vez de visitar la web tiene instalado en su ordenador la última versión de **Composer**. Si no es el caso, [aquí tienes el link para descargarlo](https://getcomposer.org/download/).
+
+### Base de datos:
+
+#### 1. Importar base de datos a XAMPP:
+
+Dentro de la carpeta `Proyecto-DAW/API`, podremos encontrar un archivo sql llamado `bbdd`, que está completamente preparado para simplemente importarlo en `http://localhost/phpmyadmin`.
+
+`NOTA`: estas instrucciones asumen que el usuario que quiera realizar una prueba local en vez de visitar la web tiene instalado en su ordenador la última versión de **XAMPP**. Si no es el caso, [aquí tienes el link para descargarlo](https://www.apachefriends.org/es/download.html).
 
 ## Uso
 
