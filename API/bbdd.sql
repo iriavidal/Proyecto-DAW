@@ -15,7 +15,7 @@ INSERT INTO Roles (rol, date_create, date_update)
 VALUES 
     ('cliente', CURDATE(), CURDATE()),
     ('veterinario', CURDATE(), CURDATE()),
-    ("tecnico", CURDATE(), CURDATE());
+    ('tecnico', CURDATE(), CURDATE());
 
 -- Tabla Usuario genérica
 CREATE TABLE Usuarios (
@@ -31,7 +31,7 @@ CREATE TABLE Usuarios (
     id_rol INT,
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
-    FOREIGN KEY (id_rol) REFERENCES Roles(id_rol)
+    FOREIGN KEY (id_rol) REFERENCES Roles(id_rol) ON DELETE SET NULL
 );
 
 -- Tabla TipoMascota para almacenar los tipos de mascotas
@@ -59,8 +59,8 @@ CREATE TABLE Mascotas (
     raza_mascota VARCHAR(50),
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
-    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
-    FOREIGN KEY (id_tipo) REFERENCES TiposMascota(id_tipo)
+    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE,
+    FOREIGN KEY (id_tipo) REFERENCES TiposMascota(id_tipo) ON DELETE SET NULL
 );
 
 -- Tabla Historiales
@@ -80,8 +80,8 @@ CREATE TABLE Citas (
     id_cita INT PRIMARY KEY AUTO_INCREMENT,
     id_mascota INT,
     tipo_cita VARCHAR(20) NOT NULL,
-    fecha_y_hora DATETIME  NOT NULL,
+    fecha_y_hora DATETIME NOT NULL,
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
-    FOREIGN KEY (id_mascota) REFERENCES Mascotas(id_mascota)
+    FOREIGN KEY (id_mascota) REFERENCES Mascotas(id_mascota) ON DELETE CASCADE
 );
