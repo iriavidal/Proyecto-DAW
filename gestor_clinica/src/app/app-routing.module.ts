@@ -15,6 +15,8 @@ import { PostCitaComponent } from './features/menu-layout/menu-mascota/citas/pos
 import { DatosMascotaComponent } from './features/menu-layout/datos-mascota/datos-mascota.component';
 import { HistorialesComponent } from './features/menu-layout/menu-mascota/historiales/historiales.component';
 import { HistorialComponent } from './features/menu-layout/menu-mascota/historiales/historial/historial.component';
+import { DatosComponent } from './features/menu-layout/menu-mascota/datos/datos.component';
+import { DatosUserComponent } from './features/menu-layout/menu-mascota/datos/datos-user/datos-user.component';
 
 const routes: Routes = [
   {
@@ -68,14 +70,6 @@ const routes: Routes = [
         component: PostCitaComponent,
       },
       {
-        path: 'datos-mascota',
-        component: DatosMascotaComponent,
-      },
-      {
-        path: 'datos-mascota/:id_mascota',
-        component: DatosMascotaComponent,
-      },
-      {
         path: 'historiales/:id_mascota',
         component: HistorialesComponent,
       },
@@ -86,6 +80,22 @@ const routes: Routes = [
       {
         path: 'historial/:id_mascota/:id_historial',
         component: HistorialComponent,
+      },
+      {
+        path: 'datos/:id_usuario/:id_mascota',
+        component: DatosComponent,
+      },
+      {
+        path: 'datos-mascota/:id_mascota',
+        component: DatosMascotaComponent,
+      },
+      {
+        path: 'datos-user/:id_usuario',
+        component: DatosUserComponent,
+      },
+      {
+        path: 'datos-mascota',
+        component: DatosMascotaComponent,
       },
     ],
   },

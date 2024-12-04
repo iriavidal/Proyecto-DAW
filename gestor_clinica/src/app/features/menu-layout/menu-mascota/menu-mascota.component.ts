@@ -66,6 +66,10 @@ export class MenuMascotaComponent {
     if (boton == 'historiales') {
       this.router.navigate(['/menu/historiales', idMascota]);
     }
+
+    if (boton == 'datos') {
+      this.router.navigate(['/menu/datos', this.userId, idMascota]);
+    }
   }
 
   addMascota() {

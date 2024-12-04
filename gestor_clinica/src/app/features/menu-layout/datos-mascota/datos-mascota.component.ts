@@ -64,6 +64,38 @@ export class DatosMascotaComponent {
 
     const today = new Date();
     this.maxDate = today.toISOString().split('T')[0];
+
+    this.route.params.subscribe((params) => {
+      if (params['id_mascota']) {
+        this.selectedMascotaId = +params['id_mascota'];
+        this.esEdicion = true;
+        this.cargarDatos();
+      }
+    });
+  }
+
+  cargarDatos() {
+    this.mascotasService.getMascota(this.selectedMascotaId).subscribe({
+      next: (data) => {
+        //console.log(data);
+        this.data = data.results[0];
+
+        this.datosMascota.patchValue({ id_tipo: this.data.id_tipo });
+        this.datosMascota.patchValue({
+          nombre_mascota: this.data.nombre_mascota,
+        });
+        this.datosMascota.patchValue({
+          fecha_nac_mascota: this.data.fecha_nac_mascota,
+        });
+        this.datosMascota.patchValue({
+          nChip_mascota: this.data.nChip_mascota,
+        });
+        this.datosMascota.patchValue({ raza_mascota: this.data.raza_mascota });
+      },
+      error: (err) => {
+        console.error('Error al cargar la mascota:', err);
+      },
+    });
   }
 
   recogerDatos(event: Event | string, input: string) {
@@ -111,31 +143,70 @@ export class DatosMascotaComponent {
           }
         }
       }
+
+      console.log(this.data);
     }
   }
 
   onSubmit() {
     if (this.datosMascota.valid) {
-      this.mascotasService
-        .addMascota(this.data, sessionStorage['authToken'])
-        .subscribe({
-          next: (data) => {
-            console.log('Registro exitoso:', data);
-            this.idNuevaMascota = data.results.lastId;
-            this.atras();
-          },
-          error: (err) => {
-            console.error('Error en el registro:', err);
-          },
-        });
+      if (!this.esEdicion) {
+        this.mascotasService
+          .addMascota(this.data, sessionStorage['authToken'])
+          .subscribe({
+            next: (data) => {
+              console.log('Registro exitoso:', data);
+              this.idNuevaMascota = data.results.lastId;
+              this.atras();
+            },
+            error: (err) => {
+              console.error('Error en el registro:', err);
+            },
+          });
+      } else {
+        this.mascotasService
+          .updateMascota(
+            this.selectedMascotaId,
+            sessionStorage['authToken'],
+            this.data
+          )
+          .subscribe({
+            next: (response) => {
+              console.log('Mascota actualizada:', response);
+              this.atras();
+            },
+            error: (err) => {
+              console.error('Error al actualizar la mascota:', err);
+            },
+          });
+      }
     }
+  }
+
+  deleteMascota() {
+    this.mascotasService
+      .deleteMascota(this.selectedMascotaId, sessionStorage['authToken'])
+      .subscribe({
+        next: (data) => {
+          console.log('Borrado exitoso:', data);
+          this.atras();
+        },
+        error: (err) => {
+          console.error('Error en el borrado:', err);
+          console.log(this.selectedMascotaId);
+        },
+      });
   }
 
   atras() {
     if (this.idNuevaMascota != 0) {
       this.router.navigate([`/menu/mascota/${this.idNuevaMascota}`]);
     } else {
-      this.router.navigate([`/menu/mascota`]);
+      if (this.selectedMascotaId != 0) {
+        this.router.navigate([`/menu/mascota/${this.selectedMascotaId}`]);
+      } else {
+        this.router.navigate([`/menu/mascota`]);
+      }
     }
   }
 }

@@ -72,6 +72,44 @@ export class MascotasService {
     });
   }
 
+  updateMascota(
+    mascotaId: number,
+    token: string,
+    data: {
+      id_usuario?: number;
+      id_tipo?: number;
+      nombre_mascota?: string;
+      fecha_nac_mascota?: string;
+      nChip_mascota?: string;
+      raza_mascota?: string;
+    }
+  ): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    return this.http
+      .put<any>(
+        `${environment.URLServer}/mascotas?token=${token}&nameId=id_mascota&id=${mascotaId}`,
+        JSON.stringify(data),
+        { headers }
+      )
+      .pipe(catchError(this.handleError));
+  }
+
+  deleteMascota(mascotaId: number, token: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    return this.http
+      .delete<any>(
+        `${environment.URLServer}/mascotas?token=${token}&nameId=id_mascota&id=${mascotaId}`,
+        { headers }
+      )
+      .pipe(catchError(this.handleError));
+  }
+
   private handleError(error: HttpErrorResponse) {
     let errorMessage = '';
 

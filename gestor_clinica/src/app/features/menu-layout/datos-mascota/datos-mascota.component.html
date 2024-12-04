@@ -23,7 +23,7 @@
 <section class="formulario">
   <form [formGroup]="datosMascota" (submit)="onSubmit()">
     <!-- Campo de tipo_id -->
-    <div class="form-field">
+    <article class="form-field">
       <label for="id_tipo">Tipo de mascota</label>
       <div class="content-select">
         <select
@@ -47,10 +47,10 @@
           </svg>
         </div>
       </div>
-    </div>
+    </article>
 
     <!-- Campo de nombre_mascota -->
-    <div class="form-field">
+    <article class="form-field">
       <label for="nombre_mascota">Nombre</label>
       <div class="wrapper">
         <input
@@ -61,10 +61,10 @@
           (ngModelChange)="recogerDatos($event, 'nombre')"
         />
       </div>
-    </div>
+    </article>
 
     <!-- Campo de fecha_nac_mascota -->
-    <div class="form-field">
+    <article class="form-field">
       <label for="nombre_mascota">Fecha de nacimiento</label>
       <mat-form-field>
         <mat-label>Escoge una fecha</mat-label>
@@ -81,10 +81,10 @@
         ></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-    </div>
+    </article>
 
     <!-- Campo de nChip_mascota -->
-    <div class="form-field">
+    <article class="form-field">
       <label for="nChip_mascota">Nº de chip</label>
       <div class="wrapper">
         <input
@@ -95,10 +95,10 @@
           (ngModelChange)="recogerDatos($event, 'chip')"
         />
       </div>
-    </div>
+    </article>
 
     <!-- Campo de raza_mascota -->
-    <div class="form-field">
+    <article class="form-field">
       <label for="raza_mascota">Raza</label>
       <div class="wrapper">
         <input
@@ -109,15 +109,20 @@
           (ngModelChange)="recogerDatos($event, 'raza')"
         />
       </div>
-    </div>
+    </article>
 
-    <button
-      type="submit"
-      [disabled]="datosMascota.invalid"
-      class="submit-button"
-    >
-      <ng-container *ngIf="esEdicion"> Editar datos </ng-container>
-      <ng-container *ngIf="!esEdicion">Registrar mascota</ng-container>
-    </button>
+    <article class="botones">
+      <button
+        type="submit"
+        [disabled]="datosMascota.invalid"
+        class="submit-button"
+      >
+        <ng-container *ngIf="esEdicion"> Editar datos </ng-container>
+        <ng-container *ngIf="!esEdicion">Registrar mascota</ng-container>
+      </button>
+      <span class="delete" *ngIf="esEdicion" (click)="deleteMascota()"
+        >Eliminar mascota</span
+      >
+    </article>
   </form>
 </section>
