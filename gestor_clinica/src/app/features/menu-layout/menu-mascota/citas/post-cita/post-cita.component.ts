@@ -72,8 +72,6 @@ export class PostCitaComponent {
         this.esEdicion = false;
       }
     });
-
-    console.log(this.esEdicion);
   }
 
   cargarDatosCita(): void {

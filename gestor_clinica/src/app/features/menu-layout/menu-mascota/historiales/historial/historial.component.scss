@@ -1,0 +1,153 @@
+@import "src/styles/variables";
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100vw;
+
+  svg {
+    cursor: pointer;
+  }
+
+  h2 {
+    margin: 0;
+    color: $primary-900;
+  }
+}
+
+.formulario {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 5rem;
+
+    @media screen and (min-width: 1024px) {
+      margin: 3rem 10rem;
+    }
+
+    .form-field {
+      label {
+        color: $primary-900;
+        font-weight: 700;
+        padding: 0.5em 0;
+      }
+
+      .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        padding: 0 1rem;
+
+        border-bottom: 2px solid $primary-900;
+
+        input {
+          width: 256px;
+          height: 48px;
+
+          border: none;
+          background: none;
+
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+
+        /* input:-webkit-autofill {
+                background: none !important;
+              } */
+
+        .icono-input {
+          display: flex;
+          align-items: center;
+
+          transform: scale(1.5);
+
+          color: $primary-900;
+        }
+
+        button {
+          border: none;
+        }
+      }
+
+      .textarea {
+        padding: 0;
+        border-bottom: none;
+
+        textarea {
+          width: 100%;
+          border: 2px solid $primary-900;
+          border-radius: 5px;
+          padding: 0.5rem;
+          resize: none;
+          height: 10rem;
+        }
+      }
+
+      .content-select {
+        position: relative;
+        height: 48px;
+
+        select {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+
+          width: 100%;
+          padding: 10px 20px;
+
+          font-size: 20px;
+
+          background-color: $gray-100;
+          color: $primary-900;
+
+          border: none;
+          outline: none;
+          border-bottom: 1px solid $primary-900;
+          border-radius: 2px;
+        }
+
+        .flecha-select {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+        }
+
+        select::-ms-expand {
+          display: none;
+        }
+
+        /*select:focus {
+            border: 2px solid $primary-900;
+          } */
+      }
+    }
+
+    .submit-button {
+      width: 192px;
+      height: 48px;
+
+      background-color: $primary-900;
+      color: $primary-100;
+
+      border-radius: 8px;
+      border: none;
+
+      font-size: 18px;
+
+      box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2);
+
+      &:disabled {
+        background-color: $primary-100;
+        color: $primary-900;
+      }
+    }
+  }
+}

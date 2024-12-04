@@ -1,0 +1,75 @@
+<section class="perfil">
+  <article class="titulo">
+    <svg
+      (click)="atras()"
+      width="24"
+      height="16"
+      viewBox="0 0 24 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M24 6.66667H5.10667L9.88 1.88L8 0L0 8L8 16L9.88 14.1067L5.10667 9.33333H24V6.66667Z"
+        fill="#205047"
+      />
+    </svg>
+    <h2>Historiales médicos</h2>
+    <span></span>
+  </article>
+
+  <div class="content-select">
+    <select
+      name="mascota"
+      id="mascota"
+      [(ngModel)]="selectedMascotaId"
+      (change)="onMascotaChange($event)"
+    >
+      <ng-container *ngFor="let mascota of listadoMascotas">
+        <option
+          [value]="mascota.id_mascota"
+          [selected]="mascota.id_mascota === selectedMascotaId"
+        >
+          {{ mascota.nombre_mascota }}
+        </option>
+      </ng-container>
+    </select>
+    <div class="flecha-select">
+      <svg
+        width="12"
+        height="6"
+        viewBox="0 0 12 6"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0L6 6L12 0H0Z" fill="#205047" />
+      </svg>
+    </div>
+  </div>
+</section>
+<section class="historiales">
+  <ng-container *ngIf="historiales.length > 0; else sinHistoriales">
+    <ng-container *ngFor="let historial of historiales">
+      <article class="card-historial">
+        <h3>{{ historial.fecha_y_hora | formatDateTime }}</h3>
+        <p>{{ historial.motivo }}</p>
+        <span class="editar" (click)="verHistorial(historial.id_historial)">
+          <svg
+            width="27"
+            height="25"
+            viewBox="0 0 27 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.4079 11.8421L22.0658 10.1842C22.6447 9.60526 23.3816 9.28947 24.1842 9.21053V7.89474L16.2895 0H3.13158C1.67105 0 0.5 1.17105 0.5 2.63158V21.0526C0.5 22.5 1.67105 23.6842 3.13158 23.6842H11.0263V21.2237L11.1974 21.0526H3.13158V2.63158H12.3421V11.8421H20.4079ZM14.9737 1.97368L22.2105 9.21053H14.9737V1.97368ZM21.7237 14.25L24.4079 16.9342L16.3421 25H13.6579V22.3158L21.7237 14.25ZM26.6184 14.7237L25.3289 16.0132L22.6447 13.3289L23.9342 12.0395C24.1842 11.7763 24.6184 11.7763 24.8816 12.0395L26.6184 13.7763C26.8816 14.0395 26.8816 14.4737 26.6184 14.7237Z"
+              fill="#4d897b"
+            />
+          </svg>
+        </span>
+      </article>
+    </ng-container>
+  </ng-container>
+  <ng-template #sinHistoriales>
+    <p>No tienes ningún historial...</p>
+  </ng-template>
+</section>
