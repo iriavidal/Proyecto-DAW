@@ -37,6 +37,8 @@ import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { DatosMascotaComponent } from './menu-layout/datos-mascota/datos-mascota.component';
 import { HistorialesComponent } from './menu-layout/menu-mascota/historiales/historiales.component';
 import { HistorialComponent } from './menu-layout/menu-mascota/historiales/historial/historial.component';
+import { DatosComponent } from './menu-layout/menu-mascota/datos/datos.component';
+import { DatosUserComponent } from './menu-layout/menu-mascota/datos/datos-user/datos-user.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { HistorialComponent } from './menu-layout/menu-mascota/historiales/histo
     DatosMascotaComponent,
     HistorialesComponent,
     HistorialComponent,
+    DatosComponent,
+    DatosUserComponent,
   ],
   imports: [
     CommonModule,
