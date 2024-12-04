@@ -189,6 +189,7 @@ export class DatosMascotaComponent {
       .subscribe({
         next: (data) => {
           console.log('Borrado exitoso:', data);
+          this.selectedMascotaId = 0;
           this.atras();
         },
         error: (err) => {
