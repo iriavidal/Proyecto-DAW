@@ -66,13 +66,15 @@ CREATE TABLE Mascotas (
 -- Tabla Historiales
 CREATE TABLE Historiales (
     id_historial INT PRIMARY KEY AUTO_INCREMENT,
-    id_mascota INT,
-    fecha_y_hora DATETIME,
+    id_cita INT UNIQUE, 
+    id_mascota INT, 
+    fecha_y_hora DATETIME NOT NULL,
     motivo VARCHAR(50) NOT NULL,
     anotaciones TEXT NOT NULL,
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
-    FOREIGN KEY (id_mascota) REFERENCES Mascotas(id_mascota) ON DELETE CASCADE
+    FOREIGN KEY (id_cita) REFERENCES Citas(id_cita) ON DELETE CASCADE, 
+    FOREIGN KEY (id_mascota) REFERENCES Mascotas(id_mascota) ON DELETE CASCADE 
 );
 
 -- Tabla Citas
