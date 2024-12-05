@@ -63,6 +63,18 @@ CREATE TABLE Mascotas (
     FOREIGN KEY (id_tipo) REFERENCES TiposMascota(id_tipo) ON DELETE SET NULL
 );
 
+
+-- Tabla Citas
+CREATE TABLE Citas (
+    id_cita INT PRIMARY KEY AUTO_INCREMENT,
+    id_mascota INT,
+    tipo_cita VARCHAR(20) NOT NULL,
+    fecha_y_hora DATETIME NOT NULL,
+    date_create DATE DEFAULT CURDATE(),
+    date_update DATE DEFAULT CURDATE(),
+    FOREIGN KEY (id_mascota) REFERENCES Mascotas(id_mascota) ON DELETE CASCADE
+);
+
 -- Tabla Historiales
 CREATE TABLE Historiales (
     id_historial INT PRIMARY KEY AUTO_INCREMENT,
@@ -75,15 +87,4 @@ CREATE TABLE Historiales (
     date_update DATE DEFAULT CURDATE(),
     FOREIGN KEY (id_cita) REFERENCES Citas(id_cita) ON DELETE CASCADE, 
     FOREIGN KEY (id_mascota) REFERENCES Mascotas(id_mascota) ON DELETE CASCADE 
-);
-
--- Tabla Citas
-CREATE TABLE Citas (
-    id_cita INT PRIMARY KEY AUTO_INCREMENT,
-    id_mascota INT,
-    tipo_cita VARCHAR(20) NOT NULL,
-    fecha_y_hora DATETIME NOT NULL,
-    date_create DATE DEFAULT CURDATE(),
-    date_update DATE DEFAULT CURDATE(),
-    FOREIGN KEY (id_mascota) REFERENCES Mascotas(id_mascota) ON DELETE CASCADE
 );
