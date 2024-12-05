@@ -21,6 +21,7 @@
 - [Cómo instalar Angular en Windows: una guía sobre Angular CLI, Node.js y Herramientas de compilación](https://www.freecodecamp.org/espanol/news/como-instalar-angular-en-windows/)
 - [Librería Angular Carousel Component](https://coreui.io/angular/docs/components/carousel/)
 - [Tabla con las versiones de Node.js, TypeScript y RxJS que requiere cada versión de Angular ](https://angular.dev/reference/versions) (muy útil cuando utilizamos Node Version Manager)
+- [JSON Web Tokens](https://jwt.io/)
 
 ## 3- Sitios oficiais do software utilizado
 
