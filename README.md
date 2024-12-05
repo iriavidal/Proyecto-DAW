@@ -13,7 +13,11 @@
 
 ## Taboleiro do proyecto
 
-Este proyecto se encuentra en una fase de desarrollo temprana.
+Este proyecto se encuentra en fase de desarrollo.
+
+Ya se puede acceder a la web como cliente, añadir mascotas, pedir, modificar y eliminar citas, y consultar los historiales de dichas mascotas.
+
+En desarrollo: vista del veterinario, y vista del técnico.
 
 ## Descrición
 
