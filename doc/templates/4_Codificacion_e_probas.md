@@ -6,8 +6,6 @@
   - [3- Innovación](#3--innovación)
   - [4- Probas](#4--probas)
 
-> Este documento explica como se debe realizar a fase de codificación e probas.
-
 ## 1- Codificación
 
 > Crea unha carpeta no teu repositorio e sube o código frecuentemente.
@@ -16,23 +14,14 @@
 
 ## 2- Prototipos
 
-> A medida que se vai codificando crearanse varios prototipos, preferentemente realizados con Figma. Para cada un indicar unha descrición das funcionalidades implementadas.
->
-> Debes ir incluindo unha mostra representativan dos prototipos da aplicación.
->
-> Os proptotipos axudan no deseño da aplicación. Podes empregar:
->
-> - [Sketch](https://www.sketch.com/)
-> - [Figma](https://www.figma.com/). Recomendada
-> - [Proto.io](https://proto.io/)
->
-> A mellor opción é empregar Figma xa que esta é unha ferramenta en línea colavorativa. 
-> **Comparte o prototipo cos profesores por medio de Figma ou descarga o arquivo local o cal subirás o teu repositorio de GitHub**.
+[Figma](https://www.figma.com/design/uxAOJqyHggyEfxbHwytm41/Veterinaria?node-id=774-413&node-type=canvas&t=tfuxE9mZall5ef44-0)
 
 ## 3- Innovación
 
-No caso de utilizar tecnoloxías diferentes ás estudadas no ciclo formativo, fai unha descrición dos retos asumidos e como se resolveron.
+La utilización de `Angular 18` para mi proyecto fue todo un reto, que considero que he superado. El motivo de esta elección fue que era la tecnología que me enseñaron en la fct de este ciclo, y a medida que aprendía más la consideré una elección acertada por su versatilidad y su curva de aprendizaje completamente asequible si ya tienes una base de javascript.
+
+La creación de una `API REST en PHP` también fue todo un reto. Plasmar todo el conocimiento aprendido en el ciclo de PHP en esta API ha requerido muchas horas, tutoriales y búsquedas en google, y sobretodo romperse mucho la cabeza, pero al final he superado este reto y tengo una API que me sirve para cualquier proyecto personal que la necesite, lo cual me hace sentir muy orgullosa.
 
 ## 4- Probas
 
-Deben describirse as probas realizadas e conclusión obtidas. Describir os problemas atopados e como foron solucionados.
+> Deben describirse as probas realizadas e conclusión obtidas. Describir os problemas atopados e como foron solucionados.
