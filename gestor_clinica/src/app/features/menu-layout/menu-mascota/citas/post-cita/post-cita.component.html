@@ -66,6 +66,11 @@
           />
         </mat-form-field>
         <p class="horario">Horario: 10:00 a 14:00 y 17:00 a 20:00</p>
+        <mat-error
+          *ngIf="secondFormGroup.get('hora')?.hasError('citaInvalida')"
+        >
+          Hora no disponible.
+        </mat-error>
         <div class="pasos">
           <button mat-button matStepperPrevious>Atrás</button>
           <button mat-button matStepperNext>Continuar</button>
