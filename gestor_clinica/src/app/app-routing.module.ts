@@ -112,6 +112,10 @@ const routes: Routes = [
         path: '',
         component: VeterinarioComponent,
       },
+      {
+        path: 'historial/:id_mascota/:id_cita',
+        component: HistorialComponent,
+      },
     ],
   },
 

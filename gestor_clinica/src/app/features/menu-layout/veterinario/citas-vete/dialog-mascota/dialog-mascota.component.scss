@@ -1,0 +1,40 @@
+@import "src/styles/variables";
+
+.tabs {
+  height: 80dvh;
+  width: 80dvw;
+  overflow: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .informacion {
+    padding: 1rem 2rem;
+
+    article {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid $gray-500;
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: $primary-900;
+      }
+
+      ul {
+        margin: 1rem;
+      }
+    }
+  }
+
+  .historiales {
+    border-bottom: 1px solid $gray-500;
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 12px;
+    }
+  }
+}

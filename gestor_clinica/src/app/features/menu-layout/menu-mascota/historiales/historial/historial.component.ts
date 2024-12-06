@@ -14,11 +14,13 @@ export class HistorialComponent {
 
   data: {
     id_mascota: number;
+    id_cita: number;
     fecha_y_hora: string;
     motivo: string;
     anotaciones: string;
   } = {
     id_mascota: 0,
+    id_cita: 0,
     fecha_y_hora: '',
     motivo: '',
     anotaciones: '',
@@ -27,8 +29,9 @@ export class HistorialComponent {
   selectedMascotaId: number = 0;
   nombreMascota: string = '';
   selectedHistorialId: number = 0;
+  selectedCitaId: number = 0;
 
-  esEdicion: boolean = false;
+  esEdicion: boolean = true;
 
   constructor(
     private fb: FormBuilder,
@@ -43,26 +46,60 @@ export class HistorialComponent {
       motivo: ['', Validators.required],
       anotaciones: ['', Validators.required],
     });
+  }
 
+  ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.selectedMascotaId = +params['id_mascota'];
 
       this.mascotasService.getMascota(this.selectedMascotaId).subscribe({
         next: (data) => {
           this.nombreMascota = data.results[0].nombre_mascota;
+          const hoy = new Date();
+
+          if (params['id_cita']) {
+            this.selectedCitaId = +params['id_cita'];
+          }
+
+          if (params['id_historial']) {
+            this.esEdicion = false;
+            this.selectedHistorialId = +params['id_historial'];
+            this.cargarDatosHistorial();
+          } else {
+            this.esEdicion = true;
+
+            this.datosHistorial.patchValue({
+              id_mascota: this.nombreMascota,
+              fecha_y_hora: this.toISODate(hoy),
+              motivo: '',
+              anotaciones: '',
+            });
+
+            this.data = {
+              id_mascota: this.selectedMascotaId,
+              id_cita: this.selectedCitaId,
+              fecha_y_hora: this.toISODate(hoy),
+              motivo: '',
+              anotaciones: '',
+            };
+          }
         },
         error: (err) => {
           console.error('Error al cargar la mascota:', err);
         },
       });
-
-      if (params['id_historial']) {
-        this.selectedHistorialId = +params['id_historial'];
-        this.cargarDatosHistorial();
-      } else {
-        this.esEdicion = true;
-      }
     });
+  }
+
+  toISODate(fecha: Date): string {
+    const year = fecha.getFullYear();
+    const month = (fecha.getMonth() + 1).toString().padStart(2, '0');
+    const day = fecha.getDate().toString().padStart(2, '0');
+    const hours = fecha.getHours().toString().padStart(2, '0');
+    const minutes = fecha.getMinutes().toString().padStart(2, '0');
+    const seconds = fecha.getSeconds().toString().padStart(2, '0');
+
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
   }
 
   cargarDatosHistorial() {
@@ -83,12 +120,30 @@ export class HistorialComponent {
     });
   }
 
-  recogerDatos(event: Event, input: string) {
-    throw new Error('Method not implemented.');
+  recogerDatos(event: string, input: string) {
+    if (input === 'motivo') {
+      this.data.motivo = event;
+    }
+
+    if (input === 'anotaciones') {
+      this.data.anotaciones = event;
+    }
+
+    console.log(this.data);
   }
 
   onSubmit() {
-    throw new Error('Method not implemented.');
+    this.historialesService
+      .postHistorialMascota(this.data, sessionStorage['authToken'])
+      .subscribe({
+        next: (data) => {
+          console.log('Registro exitoso:', data);
+          this.router.navigate(['veterinario']);
+        },
+        error: (err) => {
+          console.error('Error en el registro:', err);
+        },
+      });
   }
 
   atras() {
