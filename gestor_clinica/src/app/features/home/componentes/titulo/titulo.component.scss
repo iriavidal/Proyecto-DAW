@@ -7,6 +7,7 @@
   gap: 24px;
 
   width: 350px;
+  text-align: center;
 
   h1 {
     font-family: $fuente-titulos;
@@ -20,12 +21,9 @@
     font-size: 20px;
   }
 
-  p {
-    text-align: center;
-  }
-
   @media screen and (min-width: 1024px) {
     width: 1062px;
+    margin-top: 3rem;
 
     h1 {
       font-size: 96px;

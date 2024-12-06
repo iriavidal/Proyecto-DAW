@@ -77,7 +77,6 @@ export class DatosMascotaComponent {
   cargarDatos() {
     this.mascotasService.getMascota(this.selectedMascotaId).subscribe({
       next: (data) => {
-        //console.log(data);
         this.data = data.results[0];
 
         this.datosMascota.patchValue({ id_tipo: this.data.id_tipo });

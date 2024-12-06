@@ -1,11 +1,23 @@
-<app-header-inicio></app-header-inicio>
+<app-header-inicio
+  (sectionScroll)="scrollToSection($event)"
+></app-header-inicio>
 <main>
-  <app-titulo appInView></app-titulo>
-  <app-servicios id="servicios" appInView></app-servicios>
-  <app-citas id="citas" appInView></app-citas>
-  <app-equipo id="equipo" appInView></app-equipo>
-  <app-marcas id="marcas" appInView></app-marcas>
-  <section id="contacto" class="contacto">
+  <section>
+    <app-titulo></app-titulo>
+  </section>
+  <section id="servicios" #servicios>
+    <app-servicios></app-servicios>
+  </section>
+  <section id="citas" #citas>
+    <app-citas></app-citas>
+  </section>
+  <section id="equipo" #equipo>
+    <app-equipo></app-equipo>
+  </section>
+  <section id="marcas" #marcas>
+    <app-marcas></app-marcas>
+  </section>
+  <section id="contacto" class="contacto" #contacto>
     <h6>¿Tienes alguna duda o necesitas más información?</h6>
     <button routerLink="/contacto">Contáctanos</button>
   </section>

@@ -65,7 +65,6 @@ export class CitasMascotasComponent {
         next: (data) => {
           if (data.results && data.results.length > 0) {
             const now = new Date().getTime();
-            //console.log(data.results);
 
             // Filtrar las citas próximas y ordenarlas por fecha
             this.citas = data.results
@@ -77,8 +76,6 @@ export class CitasMascotasComponent {
                 const dateB = new Date(b.fecha_y_hora).getTime();
                 return dateA - dateB;
               });
-
-            //console.log(this.citas);
           } else {
             this.citas = [];
             console.error('No se encontraron citas para esta mascota.');

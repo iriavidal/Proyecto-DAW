@@ -55,7 +55,6 @@ export class UsuariosService {
     } else {
       // Error de la API
       if (error.status === 404) {
-        // Si el error es 404, podemos manejarlo específicamente
         errorMessage =
           error.error?.results || 'No se encontró el recurso solicitado.';
       } else {
@@ -63,7 +62,6 @@ export class UsuariosService {
       }
     }
 
-    // Retornar el error
     return throwError(() => new Error(errorMessage));
   }
 }

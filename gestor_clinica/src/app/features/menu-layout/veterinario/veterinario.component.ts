@@ -25,7 +25,6 @@ export class VeterinarioComponent {
         next: (data) => {
           if (data.results && data.results.length > 0) {
             this.userName = `${data.results[0].nombre_usuario} ${data.results[0].apellidos_usuario}`;
-            //console.log(this.userName);
           } else {
             console.error('No se encontró al usuario.');
           }

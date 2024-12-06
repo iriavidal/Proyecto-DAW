@@ -6,6 +6,7 @@ import {
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from 'src/app/environment';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -54,6 +55,18 @@ export class HistorialesService {
       .pipe(catchError(this.handleError));
   }
 
+  verificarHistorial(idCita: number): Observable<boolean> {
+    return this.http
+      .get<any>(
+        `${environment.URLServer}/historiales?linkTo=id_cita&equalTo=${idCita}`
+      )
+      .pipe(
+        map((response) => {
+          return response.results && response.results.length > 0;
+        })
+      );
+  }
+
   private handleError(error: HttpErrorResponse) {
     let errorMessage = '';
 
@@ -63,7 +76,6 @@ export class HistorialesService {
     } else {
       // Error de la API
       if (error.status === 404) {
-        // Si el error es 404, podemos manejarlo específicamente
         errorMessage =
           error.error?.results || 'No se encontró el recurso solicitado.';
       } else {
@@ -71,7 +83,6 @@ export class HistorialesService {
       }
     }
 
-    // Retornar el error
     return throwError(() => new Error(errorMessage));
   }
 }

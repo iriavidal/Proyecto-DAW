@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { UsuariosService } from 'src/app/core/services/datos/usuarios.service';
 import { TokenService } from 'src/app/core/services/token.service';
 
@@ -8,6 +8,8 @@ import { TokenService } from 'src/app/core/services/token.service';
   styleUrls: ['./header-inicio.component.scss'],
 })
 export class HeaderComponent {
+  @Output() sectionScroll = new EventEmitter<string>();
+
   isLoggedIn: boolean = false;
   userRol: number | null = null;
 
@@ -27,6 +29,10 @@ export class HeaderComponent {
         error: (err) => console.error(err),
       });
     }
+  }
+
+  scrollTo(section: string): void {
+    this.sectionScroll.emit(section);
   }
 
   closeMenu(menuToggle: HTMLInputElement): void {

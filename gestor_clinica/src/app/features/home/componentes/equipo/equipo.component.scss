@@ -24,13 +24,21 @@
   }
 
   .carousel {
-    width: 100%;
-
     img {
       border-radius: 5px;
     }
+
+    c-card-body {
+      p {
+        margin-bottom: 1rem;
+      }
+    }
   }
+
   @media screen and (min-width: 1024px) {
+    width: 50%;
+    margin: 0 auto;
+
     h4 {
       font-size: 48px;
 
@@ -38,21 +46,5 @@
 
       padding: 1rem 2rem;
     }
-
-    .carousel {
-      width: 60%;
-    }
   }
-}
-
-:host {
-  display: block;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s ease-in-out;
-}
-
-:host(.visible) {
-  opacity: 1;
-  transform: translateY(0);
 }

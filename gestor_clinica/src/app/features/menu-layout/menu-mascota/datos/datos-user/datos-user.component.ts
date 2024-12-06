@@ -52,7 +52,6 @@ export class DatosUserComponent {
   cargarDatos() {
     this.userService.getUsuario(this.idUser).subscribe({
       next: (data) => {
-        //console.log(data);
         this.data = data.results[0];
 
         this.datosUser.patchValue({ nombre_usuario: this.data.nombre_usuario });

@@ -61,13 +61,12 @@
   li {
     text-align: center;
     padding: 10px 0;
-  }
-
-  li a {
     font-size: 36px;
     text-transform: uppercase;
     color: $primary-900;
     text-decoration: none;
+
+    cursor: pointer;
   }
 
   .sesion {
@@ -140,7 +139,7 @@
       gap: 3rem;
     }
 
-    li a {
+    li {
       text-transform: initial;
       font-size: 18px;
     }
