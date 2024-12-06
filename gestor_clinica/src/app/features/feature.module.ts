@@ -41,6 +41,7 @@ import { DatosComponent } from './menu-layout/menu-mascota/datos/datos.component
 import { DatosUserComponent } from './menu-layout/menu-mascota/datos/datos-user/datos-user.component';
 import { VeterinarioComponent } from './menu-layout/veterinario/veterinario.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { CitasVeteComponent } from './menu-layout/veterinario/citas-vete/citas-vete.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     DatosComponent,
     DatosUserComponent,
     VeterinarioComponent,
+    CitasVeteComponent,
   ],
   imports: [
     CommonModule,
