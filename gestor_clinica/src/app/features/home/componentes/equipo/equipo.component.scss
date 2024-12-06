@@ -24,23 +24,21 @@
   }
 
   .carousel {
-    width: 100%;
-
     img {
       border-radius: 5px;
     }
   }
+
   @media screen and (min-width: 1024px) {
+    width: 50%;
+    margin: 0 auto;
+
     h4 {
       font-size: 48px;
 
       border-radius: 40px;
 
       padding: 1rem 2rem;
-    }
-
-    .carousel {
-      width: 60%;
     }
   }
 }
