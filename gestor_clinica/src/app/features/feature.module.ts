@@ -12,7 +12,6 @@ import { MarcasComponent } from './home/componentes/marcas/marcas.component';
 import { ContactoComponent } from './home/componentes/contacto/contacto.component';
 import { CardModule, CarouselModule } from '@coreui/angular';
 import { RouterLink, RouterModule } from '@angular/router';
-import { InViewDirective } from '../core/directives/in-view.directive';
 import { LayoutModule } from '../layout/layout.module';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { HomeLoginComponent } from './auth-layout/home-login/home-login.component';
@@ -55,7 +54,6 @@ import { DialogMascotaComponent } from './menu-layout/veterinario/citas-vete/dia
     EquipoComponent,
     MarcasComponent,
     ContactoComponent,
-    InViewDirective,
     AuthLayoutComponent,
     HomeLoginComponent,
     LoginComponent,

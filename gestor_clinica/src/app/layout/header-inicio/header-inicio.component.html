@@ -13,19 +13,15 @@
   <!-- Menú -->
   <nav class="menu">
     <ul>
-      <li>
-        <a href="#servicios" (click)="closeMenu(menuToggle)">Servicios</a>
+      <li (click)="scrollTo('servicios'); closeMenu(menuToggle)">Servicios</li>
+      <li (click)="scrollTo('citas'); closeMenu(menuToggle)">
+        Gestiona tus citas
       </li>
-      <li>
-        <a href="#citas" (click)="closeMenu(menuToggle)">Gestiona tus citas</a>
+      <li (click)="scrollTo('equipo'); closeMenu(menuToggle)">
+        Nuestro equipo
       </li>
-      <li>
-        <a href="#equipo" (click)="closeMenu(menuToggle)">Nuestro equipo</a>
-      </li>
-      <li><a href="#marcas" (click)="closeMenu(menuToggle)">Marcas</a></li>
-      <li>
-        <a href="#contacto" (click)="closeMenu(menuToggle)">Contacto</a>
-      </li>
+      <li (click)="scrollTo('marcas'); closeMenu(menuToggle)">Marcas</li>
+      <li (click)="scrollTo('contacto'); closeMenu(menuToggle)">Contacto</li>
     </ul>
     <a [routerLink]="irA()" class="sesion">
       <ng-container *ngIf="isLoggedIn; else notLoggedIn">
