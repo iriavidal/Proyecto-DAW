@@ -42,6 +42,8 @@ import { DatosUserComponent } from './menu-layout/menu-mascota/datos/datos-user/
 import { VeterinarioComponent } from './menu-layout/veterinario/veterinario.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CitasVeteComponent } from './menu-layout/veterinario/citas-vete/citas-vete.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { DialogMascotaComponent } from './menu-layout/veterinario/citas-vete/dialog-mascota/dialog-mascota.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +73,7 @@ import { CitasVeteComponent } from './menu-layout/veterinario/citas-vete/citas-v
     DatosUserComponent,
     VeterinarioComponent,
     CitasVeteComponent,
+    DialogMascotaComponent,
   ],
   imports: [
     CommonModule,
@@ -93,6 +96,7 @@ import { CitasVeteComponent } from './menu-layout/veterinario/citas-vete/citas-v
     MatDatepickerModule,
     MatNativeDateModule,
     MatTabsModule,
+    MatExpansionModule,
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }], // dd/mm/yyyy
   bootstrap: [],
