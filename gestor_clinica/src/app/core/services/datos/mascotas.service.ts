@@ -72,6 +72,17 @@ export class MascotasService {
     });
   }
 
+  getTipoMascota(idTipo: number): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.get<any>(
+      `${environment.URLServer}/TiposMascota/?linkTo=id_tipo&equalTo=${idTipo}`,
+      {
+        headers,
+      }
+    );
+  }
+
   updateMascota(
     mascotaId: number,
     token: string,
