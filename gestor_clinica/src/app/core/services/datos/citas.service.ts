@@ -13,6 +13,12 @@ import { environment } from 'src/app/environment';
 export class CitasService {
   constructor(private http: HttpClient) {}
 
+  getAllCitas(): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.get<any>(`${environment.URLServer}/citas`, { headers });
+  }
+
   getCitasMascota(mascotaId: number): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
