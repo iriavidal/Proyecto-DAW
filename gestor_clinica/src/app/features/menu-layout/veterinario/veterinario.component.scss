@@ -44,4 +44,20 @@ section {
       }
     }
   }
+
+  mat-tab-group {
+    height: calc(100vh - (70px + 100px + 233px));
+    width: 100vw;
+
+    @media screen and (min-width: 1024px) {
+      height: calc(100vh - (96px + 100px + 48px + 78px));
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  mat-tab-body {
+    flex-grow: 1;
+  }
 }
