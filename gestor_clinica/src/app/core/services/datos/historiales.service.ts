@@ -6,6 +6,7 @@ import {
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from 'src/app/environment';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -52,6 +53,18 @@ export class HistorialesService {
         { headers }
       )
       .pipe(catchError(this.handleError));
+  }
+
+  verificarHistorial(idCita: number): Observable<boolean> {
+    return this.http
+      .get<any>(
+        `${environment.URLServer}/historiales?linkTo=id_cita&equalTo=${idCita}`
+      )
+      .pipe(
+        map((response) => {
+          return response.results && response.results.length > 0;
+        })
+      );
   }
 
   private handleError(error: HttpErrorResponse) {
