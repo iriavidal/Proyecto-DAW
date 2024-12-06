@@ -38,6 +38,8 @@ export class PostCitaComponent {
 
   esEdicion: boolean = false;
 
+  citas: any[] = [];
+
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -70,6 +72,7 @@ export class PostCitaComponent {
       } else {
         this.selectedCitaId = 0;
         this.esEdicion = false;
+        this.obtenerCitas();
       }
     });
   }
@@ -108,6 +111,18 @@ export class PostCitaComponent {
     });
   }
 
+  obtenerCitas() {
+    this.citasService.getAllCitas().subscribe({
+      next: (data) => {
+        this.citas = data.results;
+        console.log(this.citas);
+      },
+      error: (err) => {
+        console.error('Error al cargar la cita:', err);
+      },
+    });
+  }
+
   fechaFiltro = (d: Date | null): boolean => {
     const today = new Date();
     const day = today.getDay();
@@ -131,6 +146,23 @@ export class PostCitaComponent {
     } else {
       this.secondFormGroup.get('hora')?.setErrors({ horaNoValida: true });
     }
+  }
+
+  /* Valida que la cita no se pueda pedir con menos de un margen de 15 minutos antes o después de una ya existente */
+  validarFechaYHora(fecha: string, hora: string): boolean {
+    const nuevaCita = new Date(`${fecha}T${hora}`);
+
+    for (const cita of this.citas) {
+      const citaExistente = new Date(cita.fecha_y_hora);
+      const diferenciaMinutos =
+        Math.abs(nuevaCita.getTime() - citaExistente.getTime()) / (1000 * 60);
+
+      if (diferenciaMinutos < 15) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   obtenerCita(
@@ -158,8 +190,17 @@ export class PostCitaComponent {
       this.hora = `${event}:00`;
     }
 
-    /* Juntar fecha y hora para el post */
-    this.cita = `${this.dia} ${this.hora}`;
+    if (this.dia && this.hora) {
+      const esValida = this.validarFechaYHora(this.dia, this.hora);
+      if (!esValida) {
+        this.secondFormGroup.get('hora')?.setErrors({ citaInvalida: true });
+      } else {
+        this.secondFormGroup.get('hora')?.setErrors(null);
+
+        /* Juntar fecha y hora para el post */
+        this.cita = `${this.dia} ${this.hora}`;
+      }
+    }
 
     /* Capturar el motivo de la consulta */
     if (input == 'motivo' && motivo != null) {
