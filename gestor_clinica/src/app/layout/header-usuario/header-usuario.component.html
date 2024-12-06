@@ -12,7 +12,7 @@
   </label>
   <!-- Menú -->
   <nav class="menu">
-    <ul>
+    <ul *ngIf="!veterinario">
       <!-- Pendientes de enlazar a sus respectivos componentes -->
       <li>
         <a (click)="closeMenu(menuToggle); irA('citas')">Gestionar citas</a>

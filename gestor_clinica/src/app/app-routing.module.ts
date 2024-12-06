@@ -17,6 +17,9 @@ import { HistorialesComponent } from './features/menu-layout/menu-mascota/histor
 import { HistorialComponent } from './features/menu-layout/menu-mascota/historiales/historial/historial.component';
 import { DatosComponent } from './features/menu-layout/menu-mascota/datos/datos.component';
 import { DatosUserComponent } from './features/menu-layout/menu-mascota/datos/datos-user/datos-user.component';
+import { AuthClienteGuard } from './core/guards/auth-cliente.guard';
+import { AuthVeterinarioGuard } from './core/guards/auth-veterinario.guard';
+import { VeterinarioComponent } from './features/menu-layout/veterinario/veterinario.component';
 
 const routes: Routes = [
   {
@@ -39,7 +42,7 @@ const routes: Routes = [
   {
     path: 'menu',
     component: MenuLayoutComponent,
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard, AuthClienteGuard],
     children: [
       {
         path: '',
@@ -96,6 +99,18 @@ const routes: Routes = [
       {
         path: 'datos-mascota',
         component: DatosMascotaComponent,
+      },
+    ],
+  },
+
+  {
+    path: 'veterinario',
+    component: MenuLayoutComponent,
+    canActivate: [AuthGuard, AuthVeterinarioGuard],
+    children: [
+      {
+        path: '',
+        component: VeterinarioComponent,
       },
     ],
   },

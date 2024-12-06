@@ -3,6 +3,7 @@ import { Component, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { UsuariosService } from 'src/app/core/services/datos/usuarios.service';
 import { TokenService } from 'src/app/core/services/token.service';
 
 @Component({
@@ -20,7 +21,8 @@ export class LoginComponent {
     private authService: AuthService,
     private _router: Router,
     private tokenService: TokenService,
-    private observer: BreakpointObserver
+    private observer: BreakpointObserver,
+    private usuariosService: UsuariosService
   ) {
     this.loginForm = this.fb.group({
       email_usuario: ['', [Validators.required, Validators.email]],
@@ -64,17 +66,35 @@ export class LoginComponent {
 
             this.tokenService.storeToken(token);
 
-            this.observer
-              .observe(['(max-width: 767px)'])
-              .subscribe((screenSize) => {
-                if (screenSize.matches) {
-                  //console.log('Móvil');
-                  this._router.navigate(['/menu']);
-                } else {
-                  //console.log('Ordenador');
-                  this._router.navigate(['/menu/mascota']);
-                }
+            const id = this.tokenService.getUserIdFromToken();
+            //console.log(id);
+
+            if (id) {
+              this.usuariosService.getUsuario(id).subscribe({
+                next: (data) => {
+                  //console.log(data.results[0].id_rol);
+                  if (data.results[0].id_rol === 1) {
+                    /* Usuario cliente */
+                    this.observer
+                      .observe(['(max-width: 767px)'])
+                      .subscribe((screenSize) => {
+                        if (screenSize.matches) {
+                          //console.log('Móvil');
+                          this._router.navigate(['/menu']);
+                        } else {
+                          //console.log('Ordenador');
+                          this._router.navigate(['/menu/mascota']);
+                        }
+                      });
+                  } else if (data.results[0].id_rol === 2) {
+                    /* Usuario veterinario */
+                    //console.log('Veterinario con id: ', id);
+                    this._router.navigate(['/veterinario']);
+                  }
+                },
+                error: (err) => console.error(err),
               });
+            }
           }
         },
         (error) => {
