@@ -51,7 +51,7 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       this.loading = true;
-      this.loginError = ''; // Limpia cualquier error previo
+      this.loginError = '';
 
       const credentials = {
         email_usuario: this.email_usuario?.value,
@@ -67,12 +67,10 @@ export class LoginComponent {
             this.tokenService.storeToken(token);
 
             const id = this.tokenService.getUserIdFromToken();
-            //console.log(id);
 
             if (id) {
               this.usuariosService.getUsuario(id).subscribe({
                 next: (data) => {
-                  //console.log(data.results[0].id_rol);
                   if (data.results[0].id_rol === 1) {
                     /* Usuario cliente */
                     this.observer
@@ -88,7 +86,6 @@ export class LoginComponent {
                       });
                   } else if (data.results[0].id_rol === 2) {
                     /* Usuario veterinario */
-                    //console.log('Veterinario con id: ', id);
                     this._router.navigate(['/veterinario']);
                   }
                 },

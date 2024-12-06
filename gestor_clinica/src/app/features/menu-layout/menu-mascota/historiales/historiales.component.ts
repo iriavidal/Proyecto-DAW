@@ -91,7 +91,7 @@ export class HistorialesComponent {
     const selectElement = event.target as HTMLSelectElement;
     this.selectedMascotaId = Number(selectElement.value);
 
-    console.log('Mascota seleccionada:', this.selectedMascotaId); // Verificar el ID seleccionado
+    console.log('Mascota seleccionada:', this.selectedMascotaId);
 
     this.loadHistoriales();
   }

@@ -25,7 +25,6 @@ export class HeaderUsuarioComponent {
     if (id) {
       this.usuariosService.getUsuario(id).subscribe({
         next: (data) => {
-          //console.log(data.results[0].id_rol);
           if (data.results[0].id_rol === 1) {
             /* Usuario cliente */
             this.veterinario = false;

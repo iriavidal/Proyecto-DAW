@@ -178,7 +178,7 @@ export class PostCitaComponent {
         const month = ('0' + (fechaOriginal.getMonth() + 1)).slice(-2);
         const day = ('0' + fechaOriginal.getDate()).slice(-2);
 
-        const fechaFormateada = `${year}-${month}-${day}`; // Formato YYYY-MM-DD
+        const fechaFormateada = `${year}-${month}-${day}`;
         this.dia = fechaFormateada;
       } else {
         console.error('No se pudo obtener la fecha.');
