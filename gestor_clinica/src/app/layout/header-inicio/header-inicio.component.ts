@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UsuariosService } from 'src/app/core/services/datos/usuarios.service';
+import { TokenService } from 'src/app/core/services/token.service';
 
 @Component({
   selector: 'app-header-inicio',
@@ -7,13 +9,38 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isLoggedIn: boolean = false;
+  userRol: number | null = null;
+
+  constructor(
+    private tokenService: TokenService,
+    private usuariosService: UsuariosService
+  ) {}
 
   ngOnInit(): void {
     this.isLoggedIn = !!sessionStorage.getItem('authToken');
-    console.log(this.isLoggedIn);
+    const id = this.tokenService.getUserIdFromToken();
+    if (id) {
+      this.usuariosService.getUsuario(id).subscribe({
+        next: (data) => {
+          this.userRol = data.results[0].id_rol;
+        },
+        error: (err) => console.error(err),
+      });
+    }
   }
 
   closeMenu(menuToggle: HTMLInputElement): void {
     menuToggle.checked = false;
+  }
+
+  irA() {
+    if (this.isLoggedIn) {
+      if (this.userRol === 1) {
+        return '/menu';
+      } else if (this.userRol === 2) {
+        return '/veterinario';
+      }
+    }
+    return '/auth';
   }
 }

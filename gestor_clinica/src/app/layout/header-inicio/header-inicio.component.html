@@ -27,7 +27,7 @@
         <a href="#contacto" (click)="closeMenu(menuToggle)">Contacto</a>
       </li>
     </ul>
-    <a [routerLink]="isLoggedIn ? '/menu' : '/auth'" class="sesion">
+    <a [routerLink]="irA()" class="sesion">
       <ng-container *ngIf="isLoggedIn; else notLoggedIn">
         <button class="boton">
           Ir al menú
