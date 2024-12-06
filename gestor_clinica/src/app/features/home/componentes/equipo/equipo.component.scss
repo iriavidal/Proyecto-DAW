@@ -27,6 +27,12 @@
     img {
       border-radius: 5px;
     }
+
+    c-card-body {
+      p {
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   @media screen and (min-width: 1024px) {

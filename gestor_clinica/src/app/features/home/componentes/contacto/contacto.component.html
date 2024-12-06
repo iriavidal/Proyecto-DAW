@@ -1,17 +1,20 @@
-<app-header-inicio></app-header-inicio>
+<app-header-inicio
+  (sectionScroll)="scrollToSection($event)"
+></app-header-inicio>
 <main>
   <section class="numeros">
     <article class="titulos">
       <h1>Habla con nuestro equipo</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur. Urna sit non suspendisse
-        maecenas scelerisque diam facilisi aliquam.
+        Si tienes alguna duda o necesitas asistencia, nuestro equipo de atención
+        al cliente está listo para ayudarte. No dudes en contactarnos para más
+        información.
       </p>
     </article>
     <span class="cards">
       <article class="card">
         <h2>Cualquier consulta</h2>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Resuelve tus dudas sobre la salud de tu mascota.</p>
         <div class="telefono">
           <svg
             width="13"
@@ -30,7 +33,7 @@
       </article>
       <article class="card">
         <h2>Urgencias</h2>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Atención urgente para tu mascota.</p>
         <div class="telefono">
           <svg
             width="13"
