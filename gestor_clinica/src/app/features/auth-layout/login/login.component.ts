@@ -87,6 +87,9 @@ export class LoginComponent {
                   } else if (data.results[0].id_rol === 2) {
                     /* Usuario veterinario */
                     this._router.navigate(['/veterinario']);
+                  } else if (data.results[0].id_rol === 3) {
+                    /* Usuario técnico */
+                    this._router.navigate(['/administracion']);
                   }
                 },
                 error: (err) => console.error(err),

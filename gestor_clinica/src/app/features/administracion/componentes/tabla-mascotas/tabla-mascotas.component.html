@@ -1,0 +1,73 @@
+<section class="container">
+  <article class="busqueda">
+    <mat-form-field appearance="outline" class="filter">
+      <mat-label>Buscar mascota</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca el nombre de la mascota"
+        name="filterProperty"
+        [(ngModel)]="filterUser"
+        autocomplete="off"
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <button (click)="newStatus()">Nueva mascota</button>
+  </article>
+
+  <article class="tabla">
+    <table
+      mat-table
+      [dataSource]="dataSource | filterName : filterUser : ['nombre_mascota']"
+      class="mat-elevation-z8"
+    >
+      <ng-container matColumnDef="ID">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.id_mascota }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="IDuser">
+        <th mat-header-cell *matHeaderCellDef>ID dueño</th>
+        <td mat-cell *matCellDef="let element">{{ element.id_usuario }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="IDtipo">
+        <th mat-header-cell *matHeaderCellDef>ID tipo</th>
+        <td mat-cell *matCellDef="let element">{{ element.id_tipo }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="nombre_mascota">
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let element">{{ element.nombre_mascota }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fecha_nac_mascota">
+        <th mat-header-cell *matHeaderCellDef>Fecha de nacimiento</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.fecha_nac_mascota }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nChip_mascota">
+        <th mat-header-cell *matHeaderCellDef>Nº chip</th>
+        <td mat-cell *matCellDef="let element">{{ element.nChip_mascota }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="raza_mascota">
+        <th mat-header-cell *matHeaderCellDef>Raza</th>
+        <td mat-cell *matCellDef="let element">{{ element.raza_mascota }}</td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef="let element">
+          <button (click)="deleteStatus(element)">Eliminar</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </article>
+</section>

@@ -1,0 +1,82 @@
+<div class="container">
+  <p *ngIf="isEditable">Editar usuario</p>
+  <p *ngIf="checkNew">Nuevo usuario</p>
+  <form [formGroup]="myFormNew" *ngIf="checkNew" (submit)="newStatus()">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca el nombre del nuevo usuario"
+        formControlName="nombre_usuario"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Apellidos</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca los apellidos del nuevo usuario"
+        formControlName="apellidos_usuario"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca el email del nuevo usuario"
+        formControlName="email_usuario"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca la contraseña del nuevo usuario"
+        formControlName="password_usuario"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>DNI</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca el DNI del nuevo usuario"
+        formControlName="dni_usuario"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Dirección</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca la dirección del nuevo usuario"
+        formControlName="direccion_usuario"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Rol</mat-label>
+      <mat-select
+        formControlName="id_rol"
+        (selectionChange)="onSelectChange('myFormNew')"
+      >
+        <mat-option value="">-- Selecciona una opción --</mat-option>
+        <mat-option *ngFor="let rol of roles" [value]="rol.id_rol">{{
+          rol.rol
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button class="button" [disabled]="myFormNew.invalid" type="submit">
+      Guardar
+    </button>
+  </form>
+</div>

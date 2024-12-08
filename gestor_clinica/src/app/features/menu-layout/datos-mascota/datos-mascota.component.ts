@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TiposCita } from 'src/app/core/enums/tipos-cita';
 import { MascotasService } from 'src/app/core/services/datos/mascotas.service';
+import { TiposService } from 'src/app/core/services/datos/tipos.service';
 import { TokenService } from 'src/app/core/services/token.service';
 
 @Component({
@@ -41,7 +43,8 @@ export class DatosMascotaComponent {
     private router: Router,
     private route: ActivatedRoute,
     private mascotasService: MascotasService,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    private tiposService: TiposService
   ) {
     this.datosMascota = this.fb.group({
       id_tipo: ['', Validators.required],
@@ -51,7 +54,7 @@ export class DatosMascotaComponent {
       raza_mascota: ['', Validators.required],
     });
 
-    this.mascotasService.getTiposMascota().subscribe({
+    this.tiposService.getTiposMascota().subscribe({
       next: (data) => {
         this.tiposMascota = data.results;
       },

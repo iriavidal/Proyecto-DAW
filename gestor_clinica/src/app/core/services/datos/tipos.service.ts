@@ -10,34 +10,51 @@ import { environment } from 'src/app/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class UsuariosService {
+export class TiposService {
   constructor(private http: HttpClient) {}
 
-  getAllUsuarios(): Observable<any> {
+  getTiposMascota(): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    return this.http.get<any>(`${environment.URLServer}/usuarios`, { headers });
+    return this.http.get<any>(`${environment.URLServer}/TiposMascota`, {
+      headers,
+    });
   }
 
-  getUsuario(userId: number): Observable<any> {
+  getTipoMascota(idTipo: number): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     return this.http.get<any>(
-      `${environment.URLServer}/usuarios?linkTo=id_usuario&equalTo=${userId}`,
-      { headers }
+      `${environment.URLServer}/TiposMascota/?linkTo=id_tipo&equalTo=${idTipo}`,
+      {
+        headers,
+      }
     );
   }
 
-  updateUsuario(
-    userId: number,
-    token: string,
+  postTipo(
     data: {
-      nombre_usuario?: string;
-      apellidos_usuario?: string;
-      dni_usuario?: string;
-      direccion_usuario?: string;
-      email_usuario?: string;
-    }
+      tipo: string;
+    },
+    token: string
+  ): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    return this.http
+      .post<any>(
+        `${environment.URLServer}/TiposMascota?token=${token}`,
+        JSON.stringify(data),
+        { headers }
+      )
+      .pipe(catchError(this.handleError));
+  }
+
+  updateTipo(
+    tipoId: number,
+    token: string,
+    data: { tipo?: string }
   ): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -45,21 +62,21 @@ export class UsuariosService {
 
     return this.http
       .put<any>(
-        `${environment.URLServer}/usuarios?token=${token}&nameId=id_usuario&id=${userId}`,
+        `${environment.URLServer}/TiposMascota?token=${token}&nameId=id_tipo&id=${tipoId}`,
         JSON.stringify(data),
         { headers }
       )
       .pipe(catchError(this.handleError));
   }
 
-  deleteUsuario(userId: number, token: string): Observable<any> {
+  deleteTipo(tipoId: number, token: string): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
 
     return this.http
       .delete<any>(
-        `${environment.URLServer}/usuarios?token=${token}&nameId=id_usuario&id=${userId}`,
+        `${environment.URLServer}/TiposMascota?token=${token}&nameId=id_tipo&id=${tipoId}`,
         { headers }
       )
       .pipe(catchError(this.handleError));

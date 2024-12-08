@@ -1,0 +1,38 @@
+<header>
+  <h1>Bienvenidx {{ usuario.nombre_usuario }}</h1>
+  <nav>
+    <ul>
+      <li [routerLink]="'/administracion/roles'" routerLinkActive="active-link">
+        Roles
+      </li>
+      <li
+        [routerLink]="'/administracion/usuarios'"
+        routerLinkActive="active-link"
+      >
+        Usuarios
+      </li>
+      <li [routerLink]="'/administracion/tipos'" routerLinkActive="active-link">
+        Tipos de mascota
+      </li>
+      <li
+        [routerLink]="'/administracion/mascotas'"
+        routerLinkActive="active-link"
+      >
+        Mascotas
+      </li>
+      <li [routerLink]="'/administracion/citas'" routerLinkActive="active-link">
+        Citas
+      </li>
+      <li
+        [routerLink]="'/administracion/historiales'"
+        routerLinkActive="active-link"
+      >
+        Historiales
+      </li>
+    </ul>
+  </nav>
+  <p (click)="logout()">Cerrar sesión</p>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

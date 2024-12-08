@@ -43,6 +43,18 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CitasVeteComponent } from './menu-layout/veterinario/citas-vete/citas-vete.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { DialogMascotaComponent } from './menu-layout/veterinario/citas-vete/dialog-mascota/dialog-mascota.component';
+import { AdministracionComponent } from './administracion/administracion.component';
+import { TablaRolesComponent } from './administracion/componentes/tabla-roles/tabla-roles.component';
+import { MatTableModule } from '@angular/material/table';
+import { DialogRolesComponent } from './administracion/componentes/tabla-roles/dialog-roles/dialog-roles.component';
+import { TablaUsuariosComponent } from './administracion/componentes/tabla-usuarios/tabla-usuarios.component';
+import { DialogUsuariosComponent } from './administracion/componentes/tabla-usuarios/dialog-usuarios/dialog-usuarios.component';
+import { TablaTiposComponent } from './administracion/componentes/tabla-tipos/tabla-tipos.component';
+import { DialogTiposComponent } from './administracion/componentes/tabla-tipos/dialog-tipos/dialog-tipos.component';
+import { TablaMascotasComponent } from './administracion/componentes/tabla-mascotas/tabla-mascotas.component';
+import { DialogMascotasComponent } from './administracion/componentes/tabla-mascotas/dialog-mascotas/dialog-mascotas.component';
+import { TablaCitasComponent } from './administracion/componentes/tabla-citas/tabla-citas.component';
+import { TablaHistorialesComponent } from './administracion/componentes/tabla-historiales/tabla-historiales.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +84,17 @@ import { DialogMascotaComponent } from './menu-layout/veterinario/citas-vete/dia
     VeterinarioComponent,
     CitasVeteComponent,
     DialogMascotaComponent,
+    AdministracionComponent,
+    TablaRolesComponent,
+    DialogRolesComponent,
+    TablaUsuariosComponent,
+    DialogUsuariosComponent,
+    TablaTiposComponent,
+    DialogTiposComponent,
+    TablaMascotasComponent,
+    DialogMascotasComponent,
+    TablaCitasComponent,
+    TablaHistorialesComponent,
   ],
   imports: [
     CommonModule,
@@ -95,6 +118,7 @@ import { DialogMascotaComponent } from './menu-layout/veterinario/citas-vete/dia
     MatNativeDateModule,
     MatTabsModule,
     MatExpansionModule,
+    MatTableModule,
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }], // dd/mm/yyyy
   bootstrap: [],

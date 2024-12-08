@@ -1,0 +1,39 @@
+<div class="container">
+  <p *ngIf="isEditable">Editar rol</p>
+  <p *ngIf="checkNew">Nuevo rol</p>
+  <form [formGroup]="myFormNew" *ngIf="checkNew" (submit)="newStatus()">
+    <mat-form-field appearance="outline">
+      <mat-label>Rol</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca el nombre del nuevo rol"
+        formControlName="rol"
+      />
+    </mat-form-field>
+
+    <button class="button" [disabled]="myFormNew.invalid" type="submit">
+      Guardar
+    </button>
+  </form>
+
+  <form
+    [formGroup]="myFormEdit"
+    *ngIf="isEditable && !checkNew"
+    (submit)="updateStatus()"
+  >
+    <mat-form-field appearance="outline">
+      <mat-label>Rol</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca el nombre del rol"
+        formControlName="rol"
+      />
+    </mat-form-field>
+
+    <button class="button" [disabled]="myFormEdit.invalid" type="submit">
+      Guardar
+    </button>
+  </form>
+</div>

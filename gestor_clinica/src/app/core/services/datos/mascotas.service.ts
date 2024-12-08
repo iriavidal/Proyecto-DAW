@@ -13,6 +13,12 @@ import { environment } from 'src/app/environment';
 export class MascotasService {
   constructor(private http: HttpClient) {}
 
+  getAllMascotas(): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.get<any>(`${environment.URLServer}/mascotas`, { headers });
+  }
+
   getMascota(mascotaId: number): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
@@ -62,25 +68,6 @@ export class MascotasService {
         { headers }
       )
       .pipe(catchError(this.handleError));
-  }
-
-  getTiposMascota(): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-    return this.http.get<any>(`${environment.URLServer}/TiposMascota`, {
-      headers,
-    });
-  }
-
-  getTipoMascota(idTipo: number): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-    return this.http.get<any>(
-      `${environment.URLServer}/TiposMascota/?linkTo=id_tipo&equalTo=${idTipo}`,
-      {
-        headers,
-      }
-    );
   }
 
   updateMascota(

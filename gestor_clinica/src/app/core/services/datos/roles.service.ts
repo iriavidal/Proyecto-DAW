@@ -10,34 +10,19 @@ import { environment } from 'src/app/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class UsuariosService {
+export class RolesService {
   constructor(private http: HttpClient) {}
 
-  getAllUsuarios(): Observable<any> {
+  getAllRoles(): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    return this.http.get<any>(`${environment.URLServer}/usuarios`, { headers });
+    return this.http.get<any>(`${environment.URLServer}/roles`, { headers });
   }
 
-  getUsuario(userId: number): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-    return this.http.get<any>(
-      `${environment.URLServer}/usuarios?linkTo=id_usuario&equalTo=${userId}`,
-      { headers }
-    );
-  }
-
-  updateUsuario(
-    userId: number,
+  updateRol(
+    rolId: number,
     token: string,
-    data: {
-      nombre_usuario?: string;
-      apellidos_usuario?: string;
-      dni_usuario?: string;
-      direccion_usuario?: string;
-      email_usuario?: string;
-    }
+    data: { rol?: string }
   ): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -45,21 +30,40 @@ export class UsuariosService {
 
     return this.http
       .put<any>(
-        `${environment.URLServer}/usuarios?token=${token}&nameId=id_usuario&id=${userId}`,
+        `${environment.URLServer}/roles?token=${token}&nameId=id_rol&id=${rolId}`,
         JSON.stringify(data),
         { headers }
       )
       .pipe(catchError(this.handleError));
   }
 
-  deleteUsuario(userId: number, token: string): Observable<any> {
+  postRol(
+    data: {
+      rol: string;
+    },
+    token: string
+  ): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    return this.http
+      .post<any>(
+        `${environment.URLServer}/roles?token=${token}`,
+        JSON.stringify(data),
+        { headers }
+      )
+      .pipe(catchError(this.handleError));
+  }
+
+  deleteRol(rolId: number, token: string): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
 
     return this.http
       .delete<any>(
-        `${environment.URLServer}/usuarios?token=${token}&nameId=id_usuario&id=${userId}`,
+        `${environment.URLServer}/roles?token=${token}&nameId=id_rol&id=${rolId}`,
         { headers }
       )
       .pipe(catchError(this.handleError));

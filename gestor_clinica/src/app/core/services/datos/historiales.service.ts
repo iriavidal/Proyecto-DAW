@@ -32,6 +32,14 @@ export class HistorialesService {
     );
   }
 
+  getAllHistoriales(): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.get<any>(`${environment.URLServer}/historiales`, {
+      headers,
+    });
+  }
+
   postHistorialMascota(
     data: {
       id_mascota: number;
