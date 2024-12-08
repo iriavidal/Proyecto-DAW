@@ -45,6 +45,8 @@ export class HeaderComponent {
         return '/menu';
       } else if (this.userRol === 2) {
         return '/veterinario';
+      } else if (this.userRol === 3) {
+        return '/administracion';
       }
     }
     return '/auth';
