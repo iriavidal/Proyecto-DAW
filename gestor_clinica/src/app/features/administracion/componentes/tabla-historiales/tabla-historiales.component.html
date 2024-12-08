@@ -1,0 +1,57 @@
+<section class="container">
+  <article class="busqueda">
+    <mat-form-field appearance="outline" class="filter">
+      <mat-label>Buscar historiales</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca el id del historial"
+        name="filterProperty"
+        [(ngModel)]="filterUser"
+        autocomplete="off"
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </article>
+
+  <article class="tabla">
+    <table
+      mat-table
+      [dataSource]="dataSource | filterName : filterUser : ['id_historial']"
+      class="mat-elevation-z8"
+    >
+      <ng-container matColumnDef="ID">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.id_historial }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="IDcita">
+        <th mat-header-cell *matHeaderCellDef>ID cita</th>
+        <td mat-cell *matCellDef="let element">{{ element.id_cita }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="IDmascota">
+        <th mat-header-cell *matHeaderCellDef>ID mascota</th>
+        <td mat-cell *matCellDef="let element">{{ element.id_mascota }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fecha_y_hora">
+        <th mat-header-cell *matHeaderCellDef>Fecha y hora</th>
+        <td mat-cell *matCellDef="let element">{{ element.fecha_y_hora }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="motivo">
+        <th mat-header-cell *matHeaderCellDef>Motivo</th>
+        <td mat-cell *matCellDef="let element">{{ element.motivo }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="anotaciones">
+        <th mat-header-cell *matHeaderCellDef>Anotaciones</th>
+        <td mat-cell *matCellDef="let element">{{ element.anotaciones }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </article>
+</section>
