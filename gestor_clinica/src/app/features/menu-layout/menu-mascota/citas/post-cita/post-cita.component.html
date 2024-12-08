@@ -71,6 +71,11 @@
         >
           Hora no disponible.
         </mat-error>
+        <mat-error
+          *ngIf="secondFormGroup.get('hora')?.hasError('horaNoValida')"
+        >
+          Hora fuera del horario permitido.
+        </mat-error>
         <div class="pasos">
           <button mat-button matStepperPrevious>Atrás</button>
           <button mat-button matStepperNext>Continuar</button>

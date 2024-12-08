@@ -55,9 +55,9 @@
 
       <!-- Direccion Column -->
       <ng-container matColumnDef="Direccion">
-        <th mat-header-cell *matHeaderCellDef>Dirección</th>
+        <th mat-header-cell *matHeaderCellDef>Teléfono</th>
         <td mat-cell *matCellDef="let element">
-          {{ element.direccion_usuario }}
+          {{ element.telefono_usuario }}
         </td>
       </ng-container>
 
@@ -70,8 +70,11 @@
       <!-- Actions Column -->
       <ng-container matColumnDef="Actions">
         <th mat-header-cell *matHeaderCellDef>Acciones</th>
+
         <td mat-cell *matCellDef="let element">
-          <button (click)="deleteStatus(element)">Eliminar</button>
+          <ng-container *ngIf="element.id_usuario != 1">
+            <button (click)="deleteStatus(element)">Eliminar</button>
+          </ng-container>
         </td>
       </ng-container>
 

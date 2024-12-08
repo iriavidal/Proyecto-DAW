@@ -43,7 +43,7 @@ export class DialogUsuariosComponent {
       apellidos_usuario: [this.status.apellidos_usuario, Validators.required],
       email_usuario: [this.status.email_usuario, Validators.required],
       dni_usuario: [this.status.dni_usuario, Validators.required],
-      direccion_usuario: [this.status.direccion_usuario],
+      telefono_usuario: [this.status.telefono_usuario],
     });
 
     this.myFormNew = fb.group({
@@ -52,7 +52,7 @@ export class DialogUsuariosComponent {
       email_usuario: ['', [Validators.required, Validators.email]],
       password_usuario: ['', [Validators.required]],
       dni_usuario: ['', [Validators.required, dniValidator()]],
-      direccion_usuario: [''],
+      telefono_usuario: ['', [Validators.required]],
       id_rol: ['', Validators.required],
     });
   }
