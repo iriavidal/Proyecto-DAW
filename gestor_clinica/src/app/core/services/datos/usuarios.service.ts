@@ -35,7 +35,7 @@ export class UsuariosService {
       nombre_usuario?: string;
       apellidos_usuario?: string;
       dni_usuario?: string;
-      direccion_usuario?: string;
+      telefono_usuario?: string;
       email_usuario?: string;
     }
   ): Observable<any> {

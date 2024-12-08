@@ -43,7 +43,7 @@ export class AuthService {
     email_usuario: string;
     password_usuario: string;
     dni_usuario: string;
-    direccion_usuario: string;
+    telefono_usuario: string;
     id_rol: number;
   }): Observable<any> {
     const headers = new HttpHeaders({
