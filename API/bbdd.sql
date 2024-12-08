@@ -81,7 +81,7 @@ CREATE TABLE Historiales (
     id_cita INT UNIQUE, 
     id_mascota INT, 
     fecha_y_hora DATETIME NOT NULL,
-    motivo VARCHAR(50) NOT NULL,
+    motivo VARCHAR(100) NOT NULL,
     anotaciones TEXT NOT NULL,
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
