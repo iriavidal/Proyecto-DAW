@@ -1,40 +1,42 @@
 <section>
   <article class="mascota">
     <div class="select">
-      <div class="content-select">
-        <select
-          name="mascota"
-          id="mascota"
-          [(ngModel)]="selectedMascotaId"
-          (change)="onMascotaChange($event)"
-        >
-          <ng-container *ngFor="let mascota of listadoMascotas">
-            <option
-              [value]="mascota.id_mascota"
-              [selected]="mascota.id_mascota === selectedMascotaId"
-            >
-              {{ mascota.nombre_mascota }}
-            </option>
-          </ng-container>
-        </select>
-        <div class="flecha-select">
-          <svg
-            width="12"
-            height="6"
-            viewBox="0 0 12 6"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+      <ng-container *ngIf="listadoMascotas.length != 0; else sinMascota">
+        <div class="content-select">
+          <select
+            name="mascota"
+            id="mascota"
+            [(ngModel)]="selectedMascotaId"
+            (change)="onMascotaChange($event)"
           >
-            <path d="M0 0L6 6L12 0H0Z" fill="#3399A6" />
-          </svg>
+            <ng-container *ngFor="let mascota of listadoMascotas">
+              <option
+                [value]="mascota.id_mascota"
+                [selected]="mascota.id_mascota === selectedMascotaId"
+              >
+                {{ mascota.nombre_mascota }}
+              </option>
+            </ng-container>
+          </select>
+          <div class="flecha-select">
+            <svg
+              width="12"
+              height="6"
+              viewBox="0 0 12 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0L6 6L12 0H0Z" fill="#3399A6" />
+            </svg>
+          </div>
         </div>
-      </div>
+      </ng-container>
+      <ng-template #sinMascota>
+        <p>Añada su primera mascota:</p>
+      </ng-template>
+
       <button class="add" (click)="addMascota()">+</button>
     </div>
-    <img
-      src="https://cdn.outsideonline.com/wp-content/uploads/2023/03/Funny_Dog_H.jpg?crop=16:9&width=960&enable=upscale&quality=100"
-      alt=""
-    />
   </article>
 
   <article class="menu">

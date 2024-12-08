@@ -58,7 +58,7 @@ section {
       }
 
       /*select:focus {
-          border: 2px solid $primary-900;
+        border: 2px solid $primary-900;
         } */
     }
 
@@ -83,6 +83,10 @@ section {
       justify-content: center;
       align-items: center;
     }
+  }
+
+  p {
+    margin: 0;
   }
 
   .menu {
