@@ -48,8 +48,6 @@ Puedes encontrar más información en el [archivo README de la carpeta principal
 ![Datos del usuario](/img/manual_usuario/1.3.1.jpg)
 ![Datos de inicio de sesión](/img/manual_usuario/1.3.2.jpg)
 
-`NOTA`: todos los datos son obligatorios excepto la dirección.
-
 1.4. Iniciar sesión con los datos registrados
 
 ![Iniciar sesión](/img/manual_usuario/1.4.jpg)
@@ -96,6 +94,7 @@ Puedes encontrar más información en el [archivo README de la carpeta principal
 ![Acceder a vista más amplia del historial](/img/manual_usuario/4.2.jpg)
 
 4.3. Visualizar historial completo
+
 ![Historial completo](/img/manual_usuario/4.3.jpg)
 
 #### 5. Editar datos propios y de mascotas
@@ -117,6 +116,40 @@ En el usuario solo se pueden modificar la dirección y el email.
 ![Datos mascota](/img/manual_usuario/5.3.2.jpg)
 
 También se puede eliminar la mascota, lo cual eliminará también de la base de datos sus citas e historiales.
+
+### Manual de usuario veterinario
+
+#### 1. Cómo registrarse
+
+El técnico administrador de su clínica veterinaria debe poner a su disposición un email y contraseña para que pueda iniciar sesión en su perfil profesional.
+
+#### 2. Citas
+
+2.1. Consultar las citas
+Nada más iniciar sesión con su usuario, aparecerá en pantalla su menú de profesional, donde puede consultar sus citas, tanto las del día como las próximas, las últimas pudiendo ser filtradas por día.
+
+![Menú citas](/img/manual_veterinario/2.1.jpg)
+
+2.2. Consultar ficha de la mascota que va a ser atendida
+
+![Ficha cita](/img/manual_veterinario/2.2.1.jpg)
+
+Como se puede ver en la imagen, todas las citas, tanto del día como futuras, ofrecen la posibilidad de consultar la ficha de la mascota que va a ser atendida, la cual incluye tanto información del animal y de su dueño, como la lista de sus historiales de citas pasadas.
+
+![Ficha mascota](/img/manual_veterinario/2.2.2.jpg)
+![Ficha mascota](/img/manual_veterinario/2.2.3.jpg)
+
+2.3. Añadir historial
+
+![Ficha cita](/img/manual_veterinario/2.3.jpg)
+
+Podrá añadir un historial por cita del día, en el botón señalado en la imagen. Esta opción le abrirá un formulario donde ya tiene rellenado el nombre de la mascota y la fecha en la que se está rellenando el formulario, teniendo solo que aportar el motivo de la cita y anotaciones de la misma.
+
+![Formulario historial](/img/manual_veterinario/2.3.2jpg.jpg)
+
+Una vez guardado, podrá comprobar qué citas ya tienen un historial completo en la propia ficha de la misma, como se muestra en la imagen a continuación.
+
+![Ficha cita con historial rellenado](/img/manual_veterinario/2.3.3.jpg)
 
 ## 3- Melloras futuras
 
