@@ -1,0 +1,39 @@
+<div class="container">
+  <p *ngIf="isEditable">Editar tipos de mascota</p>
+  <p *ngIf="checkNew">Nuevo tipos de mascota</p>
+  <form [formGroup]="myFormNew" *ngIf="checkNew" (submit)="newStatus()">
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca el nombre del nuevo tipo"
+        formControlName="tipo"
+      />
+    </mat-form-field>
+
+    <button class="button" [disabled]="myFormNew.invalid" type="submit">
+      Guardar
+    </button>
+  </form>
+
+  <form
+    [formGroup]="myFormEdit"
+    *ngIf="isEditable && !checkNew"
+    (submit)="updateStatus()"
+  >
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Introduzca el nombre del tipo"
+        formControlName="tipo"
+      />
+    </mat-form-field>
+
+    <button class="button" [disabled]="myFormEdit.invalid" type="submit">
+      Guardar
+    </button>
+  </form>
+</div>
