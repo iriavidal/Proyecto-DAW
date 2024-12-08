@@ -20,6 +20,14 @@ import { DatosUserComponent } from './features/menu-layout/menu-mascota/datos/da
 import { AuthClienteGuard } from './core/guards/auth-cliente.guard';
 import { AuthVeterinarioGuard } from './core/guards/auth-veterinario.guard';
 import { VeterinarioComponent } from './features/menu-layout/veterinario/veterinario.component';
+import { AdministracionComponent } from './features/administracion/administracion.component';
+import { AuthTecnicoGuard } from './core/guards/auth-tecnico.guard';
+import { TablaRolesComponent } from './features/administracion/componentes/tabla-roles/tabla-roles.component';
+import { TablaUsuariosComponent } from './features/administracion/componentes/tabla-usuarios/tabla-usuarios.component';
+import { TablaTiposComponent } from './features/administracion/componentes/tabla-tipos/tabla-tipos.component';
+import { TablaMascotasComponent } from './features/administracion/componentes/tabla-mascotas/tabla-mascotas.component';
+import { TablaCitasComponent } from './features/administracion/componentes/tabla-citas/tabla-citas.component';
+import { TablaHistorialesComponent } from './features/administracion/componentes/tabla-historiales/tabla-historiales.component';
 
 const routes: Routes = [
   {
@@ -116,6 +124,19 @@ const routes: Routes = [
         path: 'historial/:id_mascota/:id_cita',
         component: HistorialComponent,
       },
+    ],
+  },
+  {
+    path: 'administracion',
+    component: AdministracionComponent,
+    canActivate: [AuthGuard, AuthTecnicoGuard],
+    children: [
+      { path: 'roles', component: TablaRolesComponent },
+      { path: 'usuarios', component: TablaUsuariosComponent },
+      { path: 'tipos', component: TablaTiposComponent },
+      { path: 'mascotas', component: TablaMascotasComponent },
+      { path: 'citas', component: TablaCitasComponent },
+      { path: 'historiales', component: TablaHistorialesComponent },
     ],
   },
 
