@@ -13,6 +13,12 @@ import { environment } from 'src/app/environment';
 export class UsuariosService {
   constructor(private http: HttpClient) {}
 
+  getAllUsuarios(): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.get<any>(`${environment.URLServer}/usuarios`, { headers });
+  }
+
   getUsuario(userId: number): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
@@ -41,6 +47,19 @@ export class UsuariosService {
       .put<any>(
         `${environment.URLServer}/usuarios?token=${token}&nameId=id_usuario&id=${userId}`,
         JSON.stringify(data),
+        { headers }
+      )
+      .pipe(catchError(this.handleError));
+  }
+
+  deleteUsuario(userId: number, token: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    return this.http
+      .delete<any>(
+        `${environment.URLServer}/usuarios?token=${token}&nameId=id_usuario&id=${userId}`,
         { headers }
       )
       .pipe(catchError(this.handleError));
