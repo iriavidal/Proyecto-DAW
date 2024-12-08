@@ -153,4 +153,8 @@ Una vez guardado, podrá comprobar qué citas ya tienen un historial completo en
 
 ## 3- Melloras futuras
 
-> _EXPLICACIÓN:_ Neste apartado incluiranse as posibilidades de mellora da aplicación no futuro.
+- La mejora más inmediata que se implantará será la de la creación de un apartado para programar recordatorios de citas, tanto en la parte del cliente como en la del veterinario.
+
+- Otra mejora que puede implementarse, si la clínica desea mejorar su SEO, es la de añadir un blog.
+
+- Por último, también a petición de la clínica, podría implementarse una tienda online de productos para animales.
