@@ -1,0 +1,30 @@
+@import "src/styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  p {
+    font-size: 20px;
+    font-weight: 700;
+    color: $primary-900;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 1rem;
+      color: $gray-100;
+      background-color: $primary-900;
+    }
+  }
+}
