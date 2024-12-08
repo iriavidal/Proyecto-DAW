@@ -38,6 +38,7 @@ export class MenuMascotaComponent {
         next: (data) => {
           if (data.results && data.results.length > 0) {
             this.listadoMascotas = data.results;
+            console.log(this.listadoMascotas.length);
 
             if (this.selectedMascotaId == null) {
               this.selectedMascotaId = this.listadoMascotas[0].id_mascota;

@@ -22,12 +22,12 @@ CREATE TABLE Usuarios (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     nombre_usuario VARCHAR(50) NOT NULL,
     apellidos_usuario VARCHAR(100) NOT NULL,
-    email_usuario VARCHAR(100),
+    email_usuario VARCHAR(100) UNIQUE,
     password_usuario VARCHAR(100) NOT NULL,
     token_usuario VARCHAR(255),
     token_exp_usuario INT,
-    dni_usuario VARCHAR(15) NOT NULL,
-    direccion_usuario VARCHAR(255),
+    dni_usuario VARCHAR(15) NOT NULL UNIQUE,
+    telefono_usuario VARCHAR(9),
     id_rol INT,
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
@@ -55,7 +55,7 @@ CREATE TABLE Mascotas (
     id_tipo INT,
     nombre_mascota VARCHAR(50) NOT NULL,
     fecha_nac_mascota DATE,
-    nChip_mascota VARCHAR(50) NOT NULL,
+    nChip_mascota VARCHAR(50) NOT NULL UNIQUE,
     raza_mascota VARCHAR(50),
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
@@ -69,7 +69,7 @@ CREATE TABLE Citas (
     id_cita INT PRIMARY KEY AUTO_INCREMENT,
     id_mascota INT,
     tipo_cita VARCHAR(20) NOT NULL,
-    fecha_y_hora DATETIME NOT NULL,
+    fecha_y_hora DATETIME NOT NULL UNIQUE,
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
     FOREIGN KEY (id_mascota) REFERENCES Mascotas(id_mascota) ON DELETE CASCADE
@@ -81,10 +81,30 @@ CREATE TABLE Historiales (
     id_cita INT UNIQUE, 
     id_mascota INT, 
     fecha_y_hora DATETIME NOT NULL,
-    motivo VARCHAR(50) NOT NULL,
+    motivo VARCHAR(100) NOT NULL,
     anotaciones TEXT NOT NULL,
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
     FOREIGN KEY (id_cita) REFERENCES Citas(id_cita) ON DELETE CASCADE, 
     FOREIGN KEY (id_mascota) REFERENCES Mascotas(id_mascota) ON DELETE CASCADE 
+);
+
+-- Usuario técnico
+INSERT INTO Usuarios (
+    nombre_usuario, 
+    apellidos_usuario, 
+    email_usuario, 
+    password_usuario, 
+    dni_usuario, 
+    telefono_usuario, 
+    id_rol
+)
+VALUES (
+    'Admin', 
+    'Admin', 
+    'admin@localhost', 
+    "$2a$09$andsf2134examplestrineOnA2P.8uZUdMhfPA.nVIwDnX2HCi5yG", 
+    '00000000A', 
+    '123456789', 
+    3
 );

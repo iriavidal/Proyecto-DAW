@@ -17,13 +17,13 @@ export class DatosUserComponent {
     nombre_usuario: string;
     apellidos_usuario: string;
     dni_usuario: string;
-    direccion_usuario: string;
+    telefono_usuario: string;
     email_usuario: string;
   } = {
     nombre_usuario: '',
     apellidos_usuario: '',
     dni_usuario: '',
-    direccion_usuario: '',
+    telefono_usuario: '',
     email_usuario: '',
   };
 
@@ -37,7 +37,7 @@ export class DatosUserComponent {
       nombre_usuario: [''],
       apellidos_usuario: [''],
       dni_usuario: [''],
-      direccion_usuario: ['', Validators.required],
+      telefono_usuario: ['', Validators.required],
       email_usuario: ['', [Validators.required, Validators.email]],
     });
 
@@ -62,7 +62,7 @@ export class DatosUserComponent {
           dni_usuario: this.data.dni_usuario,
         });
         this.datosUser.patchValue({
-          direccion_usuario: this.data.direccion_usuario,
+          telefono_usuario: this.data.telefono_usuario,
         });
         this.datosUser.patchValue({
           email_usuario: this.data.email_usuario,
@@ -76,8 +76,8 @@ export class DatosUserComponent {
 
   recogerDatos(event: string, input: string) {
     if (this.idUser !== null) {
-      if (input == 'direccion') {
-        this.data.direccion_usuario = event;
+      if (input == 'telefono') {
+        this.data.telefono_usuario = event;
       }
 
       if (input == 'email') {

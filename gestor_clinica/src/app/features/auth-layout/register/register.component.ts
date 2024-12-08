@@ -29,7 +29,7 @@ export class RegisterComponent {
       nombre_usuario: ['', [Validators.required]],
       apellidos_usuario: ['', [Validators.required]],
       dni_usuario: ['', [Validators.required, dniValidator()]],
-      direccion_usuario: ['', [Validators.required]],
+      telefono_usuario: ['', [Validators.required]],
     });
 
     this.loginForm = this.fb.group(
@@ -76,8 +76,8 @@ export class RegisterComponent {
     return this.datosForm.get('dni_usuario');
   }
 
-  get direccion_usuario() {
-    return this.datosForm.get('direccion_usuario');
+  get telefono_usuario() {
+    return this.datosForm.get('telefono_usuario');
   }
 
   clickEvent(event: MouseEvent) {
@@ -95,7 +95,7 @@ export class RegisterComponent {
         email_usuario: this.email_usuario?.value,
         password_usuario: this.password_usuario?.value,
         dni_usuario: this.dni_usuario?.value,
-        direccion_usuario: this.direccion_usuario?.value,
+        telefono_usuario: this.telefono_usuario?.value,
         id_rol: 1,
       };
 

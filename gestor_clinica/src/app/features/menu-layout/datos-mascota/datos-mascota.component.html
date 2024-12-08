@@ -24,7 +24,7 @@
   <form [formGroup]="datosMascota" (submit)="onSubmit()">
     <!-- Campo de tipo_id -->
     <article class="form-field">
-      <label for="id_tipo">Tipo de mascota</label>
+      <label for="id_tipo">Tipo de mascota*</label>
       <div class="content-select">
         <select
           (change)="recogerDatos($event, 'tipo')"
@@ -51,7 +51,7 @@
 
     <!-- Campo de nombre_mascota -->
     <article class="form-field">
-      <label for="nombre_mascota">Nombre</label>
+      <label for="nombre_mascota">Nombre*</label>
       <div class="wrapper">
         <input
           id="nombre_mascota"
@@ -65,7 +65,7 @@
 
     <!-- Campo de fecha_nac_mascota -->
     <article class="form-field">
-      <label for="nombre_mascota">Fecha de nacimiento</label>
+      <label for="nombre_mascota">Fecha de nacimiento*</label>
       <mat-form-field>
         <mat-label>Escoge una fecha</mat-label>
         <input
@@ -85,7 +85,7 @@
 
     <!-- Campo de nChip_mascota -->
     <article class="form-field">
-      <label for="nChip_mascota">Nº de chip</label>
+      <label for="nChip_mascota">Nº de chip*</label>
       <div class="wrapper">
         <input
           id="nChip_mascota"
@@ -99,7 +99,7 @@
 
     <!-- Campo de raza_mascota -->
     <article class="form-field">
-      <label for="raza_mascota">Raza</label>
+      <label for="raza_mascota">Raza*</label>
       <div class="wrapper">
         <input
           id="raza_mascota"
