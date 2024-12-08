@@ -27,7 +27,7 @@ CREATE TABLE Usuarios (
     token_usuario VARCHAR(255),
     token_exp_usuario INT,
     dni_usuario VARCHAR(15) NOT NULL,
-    direccion_usuario VARCHAR(255),
+    telefono_usuario VARCHAR(9),
     id_rol INT,
     date_create DATE DEFAULT CURDATE(),
     date_update DATE DEFAULT CURDATE(),
