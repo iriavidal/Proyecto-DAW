@@ -142,10 +142,9 @@ export class PostCitaComponent {
       (horaNumerica >= 10 && horaNumerica < 14) ||
       (horaNumerica >= 17 && horaNumerica < 20)
     ) {
-      this.secondFormGroup.get('hora')?.setErrors(null);
-    } else {
-      this.secondFormGroup.get('hora')?.setErrors({ horaNoValida: true });
+      return true;
     }
+    return false;
   }
 
   /* Valida que la cita no se pueda pedir con menos de un margen de 15 minutos antes o después de una ya existente */
@@ -192,8 +191,11 @@ export class PostCitaComponent {
 
     if (this.dia && this.hora) {
       const esValida = this.validarFechaYHora(this.dia, this.hora);
+      const esValida2 = this.validarHora(this.hora);
       if (!esValida) {
         this.secondFormGroup.get('hora')?.setErrors({ citaInvalida: true });
+      } else if (!esValida2) {
+        this.secondFormGroup.get('hora')?.setErrors({ horaNoValida: true });
       } else {
         this.secondFormGroup.get('hora')?.setErrors(null);
 
