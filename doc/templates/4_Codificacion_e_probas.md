@@ -92,3 +92,8 @@ Para la eliminación de una cita, solo tenemos que presionar el botón de elimin
 
 Cuando se tienen varias mascotas registradas, se puede consultar sus citas sin moverse del menú de citas.
 La prueba consiste en seleccionar diferentes mascotas en el select y se observa cómo el listado de citas cambia según las citas de cada mascota.
+
+#### 8. Consulta de historiales
+
+Para la consulta de los historiales médicos de una mascota, se accede al menú de historiales, donde se muestra un listado de los historiales de la mascota seleccionada. Cada card tiene un botón que permite ver por completo el historial, y en él se proporciona un formulario que solo se puede leer, no modificar, con la información ampliada del historial.
+La prueba consiste simplemente en la consulta correcta de los datos.
