@@ -97,3 +97,7 @@ La prueba consiste en seleccionar diferentes mascotas en el select y se observa 
 
 Para la consulta de los historiales médicos de una mascota, se accede al menú de historiales, donde se muestra un listado de los historiales de la mascota seleccionada. Cada card tiene un botón que permite ver por completo el historial, y en él se proporciona un formulario que solo se puede leer, no modificar, con la información ampliada del historial.
 La prueba consiste simplemente en la consulta correcta de los datos.
+
+#### 9. Modificación de datos del usuario
+
+Para la modificación de datos del usuario se proporciona un formulario ya rellenado con los datos de dicho usuario, donde solo se puede modificar el teléfono y el email.
