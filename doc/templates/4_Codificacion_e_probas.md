@@ -131,3 +131,7 @@ La información de la mascota muestra datos tanto de la mascota como del dueño,
 La redacción de un historial abre un formulario como el de su consulta por un usuario cliente, pero donde se permite redactar el motivo y las anotaciones. Solo su se proporcionan esos dos campos se permite registrar el historial.
 
 Cuando a una cita ya se le registra un historial, no se permitirá registrar otro.
+
+### Pruebas para el usuario técnico
+
+Las pruebas para un usuario técnico consisten en la consulta de todas las tablas disponibles, y la creación de nuevas entradas si es posible. También la modificación y la eliminación de los datos permitidos.
