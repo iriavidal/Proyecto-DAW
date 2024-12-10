@@ -45,6 +45,7 @@ Una vez introducidos todos los datos del usuario de forma correcta, avanzamos al
 - Dejamos cualquier campo en blanco e intentamos continuar, resultado: no nos permite registrarnos.
 - Introducimos un email no válido (formato email@email), resultado: no nos permite registrarnos.
 - Introducimos un email que ya esté en la base de datos, resultado: no nos permite registrarnos.
+- Introducimos dos contraseñas diferentes, resultado: no nos permite registrarnos.
 
 Una vez introducimos todos los datos de inicio de sesión de forma correcta, se habilita el botón de registrarse. Cuando le damos click al botón, obtenemos una respuesta positiva de la API, y nos redirige al formulario de login.
 
