@@ -83,3 +83,7 @@ Una vez que introducimos los datos de forma correcta, nos lleva al último paso 
 
 Para la modificación de las citas, se nos proporciona el mismo formulario que para la solicitud de cita, pero con los datos ya proporcionados, para su modificación.
 Las pruebas, restrucciones y resultados son los mismos que en la solicitud.
+
+#### 6. Eliminar cita
+
+Para la eliminación de una cita, solo tenemos que presionar el botón de eliminar en la card de dicha cita. El resultado es una recarga del listado de citas, en el que ya no aparecerá la cita eliminada.
