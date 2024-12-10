@@ -111,3 +111,7 @@ Una vez introducimos todos los datos de forma correcta, se habilita el botón de
 Para la modificación de datos de la mascota se proporciona un formulario ya rellenado con los datos de dicha mascota.
 
 Las pruebas, restricciones y resultados son los mismos que en el registro.
+
+#### 11. Eliminar mascota
+
+Para la eliminación de una mascota, solo tenemos que presionar el botón de eliminar en el formulario de modificación de datos. El resultado es una redirección al menú de usuario, en el que ya no aparecerá en el select la mascota eliminada.
