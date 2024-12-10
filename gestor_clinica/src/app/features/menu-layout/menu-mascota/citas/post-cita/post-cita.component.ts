@@ -104,6 +104,8 @@ export class PostCitaComponent {
 
         this.dia = fecha;
         this.hora = hora;
+
+        this.obtenerCitas();
       },
       error: (err) => {
         console.error('Error al cargar la cita:', err);
@@ -153,6 +155,7 @@ export class PostCitaComponent {
 
     for (const cita of this.citas) {
       const citaExistente = new Date(cita.fecha_y_hora);
+      console.log(citaExistente);
       const diferenciaMinutos =
         Math.abs(nuevaCita.getTime() - citaExistente.getTime()) / (1000 * 60);
 
