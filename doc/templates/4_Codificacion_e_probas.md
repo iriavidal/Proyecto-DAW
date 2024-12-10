@@ -79,4 +79,7 @@ Para la solicitud de una cita, se nos proporciona un formulario con varios pasos
 
 Una vez que introducimos los datos de forma correcta, nos lleva al último paso en el que se resumen los datos y se permite resetear el formulario o pedir la cita. Cuando se solicita la cita, obtenemos una respuesta positiva de la API, y se nos redirige de nuevo al menú de las citas, donde se visualiza una card con la información de la cita solicitada.
 
-#### 5. Modificar una cita
+#### 5. Modificar cita
+
+Para la modificación de las citas, se nos proporciona el mismo formulario que para la solicitud de cita, pero con los datos ya proporcionados, para su modificación.
+Las pruebas, restrucciones y resultados son los mismos que en la solicitud.
