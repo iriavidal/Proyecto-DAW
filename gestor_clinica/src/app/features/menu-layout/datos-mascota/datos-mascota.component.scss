@@ -74,6 +74,10 @@
           border: none;
         }
       }
+      .error {
+        font-size: 0.8rem;
+        color: $danger-700;
+      }
 
       .content-select {
         position: relative;

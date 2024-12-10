@@ -69,6 +69,7 @@
             type="tel"
             placeholder="Introduce tu teléfono"
             formControlName="telefono_usuario"
+            pattern="[0-9]{9}"
             (ngModelChange)="recogerDatos($event, 'telefono')"
           />
         </div>
@@ -86,6 +87,12 @@
             (ngModelChange)="recogerDatos($event, 'email')"
           />
         </div>
+        <span
+          *ngIf="datosUser.get('email_usuario')?.hasError('emailInvalido')"
+          class="error"
+        >
+          Email ya registrado
+        </span>
       </div>
 
       <!-- Botón de inicio de sesión -->

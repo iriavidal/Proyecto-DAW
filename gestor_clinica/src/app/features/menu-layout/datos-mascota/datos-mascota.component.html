@@ -95,6 +95,12 @@
           (ngModelChange)="recogerDatos($event, 'chip')"
         />
       </div>
+      <span
+        *ngIf="datosMascota.get('nChip_mascota')?.hasError('nChipInvalido')"
+        class="error"
+      >
+        Chip ya registrado
+      </span>
     </article>
 
     <!-- Campo de raza_mascota -->
