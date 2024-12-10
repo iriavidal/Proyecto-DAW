@@ -5,6 +5,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 import { confirmPasswordValidator } from 'src/app/core/validators/confirm-password.validator';
 import { dniValidator } from 'src/app/core/validators/dni.validator';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { UsuariosService } from 'src/app/core/services/datos/usuarios.service';
 
 @Component({
   selector: 'app-register',
@@ -18,12 +19,14 @@ export class RegisterComponent {
   loading = false;
   hide = signal(true);
   orientation: boolean = false;
+  usuarios: any[] = [];
 
   constructor(
     private fb: FormBuilder,
     private _router: Router,
     private authService: AuthService,
-    private observer: BreakpointObserver
+    private observer: BreakpointObserver,
+    private usuariosService: UsuariosService
   ) {
     this.datosForm = this.fb.group({
       nombre_usuario: ['', [Validators.required]],
@@ -49,6 +52,16 @@ export class RegisterComponent {
         //console.log('Ordenador');
         this.orientation = false;
       }
+    });
+  }
+
+  ngOnInit(): void {
+    this.usuariosService.getAllUsuarios().subscribe({
+      next: (data) => {
+        this.usuarios = data.results;
+        console.log(this.usuarios);
+      },
+      error: (err) => console.error(err),
     });
   }
 
@@ -83,6 +96,20 @@ export class RegisterComponent {
   clickEvent(event: MouseEvent) {
     this.hide.set(!this.hide());
     event.stopPropagation();
+  }
+
+  validarDatos(event: Event, input: string) {
+    if (input === 'dni') {
+      if (this.usuarios.some((usuario) => usuario.dni_usuario === event)) {
+        this.datosForm.get('dni_usuario')?.setErrors({ dniInvalido: true });
+      }
+    }
+
+    if (input === 'email') {
+      if (this.usuarios.some((usuario) => usuario.email_usuario === event)) {
+        this.loginForm.get('email_usuario')?.setErrors({ emailInvalido: true });
+      }
+    }
   }
 
   onSubmit() {

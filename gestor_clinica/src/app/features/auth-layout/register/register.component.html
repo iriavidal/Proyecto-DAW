@@ -52,8 +52,15 @@
                 type="text"
                 placeholder="Introduce tu DNI"
                 formControlName="dni_usuario"
+                (ngModelChange)="validarDatos($event, 'dni')"
               />
             </div>
+            <span
+              *ngIf="datosForm.get('dni_usuario')?.hasError('dniInvalido')"
+              class="error"
+            >
+              DNI ya registrado
+            </span>
           </div>
 
           <!-- Campo de apellidos -->
@@ -65,6 +72,7 @@
                 type="tel"
                 placeholder="Introduce tu dirección"
                 formControlName="telefono_usuario"
+                pattern="[0-9]{9}"
               />
             </div>
           </div>
@@ -89,6 +97,7 @@
                 [ngClass]="{
                   invalid: email_usuario?.invalid && email_usuario?.touched
                 }"
+                (ngModelChange)="validarDatos($event, 'email')"
               />
               <span class="icono-input"><mat-icon>email</mat-icon></span>
             </div>
@@ -108,6 +117,12 @@
               "
             >
               Introduce un email válido
+            </span>
+            <span
+              *ngIf="loginForm.get('email_usuario')?.hasError('emailInvalido')"
+              class="error"
+            >
+              Email ya registrado
             </span>
           </div>
 
