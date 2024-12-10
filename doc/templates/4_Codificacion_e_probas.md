@@ -87,3 +87,8 @@ Las pruebas, restrucciones y resultados son los mismos que en la solicitud.
 #### 6. Eliminar cita
 
 Para la eliminación de una cita, solo tenemos que presionar el botón de eliminar en la card de dicha cita. El resultado es una recarga del listado de citas, en el que ya no aparecerá la cita eliminada.
+
+#### 7. Consultar citas de una mascota diferente
+
+Cuando se tienen varias mascotas registradas, se puede consultar sus citas sin moverse del menú de citas.
+La prueba consiste en seleccionar diferentes mascotas en el select y se observa cómo el listado de citas cambia según las citas de cada mascota.
