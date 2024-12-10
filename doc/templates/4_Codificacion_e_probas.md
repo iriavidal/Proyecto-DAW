@@ -68,3 +68,15 @@ Para el registro de una mascota, se nos proporciona un formulario con varios cam
 - El campo de fecha de nacimiento no nos permite proporcionar una fecha futura.
 
 Una vez introducidos todos los datos de forma correcta, se habilita el botón de registrar mascota. Cuando le damos click al botón, obtenemos una respuesta positiva de la API, y nos redirige de nuevo al menú del usuario, donde se muestra un select con el nombre de la nueva mascota.
+
+#### 4. Solicitar cita
+
+Para la solicitud de una cita, se nos proporciona un formulario con varios pasos. Si no proporcionamos el dato del paso, no nos permite ir al siguiente.
+
+- La fecha no puede ser la misma del día o la del anterior.
+- El campo de hora no nos permite proporcionar una hora fuera del horario, ni una hora dentro del margen de 15 minutos antes y después de la hora de otra cita.
+- El campo de motivo no te permite continuar si no se selecciona uno de los motivos proporcionados.
+
+Una vez que introducimos los datos de forma correcta, nos lleva al último paso en el que se resumen los datos y se permite resetear el formulario o pedir la cita. Cuando se solicita la cita, obtenemos una respuesta positiva de la API, y se nos redirige de nuevo al menú de las citas, donde se visualiza una card con la información de la cita solicitada.
+
+#### 5. Modificar una cita
