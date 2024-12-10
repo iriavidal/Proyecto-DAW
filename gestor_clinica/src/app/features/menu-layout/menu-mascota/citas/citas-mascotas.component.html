@@ -52,7 +52,7 @@
       <article class="card-cita">
         <h3>{{ cita.tipo_cita }}</h3>
         <p>{{ cita.fecha_y_hora | formatDateTime }}</p>
-        <div class="opciones">
+        <div class="opciones" *ngIf="!cita.isCitaPasada">
           <span class="editar" (click)="editarCita(cita.id_cita)">
             <svg
               width="27"

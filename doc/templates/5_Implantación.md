@@ -9,6 +9,29 @@
 
 ## 1- Manual técnico
 
+Como se indica en el archivo [README](https://github.com/iriavidal/Proyecto-DAW/blob/main/README.md#instalaci%C3%B3n--posta-en-marcha) de la carpeta principal de este proyecto, se pone a disposición de quien lo desee una máquina virtual totalmente preparada para la visualización y prueba del proyecto.
+
+[Máquina virtual para exportar a VirtualHost](https://drive.google.com/file/d/1eEVI4Uy2GG__CywC0xEWGEnL_VFozOKp/view?usp=sharing)
+
+```bash
+usuario: iria
+contraseña: abc123.
+```
+
+Al iniciar sesión en la máquina Debian 12, lo único que hay que hacer es ir a la carpeta `Documentos` y ejecutar el archivo `iniciar_proyecto.sh`, el cual es un script que iniciará tanto la API como el proyecto de Angular.
+
+```bash
+#!/bin/bash
+
+# Pestaña 1: Iniciar servidor PHP
+gnome-terminal --tab -- bash -c "cd ~/Documentos/Proyecto-DAW/API; php -S localhost:8081; exec bash"
+
+# Pestaña 2: Iniciar proyecto con npm, cargando nvm
+gnome-terminal --tab -- bash -c "source ~/.nvm/nvm.sh; cd ~/Documentos/Proyecto-DAW/gestor_clinica; npm start; exec bash"
+```
+
+### Instalación en Windows si no se utiliza la mv:
+
 ### 1.1- Instalación
 
 - **Requirimentos de hardware**: ninguno en especial más que un ordenador con acceso a internet.
