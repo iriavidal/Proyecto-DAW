@@ -37,83 +37,83 @@ Puedes encontrar más información en el [archivo README de la carpeta principal
 
 1.1. Accedemos al menú para escoger si iniciar sesión o registrarse
 
-![Pantalla principal](/img/manual_usuario/1.1.jpg)
+![Pantalla principal](../img/manual_usuario/1.1.jpg)
 
 1.2. Escogemos la opción de registrarse
 
-![Menú registro](/img/manual_usuario/1.2.jpg)
+![Menú registro](../img/manual_usuario/1.2.jpg)
 
 1.3. Rellenar los datos solicitados
 
-![Datos del usuario](/img/manual_usuario/1.3.1.jpg)
-![Datos de inicio de sesión](/img/manual_usuario/1.3.2.jpg)
+![Datos del usuario](../img/manual_usuario/1.3.1.jpg)
+![Datos de inicio de sesión](../img/manual_usuario/1.3.2.jpg)
 
 1.4. Iniciar sesión con los datos registrados
 
-![Iniciar sesión](/img/manual_usuario/1.4.jpg)
+![Iniciar sesión](../img/manual_usuario/1.4.jpg)
 
 #### 2. Registrar una mascota
 
 2.1. Dentro del menú del usuario, escogemos la opción de añadir una nueva mascota
 
-![Añadir nueva mascota](/img/manual_usuario/2.1.jpg)
+![Añadir nueva mascota](../img/manual_usuario/2.1.jpg)
 
 2.2. Rellenar los datos de la mascota
 
-![Datos de la nueva mascota](/img/manual_usuario/2.2.jpg)
+![Datos de la nueva mascota](../img/manual_usuario/2.2.jpg)
 
 #### 3. Solicitar una cita
 
 3.1. Acceder al menú de citas, donde podemos consultar las citas pendientes
 
-![Acceder al menú de citas](/img/manual_usuario/3.1.jpg)
+![Acceder al menú de citas](../img/manual_usuario/3.1.jpg)
 
 3.2. Escogemos la opción de añadir una nueva cita
 
-![Añadir nueva cita](/img/manual_usuario/3.2.jpg)
+![Añadir nueva cita](../img/manual_usuario/3.2.jpg)
 
 3.3. Escoger fecha (no se permiten fines de semana), hora (no se permiten horas fuera del horario ni horas de menos de 15 minutos antes o después de otra cita) y motivo de la cita
 
-![Fecha](/img/manual_usuario/3.3.1.jpg)
-![Hora](/img/manual_usuario/3.3.2.jpg)
-![Motivo](/img/manual_usuario/3.3.3.jpg)
-![Finalizar](/img/manual_usuario/3.3.4.jpg)
+![Fecha](../img/manual_usuario/3.3.1.jpg)
+![Hora](../img/manual_usuario/3.3.2.jpg)
+![Motivo](../img/manual_usuario/3.3.3.jpg)
+![Finalizar](../img/manual_usuario/3.3.4.jpg)
 
 3.4. Consultar citas
 
-![Citas pendientes](/img/manual_usuario/3.4.jpg)
+![Citas pendientes](../img/manual_usuario/3.4.jpg)
 
 #### 4. Consultar historiales
 
 4.1. Acceder al menú de historiales, después de que hayas tenido una cita
 
-![Acceder al menú de historiales](/img/manual_usuario/4.1.jpg)
+![Acceder al menú de historiales](../img/manual_usuario/4.1.jpg)
 
 4.2. Acceder a una vista más amplia del historial
 
-![Acceder a vista más amplia del historial](/img/manual_usuario/4.2.jpg)
+![Acceder a vista más amplia del historial](../img/manual_usuario/4.2.jpg)
 
 4.3. Visualizar historial completo
 
-![Historial completo](/img/manual_usuario/4.3.jpg)
+![Historial completo](../img/manual_usuario/4.3.jpg)
 
 #### 5. Editar datos propios y de mascotas
 
 5.1. Acceder al menú de editar datos
 
-![Acceder al menú de editar datos](/img/manual_usuario/5.1.jpg)
+![Acceder al menú de editar datos](../img/manual_usuario/5.1.jpg)
 
 5.2. Esocger qué datos queremos editar
 
-![Escoger entre datos usuario y datos mascota](/img/manual_usuario/5.2.jpg)
+![Escoger entre datos usuario y datos mascota](../img/manual_usuario/5.2.jpg)
 
 5.3. Editar los datos deseados
 
-![Datos usuario](/img/manual_usuario/5.3.1.jpg)
+![Datos usuario](../img/manual_usuario/5.3.1.jpg)
 
 En el usuario solo se pueden modificar la dirección y el email.
 
-![Datos mascota](/img/manual_usuario/5.3.2.jpg)
+![Datos mascota](../img/manual_usuario/5.3.2.jpg)
 
 También se puede eliminar la mascota, lo cual eliminará también de la base de datos sus citas e historiales.
 
@@ -128,28 +128,28 @@ El técnico administrador de su clínica veterinaria debe poner a su disposició
 2.1. Consultar las citas
 Nada más iniciar sesión con su usuario, aparecerá en pantalla su menú de profesional, donde puede consultar sus citas, tanto las del día como las próximas, las últimas pudiendo ser filtradas por día.
 
-![Menú citas](/img/manual_veterinario/2.1.jpg)
+![Menú citas](../img/manual_veterinario/2.1.jpg)
 
 2.2. Consultar ficha de la mascota que va a ser atendida
 
-![Ficha cita](/img/manual_veterinario/2.2.1.jpg)
+![Ficha cita](../img/manual_veterinario/2.2.1.jpg)
 
 Como se puede ver en la imagen, todas las citas, tanto del día como futuras, ofrecen la posibilidad de consultar la ficha de la mascota que va a ser atendida, la cual incluye tanto información del animal y de su dueño, como la lista de sus historiales de citas pasadas.
 
-![Ficha mascota](/img/manual_veterinario/2.2.2.jpg)
-![Ficha mascota](/img/manual_veterinario/2.2.3.jpg)
+![Ficha mascota](../img/manual_veterinario/2.2.2.jpg)
+![Ficha mascota](../img/manual_veterinario/2.2.3.jpg)
 
 2.3. Añadir historial
 
-![Ficha cita](/img/manual_veterinario/2.3.jpg)
+![Ficha cita](../img/manual_veterinario/2.3.jpg)
 
 Podrá añadir un historial por cita del día, en el botón señalado en la imagen. Esta opción le abrirá un formulario donde ya tiene rellenado el nombre de la mascota y la fecha en la que se está rellenando el formulario, teniendo solo que aportar el motivo de la cita y anotaciones de la misma.
 
-![Formulario historial](/img/manual_veterinario/2.3.2jpg.jpg)
+![Formulario historial](../img/manual_veterinario/2.3.2jpg.jpg)
 
 Una vez guardado, podrá comprobar qué citas ya tienen un historial completo en la propia ficha de la misma, como se muestra en la imagen a continuación.
 
-![Ficha cita con historial rellenado](/img/manual_veterinario/2.3.3.jpg)
+![Ficha cita con historial rellenado](../img/manual_veterinario/2.3.3.jpg)
 
 ## 3- Melloras futuras
 
