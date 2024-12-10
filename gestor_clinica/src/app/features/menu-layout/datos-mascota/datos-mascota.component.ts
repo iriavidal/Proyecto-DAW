@@ -82,6 +82,13 @@ export class DatosMascotaComponent {
     this.mascotasService.getAllMascotas().subscribe({
       next: (data) => {
         this.mascotas = data.results;
+        if (this.selectedMascotaId != 0) {
+          this.mascotas = this.mascotas.filter(
+            (mascota) => mascota.id_mascota !== this.selectedMascotaId
+          );
+        }
+
+        console.log(this.mascotas);
       },
       error: (err) => console.error(err),
     });
