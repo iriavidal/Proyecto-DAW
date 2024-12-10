@@ -115,3 +115,19 @@ Las pruebas, restricciones y resultados son los mismos que en el registro.
 #### 11. Eliminar mascota
 
 Para la eliminación de una mascota, solo tenemos que presionar el botón de eliminar en el formulario de modificación de datos. El resultado es una redirección al menú de usuario, en el que ya no aparecerá en el select la mascota eliminada.
+
+### Pruebas para el usuario veterinario de la clínica
+
+#### 1. Consulta de citas
+
+Al iniciar sesión, de la misma manera que un usuario cliente, se redirige a un menú especial de veterinario, en el que se muestran las citas del día actual.
+
+En otro apartado del menú se muestran las citas de días posteriores.
+
+Las citas del día permiten consultar la información de la mascota de la cita, y redactar un historial. Las citas posteriores solo permiten la consulta de la información de la mascota.
+
+La información de la mascota muestra datos tanto de la mascota como del dueño, e historiales ya registrados de la mascota.
+
+La redacción de un historial abre un formulario como el de su consulta por un usuario cliente, pero donde se permite redactar el motivo y las anotaciones. Solo su se proporcionan esos dos campos se permite registrar el historial.
+
+Cuando a una cita ya se le registra un historial, no se permitirá registrar otro.
