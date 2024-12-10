@@ -19,6 +19,7 @@ export class DatosMascotaComponent {
   idNuevaMascota: number = 0;
 
   datosMascota: FormGroup = new FormGroup({});
+  mascotas: any[] = [];
 
   maxDate: string;
 
@@ -77,6 +78,15 @@ export class DatosMascotaComponent {
     });
   }
 
+  ngOnInit(): void {
+    this.mascotasService.getAllMascotas().subscribe({
+      next: (data) => {
+        this.mascotas = data.results;
+      },
+      error: (err) => console.error(err),
+    });
+  }
+
   cargarDatos() {
     this.mascotasService.getMascota(this.selectedMascotaId).subscribe({
       next: (data) => {
@@ -123,7 +133,15 @@ export class DatosMascotaComponent {
 
         /* nChip_mascota */
         if (input == 'chip') {
-          this.data.nChip_mascota = event;
+          if (
+            this.mascotas.some((mascota) => mascota.nChip_mascota === event)
+          ) {
+            this.datosMascota
+              .get('nChip_mascota')
+              ?.setErrors({ nChipInvalido: true });
+          } else {
+            this.data.nChip_mascota = event;
+          }
         }
 
         /* raza_mascota */
