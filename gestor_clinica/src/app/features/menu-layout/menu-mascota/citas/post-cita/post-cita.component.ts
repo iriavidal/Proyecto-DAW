@@ -127,12 +127,17 @@ export class PostCitaComponent {
 
   fechaFiltro = (d: Date | null): boolean => {
     const today = new Date();
-    const day = today.getDay();
+
+    today.setHours(0, 0, 0, 0);
 
     if (d) {
       const dayOfWeek = d.getDay();
+
+      d.setHours(0, 0, 0, 0);
+
       return d >= today && dayOfWeek !== 0 && dayOfWeek !== 6;
     }
+
     return false;
   };
 

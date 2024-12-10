@@ -13,11 +13,9 @@
 
 ## Taboleiro do proyecto
 
-Este proyecto se encuentra en fase de desarrollo.
+Este proyecto se encuentra en fase de finalización.
 
-Ya se puede acceder a la web como cliente, añadir mascotas, pedir, modificar y eliminar citas, y consultar los historiales de dichas mascotas.
-
-En desarrollo: vista del veterinario, y vista del técnico.
+Ya se han implementado todas las funcionalidades deseadas por el momento, pero no se descarta añadir más en el futuro.
 
 ## Descrición
 
@@ -30,6 +28,29 @@ El proyecto es una **plataforma integral para clínicas veterinarias** que unifi
 Este proyecto utilizará Angular en su versión más reciente y una API propia en PHP.
 
 ## Instalación / Posta en marcha
+
+Se pone a disposición de quien lo desee una máquina virtual totalmente preparada para la visualización y prueba del proyecto.
+
+[Máquina virtual para exportar a VirtualHost](https://drive.google.com/file/d/1eEVI4Uy2GG__CywC0xEWGEnL_VFozOKp/view?usp=sharing)
+
+```bash
+usuario: iria
+contraseña: abc123.
+```
+
+Al iniciar sesión en la máquina Debian 12, lo único que hay que hacer es ir a la carpeta `Documentos` y ejecutar el archivo `iniciar_proyecto.sh`, el cual es un script que iniciará tanto la API como el proyecto de Angular.
+
+```bash
+#!/bin/bash
+
+# Pestaña 1: Iniciar servidor PHP
+gnome-terminal --tab -- bash -c "cd ~/Documentos/Proyecto-DAW/API; php -S localhost:8081; exec bash"
+
+# Pestaña 2: Iniciar proyecto con npm, cargando nvm
+gnome-terminal --tab -- bash -c "source ~/.nvm/nvm.sh; cd ~/Documentos/Proyecto-DAW/gestor_clinica; npm start; exec bash"
+```
+
+### Instalación en Windows si no se utiliza la mv:
 
 ### Web clínica:
 
@@ -125,8 +146,6 @@ Este proyecto está licenciado bajo la `GNU Free Documentation License Version 1
 Para más detalles, consulta el archivo `LICENSE` incluido en la raíz del repositorio, donde se especifican los términos completos de esta licencia.
 
 ## Índice
-
-> _EXPLICACIÓN_: Simplemente indexa ordenadamente todo o tey proxecto.
 
 1. [Anteproyecto](doc/templates/1_Anteproxecto.md)
 2. [Análise](doc/templates/2_Analise.md)

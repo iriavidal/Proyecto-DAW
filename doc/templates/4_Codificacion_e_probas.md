@@ -23,8 +23,6 @@ La creación de una `API REST en PHP` también fue todo un reto. Plasmar todo el
 
 ## 4- Probas
 
-> Deben describirse as probas realizadas e conclusión obtidas. Describir os problemas atopados e como foron solucionados.
-
 Las pruebas que se describirán a continuación, pueden verse paso a paso con imágenes en los manuales de usuario. Si se precisa guía visual se recomienda su consulta en el siguiente [enlace](https://github.com/iriavidal/Proyecto-DAW/blob/main/doc/templates/5_Implantaci%C3%B3n.md#2--manual-de-usuario).
 
 ### Pruebas para el usuario cliente de la clínica

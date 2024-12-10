@@ -27,9 +27,24 @@ export class CitasVeteComponent {
   ngOnInit(): void {
     this.citasService.getAllCitas().subscribe({
       next: (data) => {
-        const now = new Date().getTime();
+        const now = new Date();
+
         this.citas = data.results
-          .filter((cita: any) => new Date(cita.fecha_y_hora).getTime() > now)
+          .filter((cita: any) => {
+            const citaDate = new Date(cita.fecha_y_hora);
+            const citaDateWithoutTime = new Date(
+              citaDate.getFullYear(),
+              citaDate.getMonth(),
+              citaDate.getDate()
+            );
+            const nowWithoutTime = new Date(
+              now.getFullYear(),
+              now.getMonth(),
+              now.getDate()
+            );
+
+            return citaDateWithoutTime >= nowWithoutTime;
+          })
           .sort((a: any, b: any) => {
             const dateA = new Date(a.fecha_y_hora).getTime();
             const dateB = new Date(b.fecha_y_hora).getTime();
