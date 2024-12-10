@@ -101,3 +101,13 @@ La prueba consiste simplemente en la consulta correcta de los datos.
 #### 9. Modificación de datos del usuario
 
 Para la modificación de datos del usuario se proporciona un formulario ya rellenado con los datos de dicho usuario, donde solo se puede modificar el teléfono y el email.
+
+- Introducimos un email que ya esté en la base de datos, resultado: no nos permite modificar los datos de usuario.
+
+Una vez introducimos todos los datos de forma correcta, se habilita el botón de modificar datos del usuario. Cuando le damos click al botón, obtenemos una respuesta positiva de la API, y nos redirige al menú de usuario.
+
+#### 10. Modificación de datos del usuario
+
+Para la modificación de datos de la mascota se proporciona un formulario ya rellenado con los datos de dicha mascota.
+
+Las pruebas, restricciones y resultados son los mismos que en el registro.
