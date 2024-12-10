@@ -12,6 +12,7 @@ import { TokenService } from 'src/app/core/services/token.service';
 export class DatosUserComponent {
   datosUser: FormGroup = new FormGroup({});
   idUser: number = 0;
+  usuarios: any[] = [];
 
   data: {
     nombre_usuario: string;
@@ -49,6 +50,19 @@ export class DatosUserComponent {
     });
   }
 
+  ngOnInit(): void {
+    this.userService.getAllUsuarios().subscribe({
+      next: (data) => {
+        this.usuarios = data.results;
+        this.usuarios = this.usuarios.filter(
+          (usuario) => usuario.id_usuario !== this.idUser
+        );
+        console.log(this.usuarios);
+      },
+      error: (err) => console.error(err),
+    });
+  }
+
   cargarDatos() {
     this.userService.getUsuario(this.idUser).subscribe({
       next: (data) => {
@@ -81,7 +95,13 @@ export class DatosUserComponent {
       }
 
       if (input == 'email') {
-        this.data.email_usuario = event;
+        if (this.usuarios.some((usuario) => usuario.email_usuario === event)) {
+          this.datosUser
+            .get('email_usuario')
+            ?.setErrors({ emailInvalido: true });
+        } else {
+          this.data.email_usuario = event;
+        }
       }
     }
   }
