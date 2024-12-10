@@ -24,3 +24,46 @@ La creación de una `API REST en PHP` también fue todo un reto. Plasmar todo el
 ## 4- Probas
 
 > Deben describirse as probas realizadas e conclusión obtidas. Describir os problemas atopados e como foron solucionados.
+
+Las pruebas que se describirán a continuación, pueden verse paso a paso con imágenes en los manuales de usuario. Si se precisa guía visual se recomienda su consulta en el siguiente [enlace](https://github.com/iriavidal/Proyecto-DAW/blob/main/doc/templates/5_Implantaci%C3%B3n.md#2--manual-de-usuario).
+
+### Pruebas para el usuario cliente de la clínica
+
+#### 1. Registrarse
+
+A la hora de registrarse, nos encontramos un formulario con dos pasos. En el primer paso, realizamos las siguientes pruebas:
+
+- Primero dejamos el formulario en blanco e intentamos continuar, resultado: no nos permite avanzar al siguiente paso.
+- Dejamos cualquier campo en blanco e intentamos continuar, resultado: no nos permite avanzar al siguiente paso.
+- Intentamos introducir un DNI falso, resultado: no nos permite avanzar al siguiente paso.
+- Intentamos introducir un DNI que ya está en la base de datos, resultado: no nos permite avanzar al siguiente paso.
+- Intentamos introducir un teléfono no válido, resultado: no nos permite avanzar al siguiente paso.
+
+Una vez introducidos todos los datos del usuario de forma correcta, avanzamos al siguiente paso:
+
+- Primero dejamos el formulario en blanco e intentamos continuar, resultado: no nos permite registrarnos.
+- Dejamos cualquier campo en blanco e intentamos continuar, resultado: no nos permite registrarnos.
+- Introducimos un email no válido (formato email@email), resultado: no nos permite registrarnos.
+- Introducimos un email que ya esté en la base de datos, resultado: no nos permite registrarnos.
+
+Una vez introducimos todos los datos de inicio de sesión de forma correcta, se habilita el botón de registrarse. Cuando le damos click al botón, obtenemos una respuesta positiva de la API, y nos redirige al formulario de login.
+
+#### 2. Iniciar sesión
+
+A la hora de iniciar sesión, nos encontramos con un formulario con dos campos y el botón de iniciar sesión deshabilitado.
+
+- Primero dejamos el formulario en blanco e intentamos continuar, resultado: no nos permite iniciar sesión.
+- Introducimos un email no válido (formato email@email), resultado: no nos permite iniciar sesión.
+- Introducimos un email no registrado en la base de datos, resultado: no nos permite iniciar sesión.
+- Introducimos una contraseña que no es la asociada a ese email, resultado: no nos permite iniciar sesión.
+
+Una vez introducimos todos los datos de forma corrcta, se habilita el botón de iniciar sesión. Cuando le damos click al botón, obtenemos una respuesta positiva de la API, y nos redirige al menú de usuario.
+
+#### 3. Registrar mascota
+
+Para el registro de una mascota, se nos proporciona un formulario con varios campos y el botón de registrar mascota deshabilitado.
+
+- Primero dejamos el formulario en blanco e intentamos continuar, resultado: no nos permite registrar a la mascota.
+- El campo de fecha de nacimiento no nos permite proporcionar una fecha futura.
+
+Una vez introducidos todos los datos de forma correcta, se habilita el botón de registrar mascota. Cuando le damos click al botón, obtenemos una respuesta positiva de la API, y nos redirige de nuevo al menú del usuario, donde se muestra un select con el nombre de la nueva mascota.
